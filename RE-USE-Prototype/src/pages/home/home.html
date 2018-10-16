@@ -1,12 +1,44 @@
 <ion-header>
   <ion-navbar>
+    <button ion-button>
+      <ion-icon name="home"></ion-icon>
+    </button>
     <ion-title>
       Ionic Blank
     </ion-title>
+    <label ion-label>1/9</label>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+              <div>
+                <h2>Fatigue Severity Scale</h2>
+                <p>Ich habe weniger Motivation, wenn ich erschöpft bin</p>
+                <div>
+                  <p> 7 Volle Übereinstimmung</p>
+                  <p>-></p>
+                  <p>1 Ablehnung</p>
+                </div>
+              </div>
+            </ion-col>
+            <ion-col col-auto>
+              <div class="range">
+                  <input type="range" name="volume" step="50">
+                </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div><p><button ion-button>Zurück</button></p></div>
+            </ion-col>
+            <ion-col>
+              <div><p><button ion-button>Zurück</button></p></div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
   The world is your oyster.
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.

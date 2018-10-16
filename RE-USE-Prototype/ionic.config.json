@@ -1,0 +1,7 @@
+{
+  "name": "RE-USE-Prototype",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

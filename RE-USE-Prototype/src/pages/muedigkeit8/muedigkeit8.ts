@@ -18,6 +18,18 @@ export class Muedigkeit8Page {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  goToHome(){
+    this.navCtrl.popToRoot();
+  }
+
+  openNext(){
+    this.navCtrl.push('Muedigkeit9Page');
+  }
+
+  openLast(){
+    this.navCtrl.pop();
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad Muedigkeit8Page');
   }

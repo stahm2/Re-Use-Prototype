@@ -18,8 +18,8 @@ export class Muedigkeit1Page {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  openHome(){
-    this.navCtrl.push('HomePage');
+  goToHome(){
+    this.navCtrl.popToRoot();
   }
 
   openNext(){

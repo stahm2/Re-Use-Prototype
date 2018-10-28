@@ -18,7 +18,7 @@ export class HomePage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   openFragebogen(){
-    this.navCtrl.push('Muedigkeit1Page');
+    this.navCtrl.push('ArmbewegungPage');
   }
 
   ionViewDidLoad() {

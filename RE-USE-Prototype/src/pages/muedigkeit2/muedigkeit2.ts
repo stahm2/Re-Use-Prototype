@@ -18,6 +18,17 @@ export class Muedigkeit2Page {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  goToHome(){
+    this.navCtrl.popToRoot();
+  }
+
+  openNext(){
+    this.navCtrl.push('Muedigkeit3Page');
+  }
+
+  openLast(){
+    this.navCtrl.pop();
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad Muedigkeit2Page');
   }

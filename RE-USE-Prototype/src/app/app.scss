@@ -14,3 +14,92 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18pt;
+  font-weight: bold;
+}
+p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14pt;
+  font-weight: normal;
+}
+
+.navigation{
+  height: 75px;
+}
+.navigation button{
+  position: relative;
+  float: left;
+}
+.navigation h1{
+  position: relative;
+  float: left;
+  margin-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20pt;
+  margin-top: 10px;
+}
+.navigation label{
+  position: relative;
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18pt;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+
+.inhalt{
+  float: left;
+}
+.inhalt .linkeSeite{
+  position: relative;
+  float: left;
+  height: 500px;
+}
+
+.inhalt .linkeSeite #zurueck{
+  width: 150px;
+  margin-top: 245px;
+}
+
+.inhalt .rechteSeite{
+  position: fixed;
+  height: 500px;
+  z-index: -1000;
+
+}
+
+.inhalt .rechteSeite #likert7{
+ // background-image: url(../../assets/img/likert7.PNG);
+  height: 500px;
+  width: 550px;
+  margin-top: 30px;
+  -ms-transform: rotate(-90deg); /* IE 9 */
+  -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+  transform: rotate(-90deg);
+}
+
+.inhalt .rechteSeite #likert7::-moz-range-thumb{
+  background: #25A33C;
+}
+
+.inhalt .rechteSeite #likert7::-ms-thumb{
+  background: #25A33C;
+}
+
+.inhalt .rechteSeite #likert7::-webkit-slider-thumb{
+  background: #25A33C;
+}
+
+.inhalt .rechteSeite #likert7::-moz-range-progress{
+  background-color: red;
+}
+
+.inhalt .rechteSeite #weiter{
+  margin-left: 230px;
+  margin-top: 0px;
+  width: 150px;
+}

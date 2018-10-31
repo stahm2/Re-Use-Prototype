@@ -21,6 +21,10 @@ export class HomePage {
     this.navCtrl.push('ArmbewegungPage');
   }
 
+  openGewicht(){
+    this.navCtrl.push('GewichtPage');
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
   }

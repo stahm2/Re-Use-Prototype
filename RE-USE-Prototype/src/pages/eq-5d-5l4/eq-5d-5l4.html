@@ -18,6 +18,19 @@
             <h1>Lebensqualität</h1>
             <label>4/6</label>
         </div>
+        <div class="radio">
+            <h1>Schmerzen/Körperliche Beschwerden</h1>
+            <ion-radio group="eq1" value="1"></ion-radio>
+            <ion-label>Ich habe keine Schmerzen oder Beschwerden</ion-label>
+            <ion-radio group="eq1" value="2"></ion-radio>
+            <ion-label>Ich habe leichte Schmerzen oder Beschwerden</ion-label>
+            <ion-radio group="eq1" value="3"></ion-radio>
+            <ion-label>Ich habe mässige Schmerzen oder Beschwerden</ion-label>
+            <ion-radio group="eq1" value="4"></ion-radio>
+            <ion-label>Ich habe starke Schmerzen oder Beschwerden</ion-label>
+            <ion-radio group="eq1" value="5"></ion-radio>
+            <ion-label>Ich habe extreme Schmerzen oder Beschwerden</ion-label>
+        </div>
         <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
         <button id="weiter" ion-button (click)="openNext()">Weiter</button>
 

@@ -6,13 +6,45 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>schlaf1</ion-title>
+  <ion-navbar hideBackButton *navbar>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <div class="navigation">
+    <button ion-button (click)="goToHome()">
+      <ion-icon name="home"></ion-icon>
+    </button>
+    <h1>Schlafen</h1>
+    <label>1/7</label>
+  </div>
+  <div id="schlaf1Radio">
+    <p>Nemen Sie regelmässig Medikamente ein?</p>
+    <ion-radio group="schlaf1" value="ja"></ion-radio>
+    <label>ja</label>
+    <ion-radio group="schlaf1" value="nein"></ion-radio>
+    <label>nein</label>
+  </div>
+  <div id="schalf1Check">
+      <ion-checkbox [(ngModel)]="Herzbeschwerden/Blutdruck"></ion-checkbox>
+      <label>Herzbeschwerden/Blutdruck</label>
+      <ion-checkbox [(ngModel)]="Allergien"></ion-checkbox>
+      <label>Allergien</label>
+      <ion-checkbox [(ngModel)]="Schliddrüsenprobleme"></ion-checkbox>
+      <label>Schliddrüsenprobleme</label>
+      <ion-checkbox [(ngModel)]="Lungenerkrankungen/Asthma"></ion-checkbox>
+      <label>Lungenerkrankungen/Asthma</label>
+      <ion-checkbox [(ngModel)]="Stimmung/Psyche/Angst"></ion-checkbox>
+      <label>Stimmung/Psyche/Angst</label>
+      <ion-checkbox [(ngModel)]="Schlafmittel"></ion-checkbox>
+      <label>Schlafmittel</label>
+      <ion-checkbox [(ngModel)]="Weissnicht"></ion-checkbox>
+      <label>Weiss nicht</label>
+      <label>Bitte Namen:</label>
+      <ion-textarea></ion-textarea>
+  </div>
+  <button id="weiter" ion-button (click)="openNext()">Weiter</button>
 
 </ion-content>

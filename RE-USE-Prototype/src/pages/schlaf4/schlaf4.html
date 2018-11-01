@@ -6,13 +6,20 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>schlaf4</ion-title>
+  <ion-navbar hideBackButton *navbar>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <div class="navigation">
+    <button ion-button (click)="goToHome()">
+      <ion-icon name="home"></ion-icon>
+    </button>
+    <h1>Schlafen</h1>
+    <label>4/7</label>
+  </div>
+  <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
+  <button id="weiter" ion-button (click)="openNext()">Weiter</button>
 </ion-content>

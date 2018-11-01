@@ -6,13 +6,35 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>schlaf2</ion-title>
+  <ion-navbar hideBackButton *navbar>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <div class="navigation">
+    <button ion-button (click)="goToHome()">
+      <ion-icon name="home"></ion-icon>
+    </button>
+    <h1>Schlafen</h1>
+    <label>2/7</label>
+  </div>
+  <div id="schlaf2Radio">
+    <p>Nehmen Sie Schlafmittel?</p>
+    <label>nie</label>
+    <ion-radio group="schlaf2" value="nie"></ion-radio>
+    <label>selten</label>
+    <ion-radio group="schlaf2" value="selten"></ion-radio>
+    <label>manchmal</label>
+    <ion-radio group="schlaf2" value="manchmal"></ion-radio>
+    <label>oft</label>
+    <ion-radio group="schlaf2" value="oft"></ion-radio>
+    <label>fast immer</label>
+    <ion-radio group="schlaf2" value="fastimmer"></ion-radio>
+    <p>Wenn ja: Bitte Namen:</p>
+    <ion-text></ion-text>
+  </div>
+  <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
+  <button id="weiter" ion-button (click)="openNext()">Weiter</button>
 </ion-content>

@@ -21,12 +21,26 @@ export class HomePage {
     this.navCtrl.push('ArmbewegungPage');
   }
 
+  openBegleittherapie(){
+    this.navCtrl.push('BegleittherapiePage');
+  }
+
   openGewicht(){
     this.navCtrl.push('GewichtPage');
+  }
+
+  openBlutdruck(){
+    this.navCtrl.push('BlutdruckPage');
+  }
+
+  openSchlaf(){
+    this.navCtrl.push('Schlaf1Page');
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
   }
+
+
 
 }

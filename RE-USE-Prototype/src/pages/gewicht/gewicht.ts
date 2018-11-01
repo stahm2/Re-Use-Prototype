@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { WheelSelector } from '@ionic-native/wheel-selector';
+//import { WheelSelector } from '@ionic-native/wheel-selector';
 
 /**
  * Generated class for the GewichtPage page.
@@ -19,7 +19,7 @@ export class GewichtPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-  const jsonData = {
+  /*const jsonData = {
     numbers: [
      { description: "1" },
       { description: "2" },
@@ -39,7 +39,7 @@ export class GewichtPage {
       err => console.log('Error: ', err)
       );
   }
-
+*/
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad GewichtPage');

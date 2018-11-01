@@ -6,13 +6,37 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>schlaf5</ion-title>
+  <ion-navbar hideBackButton *navbar>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <div class="navigation">
+    <button ion-button (click)="goToHome()">
+      <ion-icon name="home"></ion-icon>
+    </button>
+    <h1>Schlafen</h1>
+    <label>5/7</label>
+  </div>
+  <div class="inhalt">
+    <div class="linkeSeite">
+      <h1></h1>
+      <p>Zeichnen Sie bitte auf der<br> folgenden Linie Ihre<br> durchschnittliche<br> Schlafqualität ein:</p>
+      <div class="erklaerung">
+        <p>10 sehr gut<br>
+          ---><br>
+          0 sehr schlecht</p>
+      </div>
+      <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
+    </div>
+    <div class="rechteSeite">
+      <div classe="range">
+        <input type="range" name="likert7" id="likert7" [(ngModel)]="knobValue" min="0" max="10" (onchange)="rangeEnd()">
+      </div>
+      <p>Value {{knobValue}}</p>
+      <button id="weiter" ion-button (click)="openNext()">Weiter</button>
+    </div>
+  </div>
 </ion-content>

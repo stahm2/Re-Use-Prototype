@@ -18,6 +18,18 @@ export class Schlaf6Page {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  goToHome(){
+    this.navCtrl.popToRoot();
+  }
+
+  openNext(){
+    this.navCtrl.push('Schlaf7Page');
+  }
+
+  openLast(){
+    this.navCtrl.pop();
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad Schlaf6Page');
   }

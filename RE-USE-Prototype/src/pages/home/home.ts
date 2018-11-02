@@ -25,6 +25,14 @@ export class HomePage {
     this.navCtrl.push('GewichtPage');
   }
 
+  openBegleittherapie(){
+    this.navCtrl.push('BegleittherapiePage');
+  }
+
+  openBlutdruck(){
+    this.navCtrl.push('BlutdruckPage');
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
   }

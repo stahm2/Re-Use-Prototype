@@ -18,6 +18,20 @@ export class BlutdruckPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  save() {
+    console.log("Data saved");
+    this.navCtrl.popToRoot();
+  }
+
+
+  back(){
+    this.navCtrl.pop();
+  }
+
+  goToHome(){
+    this.navCtrl.popToRoot();
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad BlutdruckPage');
   }

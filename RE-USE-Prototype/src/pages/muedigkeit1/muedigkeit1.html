@@ -12,6 +12,7 @@
 </ion-header>
 
 
+
 <ion-content padding>
   <div class="navigation">
     <button ion-button (click)="goToHome()">
@@ -25,12 +26,13 @@
       <h1>Fatigue Severity <br> Scale</h1>
       <p>Ich habe weniger <br> Motivation, wenn ich <br> erschöpft bin</p>
       <div class="erklaerung">
-        <p>7 volle Übereinstimmung<br>
-          ---><br>
-          1 Ablehnung</p>
+        <p>7 volle Übereinstimmung</p>
+        <p>---></p>
+        <p>1 Ablehnung</p>
       </div>
       <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
     </div>
+    <!--<div><ion-range [(ngModel)]="singleValue" color="danger" pin="true"></ion-range></div>-->
     <div class="rechteSeite">
       <div classe="range">
         <input type="range" name="likert7" id="likert7" [(ngModel)]="knobValue" min="0" max="7" step="1" (onchange)="rangeEnd()">
@@ -39,4 +41,7 @@
       <button id="weiter" ion-button (click)="openNext()">Weiter</button>
     </div>
   </div>
+  
+  
 </ion-content>
+

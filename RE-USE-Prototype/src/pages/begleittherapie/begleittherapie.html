@@ -7,12 +7,26 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>begleittherapie</ion-title>
+    <ion-title>Begleittherapie</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+    <div class="navigation">
+        <button ion-button (click)="goToHome()">
+          <ion-icon name="home"></ion-icon>
+        </button>
+        <h1>Begleittherapie</h1>
+    
+      </div>
+    
+      <div>
+        <button ion-button (click)="selectDate()">Open DatePicker</button>
+
+        <input type="text" value={{date}}>
+      </div>
+
 
 </ion-content>

@@ -14,5 +14,52 @@
 
 
 <ion-content padding>
+    <div class="navigation">
+        <button ion-button (click)="goToHome()">
+          <ion-icon name="home"></ion-icon>
+        </button>
+        <h1>Blutdruck</h1>
+    </div>
+
+    <div>
+    <table>
+      <tr>
+        <td>
+          Systolisch
+        </td>
+        <td>
+          <input type="tel" pattern="\d*" style="width:120px;">
+        </td>
+        <td>
+           mmHg
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Diastolisch
+        </td>
+        <td>
+          <input type="tel" pattern="\d*" style="width:120px;">
+        </td>
+        <td>
+           mmHg
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Puls
+        </td>
+        <td>
+          <input type="tel" pattern="\d*" style="width:120px;">
+        </td>
+        <td>
+           bpm
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <button id="cancelBP" ion-button (click)="back()">Zurück</button>
+  <button id="saveBP" ion-button (click)="save()">Speichern</button>
 
 </ion-content>

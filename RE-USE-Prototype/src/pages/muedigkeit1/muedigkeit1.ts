@@ -14,9 +14,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'muedigkeit1.html',
 })
 export class Muedigkeit1Page {
-
+  sleepness: any;
+  text: 1;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
+  
+
+  setBagde(){
+    //this.sleepness = this.singleValue.ratio;
+
+  //this.sleepness = likert7.value;
+    
+  }
+  
 
   goToHome(){
     this.navCtrl.popToRoot();

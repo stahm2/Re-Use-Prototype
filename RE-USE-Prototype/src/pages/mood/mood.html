@@ -33,8 +33,9 @@
     <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
   </div>
   <div class="rechteSeite">
-    <div classe="range">
-      <input type="range" name="likert7" id="likert7" [(ngModel)]="knobValue" min="0" max="7" step="1" (onchange)="rangeEnd()">
+    <div classe="range">$
+        <img src="../../assets/img/likert7.png">
+      <input type="range" name="likert7" id="likert" [(ngModel)]="knobValue" min="0" max="10" (onchange)="rangeEnd()">
     </div>
     <p>Value {{knobValue}}</p>
     <button id="weiter" ion-button (click)="openNext()">Weiter</button>

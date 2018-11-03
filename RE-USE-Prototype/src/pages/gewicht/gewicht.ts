@@ -19,27 +19,9 @@ export class GewichtPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-  /*const jsonData = {
-    numbers: [
-     { description: "1" },
-      { description: "2" },
-      { description: "3" }
-    ]
-  };
-  selectANumber() {
-    this.selector.show({
-      title: "How Many?",
-      items: [
-        this.jsonData.numbers
-      ],
-    }).then(
-      result => {
-        console.log(result[0].description + ' at index: ' + result[0].index);
-      },
-      err => console.log('Error: ', err)
-      );
+  goToHome(){
+    this.navCtrl.popToRoot();
   }
-*/
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad GewichtPage');

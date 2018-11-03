@@ -18,6 +18,9 @@ export class Schlaf1Page {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  onChange(data) : void {
+    console.log("text: " + data);
+  }
   goToHome(){
     this.navCtrl.popToRoot();
   }

@@ -81,14 +81,6 @@ p{
 
 }
 
-img{
-  transform: rotate(-90deg);
-  z-index: -10000 !important;
-  margin-top: 178px;
-  margin-left: 68px;
-  height: 107px;
-}
-
 .inhalt .rechteSeite #likert{
   z-index: 200;
  /* background-image: url(../../assets/img/likert7.PNG);
@@ -97,7 +89,9 @@ img{
   background-size: 103%;*/
   height: 450px;
   width: 450px;
-  margin-top: -280px;
+  position: fixed;
+  top: 100px;
+  //margin-top: -900px;
   margin-left: 100px;
   transform: rotate(-90deg);
   scrollbar-track-color: #25A33C;

@@ -16,22 +16,31 @@ import { DatePicker } from '@ionic-native/date-picker';
 })
 export class BegleittherapiePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private datePicker: DatePicker) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private datePicker1: DatePicker/*, private datePicker2: DatePicker, private datePicker3: DatePicker*/) {
   }
 
-  selectDate(){
-    this.datePicker.show({
-    date: new Date(),
-    mode: 'datetime',
-  }).then(
-    date => console.log('Got date: ', date),
-    err => console.log('Error occured: ', err)
-  );
-  
+  selectDate() {
+    this.datePicker1.show({
+      date: new Date(),
+      mode: 'date',
+    }).then(
+      date => console.log('Got date: ', date),
+      err => console.log('Error occured: ', err)
+    );
 
   }
 
-  goToHome(){
+  save() {
+    console.log("Data saved");
+    this.navCtrl.popToRoot();
+  }
+
+
+  back() {
+    this.navCtrl.pop();
+  }
+
+  goToHome() {
     this.navCtrl.popToRoot();
   }
   ionViewDidLoad() {

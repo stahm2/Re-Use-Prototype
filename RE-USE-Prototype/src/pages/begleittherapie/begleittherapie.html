@@ -14,19 +14,68 @@
 
 
 <ion-content padding>
-    <div class="navigation">
-        <button ion-button (click)="goToHome()">
-          <ion-icon name="home"></ion-icon>
-        </button>
-        <h1>Begleittherapie</h1>
-    
-      </div>
-    
-      <div>
-        <button ion-button (click)="selectDate()">Open DatePicker</button>
+  <div class="navigation">
+    <button ion-button (click)="goToHome()">
+      <ion-icon name="home"></ion-icon>
+    </button>
+    <h1>Begleittherapie</h1>
 
-        <input type="text" value={{date}}>
-      </div>
+  </div>
+  <div>
+    <form>
+      <fieldset>
+        <input type="button" id="lt" name="Therapie" value="Logo">
+        <input type="button" id="pt" name="Therapie" value="Physio">
+        <br>
+        <input type="button" id="et" name="Therapie" value="Ergo">
+        <input type="button" id="at" name="Therapie" value="Andere">
+      </fieldset>
+    </form>
+  </div>
 
+
+<div>
+  <ion-list>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Datum: </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-datetime cancelText="Abbrechen" doneText="OK" displayFormat="DD.MM.YYYY" [(ngModel)]="myDate"></ion-datetime>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Geplante Zeit </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-datetime cancelText="Abbrechen" doneText="OK" displayFormat="H:mm" [(ngModel)]="startTime"></ion-datetime>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Effektive Zeit </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-datetime cancelText="Abbrechen" doneText="OK" displayFormat="H:mm" [(ngModel)]="endTime"></ion-datetime>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+  </div>
+
+  <button id="cancelBP" ion-button (click)="back()">Zurück</button>
+  <button id="saveBP" ion-button (click)="save()">Speichern</button>
 
 </ion-content>

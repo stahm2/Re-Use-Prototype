@@ -18,7 +18,38 @@
       <ion-icon name="home"></ion-icon>
     </button>
     <h1>Gewicht/Bauchumfang</h1>
+
   </div>
+
+  <div>
+    <table>
+      <tr>
+        <td>
+          Gewicht
+        </td>
+        <td>
+          <input type="tel" pattern="\d*" style="width:120px;">
+        </td>
+        <td>
+          kg
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Bauchumfang
+        </td>
+        <td>
+          <input type="tel" pattern="\d*" style="width:120px;">
+        </td>
+        <td>
+          cm
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <button id="cancelBP" ion-button (click)="back()">Zurück</button>
+  <button id="saveBP" ion-button (click)="save()">Speichern</button>
 
 
 </ion-content>

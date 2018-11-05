@@ -40,6 +40,9 @@ export class ArmbewegungPage {
     console.log("text: " + data);
   }
   
+  change(data):void{
+    console.log("test Text:" + data);
+  }
 
   start(data):void{
     console.log("load");

@@ -32,7 +32,7 @@
       <label>Herzbeschwerden/Blutdruck</label>
       <ion-checkbox [(ngModel)]="Allergien"></ion-checkbox>
       <label>Allergien</label>
-      <ion-checkbox [(ngModel)]="Schliddrüsenprobleme"></ion-checkbox>
+      <ion-checkbox [(ngModel)]="Schliddruesenprobleme"></ion-checkbox>
       <label>Schliddrüsenprobleme</label>
       <ion-checkbox [(ngModel)]="Lungenerkrankungen/Asthma"></ion-checkbox>
       <label>Lungenerkrankungen/Asthma</label>
@@ -43,7 +43,7 @@
       <ion-checkbox [(ngModel)]="Weissnicht"></ion-checkbox>
       <label>Weiss nicht</label>
       <label>Bitte Namen:</label>
-      <ion-textarea></ion-textarea>
+      <ion-textarea [(ngModel)]="nameText" (change)='onChange($event.target.value)'></ion-textarea>
   </div>
   <button id="weiter" ion-button (click)="openNext()">Weiter</button>
 

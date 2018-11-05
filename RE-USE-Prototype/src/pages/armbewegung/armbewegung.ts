@@ -17,6 +17,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ArmbewegungPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    
   }
 
   goToHome(){
@@ -33,6 +34,18 @@ export class ArmbewegungPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ArmbewegungPage');
+  }
+
+  onChange(data) : void {
+    console.log("text: " + data);
+  }
+  
+  change(data):void{
+    console.log("test Text:" + data);
+  }
+
+  start(data):void{
+    console.log("load");
   }
 
 }

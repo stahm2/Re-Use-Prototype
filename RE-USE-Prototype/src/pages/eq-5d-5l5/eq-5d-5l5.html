@@ -6,30 +6,45 @@
 -->
 <ion-header>
     <ion-navbar hideBackButton *navbar>
-      </ion-navbar>
+    </ion-navbar>
 
-    </ion-header>
+</ion-header>
 
 
-    <ion-content padding>
-        <div class="navigation">
-            <button ion-button (click)="goToHome()"><ion-icon name="home"></ion-icon></button>
-            <h1>Lebensqualität</h1>
-            <label>5/6</label>
-        </div>
-        <div class="radio">
-            <h1>Angst/Niedergeschlagenheit</h1>
-            <ion-radio group="eq1" value="1"></ion-radio>
-            <ion-label>Ich bin nicht ängstlich oder deprimiert</ion-label>
-            <ion-radio group="eq1" value="2"></ion-radio>
-            <ion-label>Ich bin ein wenig ängstlich oder deprimiert</ion-label>
-            <ion-radio group="eq1" value="3"></ion-radio>
-            <ion-label>Ich bin mässig ängstlich oder deprimiert</ion-label>
-            <ion-radio group="eq1" value="4"></ion-radio>
-            <ion-label>Ich bin sehr ängstlich oder deprimiert</ion-label>
-            <ion-radio group="eq1" value="5"></ion-radio>
-            <ion-label>Ich bin extrem ängstlich oder deprimiert</ion-label>
-        </div>
-        <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
-        <button id="weiter" ion-button (click)="openNext()">Weiter</button>
+<ion-content padding>
+    <div class="navigation">
+        <button ion-button (click)="goToHome()">
+            <ion-icon name="home"></ion-icon>
+        </button>
+        <h1>Lebensqualität</h1>
+        <label>5/6</label>
+    </div>
+    <div class="radio">
+        <h1>Angst/Niedergeschlagenheit</h1>
+        <ion-list radio-group [(ngModel)]="eq5">
+            <ion-item>
+                <ion-radio value="1"></ion-radio>
+                <ion-label>Ich bin nicht ängstlich oder deprimiert</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-radio value="2"></ion-radio>
+                <ion-label>Ich bin ein wenig ängstlich oder <br>deprimiert</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-radio value="3"></ion-radio>
+                <ion-label>Ich bin mässig ängstlich oder deprimiert</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-radio value="4"></ion-radio>
+                <ion-label>Ich bin sehr ängstlich oder deprimiert</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-radio value="5">
+                    </ion-radio>
+                    <ion-label>Ich bin extrem ängstlich oder deprimiert</ion-label>
+            </ion-item>
+        </ion-list>
+    </div>
+    <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
+    <button id="weiter" ion-button (click)="openNext()">Weiter</button>
 </ion-content>

@@ -6,8 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>blutdruck</ion-title>
+  <ion-navbar hideBackButton *navbar>
   </ion-navbar>
 
 </ion-header>
@@ -59,7 +58,7 @@
     </table>
   </div>
 
-  <button id="cancelBP" ion-button (click)="back()">Zurück</button>
-  <button id="saveBP" ion-button (click)="save()">Speichern</button>
+  <button id="zurueck" ion-button (click)="back()">Zurück</button>
+  <button id="weiter" ion-button (click)="save()">Speichern</button>
 
 </ion-content>

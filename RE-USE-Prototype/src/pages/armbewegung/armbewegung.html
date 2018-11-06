@@ -27,14 +27,14 @@
       <p>Wie hatten sich die<br> Bewegungen Ihres<br> betroffenen Armes<br> verändert?<br>
         (während den letzten <br>7 Tagen)</p>
       <div class="erklaerung">
-        <p>Value {{knobValue}}</p>
+        <p id="erklaerungText">Value {{knobValue + onChange()}}</p>
       </div>
     </div>
     <div class="rechteSeite">
         <img src="../../assets/img/likert7.png">
      <div classe="range">
-       <input type="range" name="likert7" id="likert" [(ngModel)]="knobValue" min="0" max="7" step="1"  (ondrag)="change($event.target.value)" (change)='onChange($event.target.value)'
-          vlaue="2">
+       <input type="range" name="likert7" id="likert" [(ngModel)]="knobValue" min="0" max="7" step="1" (change)='onChange($event.target.value)'
+       vlaue="2">
       </div>
       <button id="weiter" ion-button (click)="openNext()">Weiter</button>
     </div>

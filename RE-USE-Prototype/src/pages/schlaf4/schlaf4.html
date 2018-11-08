@@ -20,6 +20,28 @@
     <h1>Schlafen</h1>
     <label>4/7</label>
   </div>
+
+  <div>
+    <p>
+      Wie viele Stunden schlafen Sie ungefähr pro Nacht (nicht Bettliegzeit)?
+    </p>
+
+    <ion-list>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-datetime cancelText="Abbrechen" doneText="OK" displayFormat="H:mm" [(ngModel)]="startTime"></ion-datetime>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label>Std./Min.</ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+
+  </div>
   <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
   <button id="weiter" ion-button (click)="openNext()">Weiter</button>
 </ion-content>

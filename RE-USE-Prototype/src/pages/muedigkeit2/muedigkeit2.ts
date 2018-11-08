@@ -33,4 +33,14 @@ export class Muedigkeit2Page {
     console.log('ionViewDidLoad Muedigkeit2Page');
   }
 
+  private knobValue = 0;
+  onChange(data) {
+    if (data == 0) {
+      console.log('nichts');
+      document.querySelector("body").style.cssText = "--color: #D68018";
+    } else {
+      document.querySelector("body").style.cssText = "--color: #25A33C";
+    }
+  }
+
 }

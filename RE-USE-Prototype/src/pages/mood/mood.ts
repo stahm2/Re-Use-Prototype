@@ -34,4 +34,13 @@ export class MoodPage {
     console.log('ionViewDidLoad MoodPage');
   }
 
+  private knobValue = 0;
+  onChange(data) {
+    if (data == 0) {
+      console.log('nichts');
+      document.querySelector("body").style.cssText = "--color: #D68018";
+    } else {
+      document.querySelector("body").style.cssText = "--color: #25A33C";
+    }
+  }
 }

@@ -34,7 +34,7 @@
     <div class="rechteSeite">
         <img class="eq" src="../../assets/img/eq-5d-5l_scale.PNG">
       <div classe="range">
-        <input type="range" name="likert7" id="likert" [(ngModel)]="knobValue" min="0" max="100" (onchange)="rangeEnd()">
+        <input type="range" name="likert7" id="likert" [(ngModel)]="knobValue" min="0" max="100" (change)='onChange($event.target.value)'>
       </div>
       <button id="weiter" ion-button (click)="openNext()">Weiter</button>
     </div>

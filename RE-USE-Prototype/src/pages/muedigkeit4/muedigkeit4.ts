@@ -23,7 +23,7 @@ export class Muedigkeit4Page {
   }
 
   openNext(){
-    this.navCtrl.push('Muedigkeit6Page');
+    this.navCtrl.push('Muedigkeit5Page');
   }
 
   openLast(){
@@ -34,4 +34,13 @@ export class Muedigkeit4Page {
     console.log('ionViewDidLoad Muedigkeit4Page');
   }
 
+  private knobValue = 0;
+  onChange(data) {
+    if (data == 0) {
+      console.log('nichts');
+      document.querySelector("body").style.cssText = "--color: #D68018";
+    } else {
+      document.querySelector("body").style.cssText = "--color: #25A33C";
+    }
+  }
 }

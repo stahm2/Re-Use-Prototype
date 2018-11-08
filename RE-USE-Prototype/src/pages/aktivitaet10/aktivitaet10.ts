@@ -18,20 +18,30 @@ export class Aktivitaet10Page {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  goToHome(){
+  goToHome() {
     this.navCtrl.popToRoot();
   }
 
-  openNext(){
+  openNext() {
     this.navCtrl.push('PainPage');
   }
 
-  openLast(){
+  openLast() {
     this.navCtrl.pop();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Aktivitaet10Page');
+  }
+
+  private knobValue = 0;
+  onChange(data) {
+    if (data == 0) {
+      console.log('nichts');
+      document.querySelector("body").style.cssText = "--color: #D68018";
+    } else {
+      document.querySelector("body").style.cssText = "--color: #25A33C";
+    }
   }
 
 }

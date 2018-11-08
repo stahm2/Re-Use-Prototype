@@ -18,15 +18,15 @@ export class Muedigkeit1Page {
   text: 1;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-  
+
 
   setBagde(){
     //this.sleepness = this.singleValue.ratio;
 
   //this.sleepness = likert7.value;
-    
+
   }
-  
+
 
   goToHome(){
     this.navCtrl.popToRoot();
@@ -42,6 +42,16 @@ export class Muedigkeit1Page {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Muedigkeit1Page');
+  }
+
+  private knobValue = 0;
+  onChange(data) {
+    if (data == 0) {
+      console.log('nichts');
+      document.querySelector("body").style.cssText = "--color: #D68018";
+    } else {
+      document.querySelector("body").style.cssText = "--color: #25A33C";
+    }
   }
 
 }

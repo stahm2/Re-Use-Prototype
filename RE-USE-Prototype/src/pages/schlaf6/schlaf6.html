@@ -20,6 +20,52 @@
     <h1>Schlafen</h1>
     <label>6/7</label>
   </div>
+
+  <div>
+      <p>
+        Bitte schätzen Sie die Zeiten nach Ihrem Gefühl.
+      </p>
+      <p>
+        Wie lange dauerte es bis Sie eingeschlafen sind?
+      </p>
+
+      <ion-list>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-datetime cancelText="Abbrechen" doneText="OK" displayFormat="H:mm" [(ngModel)]="fallAsleepTime"></ion-datetime>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <ion-label>Std./Min.</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-list>
+
+      <p>
+        Wie viele Male sind Sie aufgewacht?
+      </p>
+
+      <ion-list>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-datetime cancelText="Abbrechen" doneText="OK" displayFormat="H" [(ngModel)]="wakeUpCount"></ion-datetime>
+              </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item>
+                <ion-label>
+                  Mal
+                </ion-label>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-list>
+
+    </div>
   <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
   <button id="weiter" ion-button (click)="openNext()">Weiter</button>
 

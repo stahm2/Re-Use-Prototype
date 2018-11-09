@@ -8,4 +8,12 @@ img{
     margin-left: 253px;
     width: 107px;
   }
+
+  .ios img{
+    z-index: -10000 !important;
+    position: fixed;
+    top: 80px;
+    margin-left: 100px;
+    width: 107px;
+  }
 }

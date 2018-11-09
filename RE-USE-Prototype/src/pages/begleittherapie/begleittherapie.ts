@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DatePicker } from '@ionic-native/date-picker';
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the BegleittherapiePage page.
@@ -16,7 +17,7 @@ import { DatePicker } from '@ionic-native/date-picker';
 })
 export class BegleittherapiePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private datePicker1: DatePicker/*, private datePicker2: DatePicker, private datePicker3: DatePicker*/) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private datePicker1: DatePicker, private storage: Storage) {
   }
 
   selectDate() {
@@ -30,8 +31,20 @@ export class BegleittherapiePage {
 
   }
 
-  save() {
+  save(myDate, startTime, endTime) {
+    this.storage.set('begldate', myDate);
+    this.storage.set('beglstart', startTime);
+    this.storage.set('beglend', endTime);
     console.log("Data saved");
+    this.storage.get('begldate').then((val) => {
+      console.log('The date was:', val, 'and the key was');
+    });
+    this.storage.get('beglstart').then((val) => {
+      console.log('The plantime was:', val, 'and the key was');
+    });
+    this.storage.get('beglend').then((val) => {
+      console.log('The effectivetime was:', val, 'and the key was');
+    });
     this.navCtrl.popToRoot();
   }
 
@@ -47,7 +60,7 @@ export class BegleittherapiePage {
     console.log('ionViewDidLoad BegleittherapiePage');
   }
 
-  choice(){
+  choice() {
   }
 
 }

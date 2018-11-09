@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the Muedigkeit1Page page.
@@ -16,7 +17,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class Muedigkeit1Page {
   sleepness: any;
   text: 1;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
   }
 
 
@@ -32,7 +33,12 @@ export class Muedigkeit1Page {
     this.navCtrl.popToRoot();
   }
 
-  openNext(){
+  openNext(knobValue){
+    this.storage.set('mud1', knobValue);
+    console.log("Data saved");
+    this.storage.get('mud1').then((val) => {
+      console.log('The value was:', val, 'and the key was');
+    });
     this.navCtrl.push('Muedigkeit2Page');
   }
 

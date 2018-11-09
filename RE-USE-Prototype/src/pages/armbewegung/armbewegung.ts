@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 
 /**
@@ -16,7 +17,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ArmbewegungPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
 
   }
 
@@ -24,7 +25,12 @@ export class ArmbewegungPage {
     this.navCtrl.popToRoot();
   }
 
-  openNext() {
+  openNext(knobValue) {
+    this.storage.set('arm', knobValue);
+    console.log("Data saved");
+    this.storage.get('arm').then((val) => {
+      console.log('The value was:', val, 'and the key was');
+    });
     this.navCtrl.push('Armbewegung10Page');
   }
 

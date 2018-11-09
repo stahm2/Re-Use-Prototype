@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { WheelSelector } from '@ionic-native/wheel-selector';
 import { HttpClientModule } from '@angular/common/http';
 import { DatePicker } from '@ionic-native/date-picker';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DatePicker } from '@ionic-native/date-picker';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpClientModule
+    HttpClientModule,
+    IonicStorageModule.forRoot({ name: 'reuseDB' })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -30,7 +32,7 @@ import { DatePicker } from '@ionic-native/date-picker';
     SplashScreen,
     WheelSelector,
     DatePicker,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }

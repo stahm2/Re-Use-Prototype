@@ -37,7 +37,7 @@
     <div classe="range">
       <input type="range" name="likert7" id="likert" [(ngModel)]="knobValue" min="0" max="10" (change)='onChange($event.target.value)'>
     </div>
-    <button id="weiter" ion-button (click)="openNext()">Weiter</button>
+    <button id="weiter" ion-button (click)="openNext(knobValue)">Weiter</button>
   </div>
   </div>
 </ion-content>

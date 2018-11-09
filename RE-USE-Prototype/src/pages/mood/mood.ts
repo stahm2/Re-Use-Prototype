@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the MoodPage page.
@@ -15,14 +16,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MoodPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
   }
 
   goToHome(){
     this.navCtrl.popToRoot();
   }
 
-  openNext(){
+  openNext(knobValue){
+    this.storage.set('mood', knobValue);
+    console.log("Data saved");
+    this.storage.get('mood').then((val) => {
+      console.log('The value was:', val, 'and the key was');
+    });
     this.navCtrl.push('Eq_5d_5l1Page');
   }
 

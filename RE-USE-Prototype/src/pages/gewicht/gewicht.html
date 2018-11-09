@@ -28,7 +28,7 @@
           Gewicht
         </td>
         <td>
-          <input type="tel" pattern="\d*" style="width:120px;">
+          <input type="tel" pattern="\d*" style="width:120px;" [(ngModel)]="gewicht">
         </td>
         <td>
           kg
@@ -39,7 +39,7 @@
           Bauchumfang
         </td>
         <td>
-          <input type="tel" pattern="\d*" style="width:120px;">
+          <input type="tel" pattern="\d*" style="width:120px;" [(ngModel)]="bauch">
         </td>
         <td>
           cm
@@ -49,7 +49,7 @@
   </div>
 
   <button id="zurueck" ion-button (click)="back()">Zurück</button>
-  <button id="weiter" ion-button (click)="save()">Speichern</button>
+  <button id="weiter" ion-button (click)="save(gewicht, bauch)">Speichern</button>
 
 
 </ion-content>

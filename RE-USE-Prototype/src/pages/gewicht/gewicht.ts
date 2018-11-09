@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the GewichtPage page.
@@ -16,7 +17,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class GewichtPage {
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
 
   }
 
@@ -25,7 +26,16 @@ export class GewichtPage {
     this.navCtrl.popToRoot();
   }
 
-  save() {
+  save(gewicht, bauch) {
+    this.storage.set('gewicht', gewicht);
+    this.storage.set('bauch', bauch);
+    console.log("Data saved");
+    this.storage.get('gwicht').then((val) => {
+      console.log('The weight was:', val, 'and the key was');
+    });
+    this.storage.get('bauch').then((val) => {
+      console.log('The bauchumfang was:', val, 'and the key was');
+    });
     console.log("Data saved");
     this.navCtrl.popToRoot();
   }

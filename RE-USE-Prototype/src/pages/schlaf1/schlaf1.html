@@ -22,28 +22,55 @@
   </div>
   <div id="schlaf1Radio">
     <p>Nemen Sie regelmässig Medikamente ein?</p>
-    <ion-radio group="schlaf1" value="ja"></ion-radio>
-    <label>ja</label>
-    <ion-radio group="schlaf1" value="nein"></ion-radio>
-    <label>nein</label>
+    <ion-row radio-group [(ngModel)]="schlaf1">
+      <ion-col>
+        <ion-item no-lines>
+          <ion-radio value="ja"></ion-radio>
+          <ion-label>ja</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item no-lines>
+          <ion-radio value="nein"></ion-radio>
+          <ion-label>nein</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
   </div>
   <div id="schalf1Check">
-      <ion-checkbox [(ngModel)]="Herzbeschwerden/Blutdruck"></ion-checkbox>
-      <label>Herzbeschwerden/Blutdruck</label>
-      <ion-checkbox [(ngModel)]="Allergien"></ion-checkbox>
-      <label>Allergien</label>
-      <ion-checkbox [(ngModel)]="Schliddruesenprobleme"></ion-checkbox>
-      <label>Schliddrüsenprobleme</label>
-      <ion-checkbox [(ngModel)]="Lungenerkrankungen/Asthma"></ion-checkbox>
-      <label>Lungenerkrankungen/Asthma</label>
-      <ion-checkbox [(ngModel)]="Stimmung/Psyche/Angst"></ion-checkbox>
-      <label>Stimmung/Psyche/Angst</label>
-      <ion-checkbox [(ngModel)]="Schlafmittel"></ion-checkbox>
-      <label>Schlafmittel</label>
-      <ion-checkbox [(ngModel)]="Weissnicht"></ion-checkbox>
-      <label>Weiss nicht</label>
-      <label>Bitte Namen:</label>
-      <ion-textarea [(ngModel)]="nameText" (change)='onChange($event.target.value)'></ion-textarea>
+    <ion-list>
+      <ion-item no-lines>
+        <ion-checkbox [(ngModel)]="Herzbeschwerden/Blutdruck"></ion-checkbox>
+        <ion-label>Herzbeschwerden/Blutdruck</ion-label>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-checkbox [(ngModel)]="Allergien"></ion-checkbox>
+        <ion-label>Allergien</ion-label>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-checkbox [(ngModel)]="Schliddruesenprobleme"></ion-checkbox>
+        <ion-label>Schliddrüsenprobleme</ion-label>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-checkbox [(ngModel)]="Lungenerkrankungen/Asthma"></ion-checkbox>
+        <ion-label>Lungenerkrankungen/Asthma</ion-label>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-checkbox [(ngModel)]="Stimmung/Psyche/Angst"></ion-checkbox>
+        <ion-label>Stimmung/Psyche/Angst</ion-label>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-checkbox [(ngModel)]="Schlafmittel"></ion-checkbox>
+        <ion-label>Schlafmittel</ion-label>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-checkbox [(ngModel)]="Weissnicht"></ion-checkbox>
+        <ion-label>Weiss nicht</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-label>Bitte Namen:</ion-label>
+    <ion-textarea [(ngModel)]="nameText" (change)='onChange($event.target.value)'></ion-textarea>
+
   </div>
   <button id="weiter" ion-button (click)="openNext()">Weiter</button>
 

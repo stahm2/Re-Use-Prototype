@@ -32,6 +32,7 @@ export class Aktivitaet7Page {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Aktivitaet7Page');
+    document.querySelector("body").style.cssText = "--color: #D68018";
   }
 
   private knobValue = 0;

@@ -32,6 +32,7 @@ export class Muedigkeit3Page {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Muedigkeit3Page');
+    document.querySelector("body").style.cssText = "--color: #D68018";
   }
 
   private knobValue = 0;

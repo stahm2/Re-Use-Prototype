@@ -32,6 +32,8 @@ export class Armbewegung10Page {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Armbewegung10Page');
+
+    document.querySelector("body").style.cssText = "--color: #D68018";
   }
 
   private knobValue = 0;

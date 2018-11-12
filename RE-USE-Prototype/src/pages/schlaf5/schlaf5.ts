@@ -32,6 +32,7 @@ export class Schlaf5Page {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Schlaf5Page');
+    document.querySelector("body").style.cssText = "--color: #D68018";
   }
   private knobValue = 0;
   onChange(data) {

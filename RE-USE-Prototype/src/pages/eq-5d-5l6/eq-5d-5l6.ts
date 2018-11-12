@@ -32,6 +32,7 @@ export class Eq_5d_5l6Page {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Eq_5d_5l6Page');
+    document.querySelector("body").style.cssText = "--color: #D68018";
   }
 
   private knobValue = 0;

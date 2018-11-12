@@ -32,6 +32,7 @@ export class PainPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PainPage');
+    document.querySelector("body").style.cssText = "--color: #D68018";
   }
 
   private knobValue = 0;

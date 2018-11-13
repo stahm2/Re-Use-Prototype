@@ -37,7 +37,7 @@ export class Aktivitaet7Page {
 
   private knobValue = 0;
   onChange(data) {
-    let test4 = <HTMLParagraphElement>document.getElementById('erklaerungText');
+    let test4 = <HTMLParagraphElement>document.getElementById('erklaerungTextAK7');
     if (data == 0) {
       console.log('nichts');
       document.querySelector("body").style.cssText = "--color: #D68018";

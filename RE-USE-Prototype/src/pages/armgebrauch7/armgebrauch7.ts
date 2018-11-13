@@ -37,7 +37,7 @@ export class Armgebrauch7Page {
 
   private knobValue = 0;
   onChange(data) {
-    let test4 = <HTMLParagraphElement>document.getElementById('erklaerungText');
+    let test4 = <HTMLParagraphElement>document.getElementById('erklaerungTextAR7');
     if (data == 0) {
       console.log('nichts');
       document.querySelector("body").style.cssText = "--color: #D68018";

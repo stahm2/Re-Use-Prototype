@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the Schlaf7Page page.
@@ -15,14 +16,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class Schlaf7Page {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
   }
 
   goToHome(){
     this.navCtrl.popToRoot();
   }
 
-  openNext(){
+  openNext(wakeTime, sleepTime){
+    this.storage.set('schl7wake', wakeTime);
+    this.storage.set('schl7slee', sleepTime);
+    console.log("Data saved");
+    this.storage.get('schl7wake').then((val) => {
+      console.log('The value was:', val, 'and the key was');
+    });
+    this.storage.get('schl7slee').then((val) => {
+      console.log('The value was:', val, 'and the key was');
+    });
     this.navCtrl.popToRoot();
   }
 

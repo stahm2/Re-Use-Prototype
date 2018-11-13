@@ -40,7 +40,7 @@
   <div id="schalf1Check">
     <ion-list>
       <ion-item no-lines>
-        <ion-checkbox [(ngModel)]="Herzbeschwerden/Blutdruck"></ion-checkbox>
+        <ion-checkbox [(ngModel)]="Herzbeschwerden"></ion-checkbox>
         <ion-label>Herzbeschwerden/Blutdruck</ion-label>
       </ion-item>
       <ion-item no-lines>
@@ -52,11 +52,11 @@
         <ion-label>Schliddrüsenprobleme</ion-label>
       </ion-item>
       <ion-item no-lines>
-        <ion-checkbox [(ngModel)]="Lungenerkrankungen/Asthma"></ion-checkbox>
+        <ion-checkbox [(ngModel)]="Lungenerkrankungen"></ion-checkbox>
         <ion-label>Lungenerkrankungen/Asthma</ion-label>
       </ion-item>
       <ion-item no-lines>
-        <ion-checkbox [(ngModel)]="Stimmung/Psyche/Angst"></ion-checkbox>
+        <ion-checkbox [(ngModel)]="Stimmung"></ion-checkbox>
         <ion-label>Stimmung/Psyche/Angst</ion-label>
       </ion-item>
       <ion-item no-lines>
@@ -72,6 +72,6 @@
     <ion-textarea [(ngModel)]="nameText" (change)='onChange($event.target.value)'></ion-textarea>
 
   </div>
-  <button id="weiter" ion-button (click)="openNext()">Weiter</button>
+  <button id="weiter" ion-button (click)="openNext(Herzbeschwerden, Allergien, Schliddruesenprobleme, Lungenerkrankungen, Stimmung, Schlafmittel, Weissnicht, nameText)">Weiter</button>
 
 </ion-content>

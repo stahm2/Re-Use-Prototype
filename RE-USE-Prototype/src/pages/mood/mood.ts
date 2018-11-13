@@ -38,6 +38,7 @@ export class MoodPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MoodPage');
+    document.querySelector("body").style.cssText = "--color: #D68018";
   }
 
   private knobValue = 0;

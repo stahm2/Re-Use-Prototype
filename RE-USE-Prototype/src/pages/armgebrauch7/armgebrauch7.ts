@@ -38,6 +38,7 @@ export class Armgebrauch7Page {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Armgebrauch7Page');
+    document.querySelector("body").style.cssText = "--color: #D68018";
   }
 
   private knobValue = 0;

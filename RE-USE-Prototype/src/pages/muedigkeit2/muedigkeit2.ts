@@ -37,6 +37,7 @@ export class Muedigkeit2Page {
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad Muedigkeit2Page');
+    document.querySelector("body").style.cssText = "--color: #D68018";
   }
 
   private knobValue = 0;

@@ -1,10 +1,22 @@
 page-pain {
 
-    img{
-        z-index: -10000 !important;
-        position: fixed;
-        top: 90px;
-        margin-left: 253px;
-        width: 110px;
-      }
+  #slider {
+    z-index: -10000 !important;
+    position: fixed;
+    top: 90px;
+    margin-left: 253px;
+    width: 110px;
+  }
+
+  .smiley {
+    position: fixed;
+    bottom: 300px;
+    width: 230px;
+    height: 200px;
+  }
+
+  ion-image {
+    background-color: transparent;
+  }
+
 }

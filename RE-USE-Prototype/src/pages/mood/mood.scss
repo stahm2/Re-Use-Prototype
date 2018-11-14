@@ -1,30 +1,22 @@
 page-mood {
 
-   #slider{
-        z-index: -10000 !important;
-        position: fixed;
-        top: 90px;
-        margin-left: 253px;
-        width: 110px;
-      }
+  #slider {
+    z-index: -10000 !important;
+    position: fixed;
+    top: 90px;
+    margin-left: 253px;
+    width: 110px;
+  }
 
-      .smiley{
-       // background-color: red;
-        position: fixed;
-        bottom: 300px;
-        width: 230px;
-        height: 200px;
-      //  background-image: url('../../assets/img/FACES_English_Black.jpg');
-      }
+  .smiley {
+    position: fixed;
+    bottom: 300px;
+    width: 230px;
+    height: 200px;
+  }
 
-      /*.smiley #smiley{
-        position: fixed;
-        bottom: 300px;
-        width: 100%;
-        height: 100%;
-      }*/
-      ion-image{
-        background-color:transparent;
-      }
+  ion-image {
+    background-color: transparent;
+  }
 
 }

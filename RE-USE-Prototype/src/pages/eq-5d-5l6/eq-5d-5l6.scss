@@ -1,9 +1,22 @@
 page-eq-5d-5l6 {
 
-img{
+  #slider {
     z-index: -10000 !important;
-    margin-top: 0;
-    margin-left: 250px;
-    width: 120px;
+    position: fixed;
+    top: 90px;
+    margin-left: 253px;
+    width: 110px;
   }
+
+  .smiley {
+    position: fixed;
+    bottom: 300px;
+    width: 230px;
+    height: 200px;
+  }
+
+  ion-image {
+    background-color: transparent;
+  }
+
 }

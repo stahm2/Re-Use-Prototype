@@ -12,7 +12,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding no-bounce>
   <div class="navigation">
     <button ion-button (click)="goToHome()">
       <ion-icon name="home"></ion-icon>
@@ -28,11 +28,6 @@
       <div class="smiley">
         <img id="smiley" [src]="picSmiley" height="100%" width="100%" >
       </div>
-      <!--<div class="erklaerung">
-          <p>7 volle Übereinstimmung<br>
-          ---<br>
-          1 Ablehnung</p>
-    </div>-->
     <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
   </div>
   <div class="rechteSeite">

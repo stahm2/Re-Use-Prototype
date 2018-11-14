@@ -11,7 +11,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding no-bounce>
   <div class="navigation">
     <button ion-button (click)="goToHome()">
       <ion-icon name="home"></ion-icon>
@@ -24,11 +24,9 @@
       <h1>Armesgebrauch im <br> Alltag</h1>
       <p>Wie wichtig ist die Änderung<br> des Armgebrauchs im Alltag <br>für Sie?
         (während den letzten<br>7 Tagen)</p>
-      <div class="erklaerung">
-        <p>10 sehr wichtig<br>
-          ---><br>
-          1 gar nicht wichtig</p>
-      </div>
+        <div class="smiley">
+          <img id="smiley" [src]="picSmiley" height="100%" width="100%" >
+        </div>
       <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
     </div>
     <div class="rechteSeite">

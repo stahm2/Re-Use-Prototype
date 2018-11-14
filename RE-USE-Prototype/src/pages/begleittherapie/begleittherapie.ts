@@ -48,6 +48,7 @@ export class BegleittherapiePage {
   }
 
   choice(){
+    console.log("ja");
   }
 
 }

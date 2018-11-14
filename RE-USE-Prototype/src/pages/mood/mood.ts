@@ -35,13 +35,29 @@ export class MoodPage {
     document.querySelector("body").style.cssText = "--color: #D68018";
   }
 
+
   private knobValue = 0;
+  private picSmiley ="";
   onChange(data) {
     if (data == 0) {
       console.log('nichts');
       document.querySelector("body").style.cssText = "--color: #D68018";
-    } else {
+      this.picSmiley = "";
+    } else if(data >= 1 && data <3){
       document.querySelector("body").style.cssText = "--color: #25A33C";
+      this.picSmiley ="../../assets/img/8.jpg"
+    }else if (data >= 3 && data <5){
+      document.querySelector("body").style.cssText = "--color: #25A33C";
+      this.picSmiley ="../../assets/img/6.jpg"
+    }else if(data >= 5 && data <7){
+      document.querySelector("body").style.cssText = "--color: #25A33C";
+      this.picSmiley ="../../assets/img/4.jpg";
+    }else if(data >=7 && data <9){
+      document.querySelector("body").style.cssText = "--color: #25A33C";
+      this.picSmiley ="../../assets/img/2.jpg";
+    }else if(data >=9 && data ==10){
+      document.querySelector("body").style.cssText = "--color: #25A33C";
+      this.picSmiley ="../../assets/img/0.png";
     }
   }
 }

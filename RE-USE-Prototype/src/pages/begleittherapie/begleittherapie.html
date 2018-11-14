@@ -20,8 +20,8 @@
     <h1>Begleittherapie</h1>
 
   </div>
-  <div>
-        <button id="begleit" value="Logo" ion-button (click)='choice()'>Logo</button>
+  <div class="begleitButton" radio-group [(ngModel)]="bg">
+        <button id="begleit"value="Logo" ion-button (click)='choice()'>Logo</button>
         <button id="begleit" value="Physio" ion-button (click)='choice()'>Physio</button><br>
         <button id="begleit" value="Ergo" ion-button (click)='choice()'>Ergo</button>
         <button id="begleit" value="Andere" ion-button (click)='choice()'>Andere</button>

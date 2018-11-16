@@ -47,8 +47,8 @@ export class BegleittherapiePage {
     console.log('ionViewDidLoad BegleittherapiePage');
   }
 
-  choice(){
-    console.log("ja");
+  choice(data){
+    console.log(data);
   }
 
 }

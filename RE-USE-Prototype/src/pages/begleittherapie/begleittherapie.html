@@ -20,11 +20,19 @@
     <h1>Begleittherapie</h1>
 
   </div>
-  <div class="begleitButton" radio-group [(ngModel)]="bg">
-        <button id="begleit"value="Logo" ion-button (click)='choice()'>Logo</button>
-        <button id="begleit" value="Physio" ion-button (click)='choice()'>Physio</button><br>
-        <button id="begleit" value="Ergo" ion-button (click)='choice()'>Ergo</button>
-        <button id="begleit" value="Andere" ion-button (click)='choice()'>Andere</button>
+  <div class="begleitButton">
+    <ion-segment [(ngModel)]="therapy">
+      <ion-segment-button value="Logo">Logo</ion-segment-button>
+      <ion-segment-button value="Physio">Physio</ion-segment-button>
+    </ion-segment>
+    <ion-segment [(ngModel)]="therapy">
+      <ion-segment-button value="Ergo">Ergo</ion-segment-button>
+      <ion-segment-button value="Andere">Andere</ion-segment-button>
+    </ion-segment>
+      <!--  <button id="begleit" value="Logo" ion-button (click)='choice($event.value)'>Logo</button>
+        <button id="begleit" value="Physio" ion-button (click)='choice($event.value)'>Physio</button><br>
+        <button id="begleit" value="Ergo" ion-button (click)='choice($event.value)'>Ergo</button>
+        <button id="begleit" value="Andere" ion-button (click)='choice($event.value)'>Andere</button>-->
   </div>
 
 

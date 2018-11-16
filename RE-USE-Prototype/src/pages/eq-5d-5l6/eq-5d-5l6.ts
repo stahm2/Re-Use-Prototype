@@ -42,19 +42,19 @@ export class Eq_5d_5l6Page {
       console.log('nichts');
       document.querySelector("body").style.cssText = "--color: #D68018";
       this.picSmiley= "";
-    } else if(data >= 1 && data <3){
+    } else if(data >= 0 && data <20){
       document.querySelector("body").style.cssText = "--color: #25A33C";
       this.picSmiley ="../../assets/img/8.jpg"
-    }else if (data >= 3 && data <5){
+    }else if (data >= 20 && data <40){
       document.querySelector("body").style.cssText = "--color: #25A33C";
       this.picSmiley ="../../assets/img/6.jpg"
-    }else if(data >= 5 && data <7){
+    }else if(data >= 40 && data <60){
       document.querySelector("body").style.cssText = "--color: #25A33C";
       this.picSmiley ="../../assets/img/4.jpg";
-    }else if(data >=7 && data <9){
+    }else if(data >=60 && data <80){
       document.querySelector("body").style.cssText = "--color: #25A33C";
       this.picSmiley ="../../assets/img/2.jpg";
-    }else if(data >=9 && data ==10){
+    }else if(data >=80 && data ==100){
       document.querySelector("body").style.cssText = "--color: #25A33C";
       this.picSmiley ="../../assets/img/0.png";
     }

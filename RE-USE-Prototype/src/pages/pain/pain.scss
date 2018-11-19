@@ -4,8 +4,8 @@ page-pain {
     z-index: -10000 !important;
     position: fixed;
     top: 90px;
-    margin-left: 253px;
-    width: 110px;
+    margin-left: 267px;
+    width: 85px;
   }
 
   .smiley {
@@ -15,6 +15,9 @@ page-pain {
     height: 200px;
   }
 
+  .linkeSeite p{
+    margin-top: -3px;
+  }
   ion-image {
     background-color: transparent;
   }

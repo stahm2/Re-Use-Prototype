@@ -22,7 +22,6 @@
   </div>
   <div class="inhalt">
     <div class="linkeSeite">
-      <h1></h1>
       <p>Wie waren Ihre Schmerzen? <br>
         (während den letzten <br>7 Tagen)</p>
         <div class="smiley">
@@ -31,7 +30,7 @@
     <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
   </div>
   <div class="rechteSeite">
-      <img id="slider" src="../../assets/img/vas10.PNG">
+      <img id="slider" src="../../assets/img/vas10.svg">
     <div classe="range">
       <input type="range" name="likert7" id="likert" [(ngModel)]="knobValue" min="0" max="10" (change)='onChange($event.target.value)'>
     </div>

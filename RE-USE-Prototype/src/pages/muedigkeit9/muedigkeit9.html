@@ -11,7 +11,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding no-bounce>
   <div class="navigation">
     <button ion-button (click)="goToHome()">
       <ion-icon name="home"></ion-icon>
@@ -31,7 +31,7 @@
       <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
     </div>
     <div class="rechteSeite">
-        <img src="../../assets/img/likert7.png">
+        <img src="../../assets/img/likert7.svg">
       <div classe="range">
         <input type="range" name="likert7" id="likert" [(ngModel)]="knobValue" min="0" max="7" step="1" (change)='onChange($event.target.value)'>
       </div>

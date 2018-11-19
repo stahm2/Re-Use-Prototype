@@ -36,12 +36,27 @@ export class Eq_5d_5l6Page {
   }
 
   private knobValue = 0;
+  private picSmiley ="../../assets/img/00.svg";
   onChange(data) {
     if (data == 0) {
       console.log('nichts');
       document.querySelector("body").style.cssText = "--color: #D68018";
-    } else {
+      this.picSmiley= "../../assets/img/00.svg";
+    } else if(data >= 0 && data <20){
       document.querySelector("body").style.cssText = "--color: #25A33C";
+      this.picSmiley ="../../assets/img/8.svg"
+    }else if (data >= 20 && data <40){
+      document.querySelector("body").style.cssText = "--color: #25A33C";
+      this.picSmiley ="../../assets/img/6.svg"
+    }else if(data >= 40 && data <60){
+      document.querySelector("body").style.cssText = "--color: #25A33C";
+      this.picSmiley ="../../assets/img/2.svg";
+    }else if(data >=60 && data <80){
+      document.querySelector("body").style.cssText = "--color: #25A33C";
+      this.picSmiley ="../../assets/img/4.svg";
+    }else if(data >=80 && data ==100){
+      document.querySelector("body").style.cssText = "--color: #25A33C";
+      this.picSmiley ="../../assets/img/0.svg";
     }
   }
 }

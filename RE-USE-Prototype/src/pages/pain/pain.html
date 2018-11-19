@@ -12,7 +12,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding no-bounce>
   <div class="navigation">
     <button ion-button (click)="goToHome()">
       <ion-icon name="home"></ion-icon>
@@ -22,18 +22,15 @@
   </div>
   <div class="inhalt">
     <div class="linkeSeite">
-      <h1></h1>
       <p>Wie waren Ihre Schmerzen? <br>
         (während den letzten <br>7 Tagen)</p>
-      <!-- <div class="erklaerung">
-          <p>7 volle Übereinstimmung<br>
-          ---<br>
-          1 Ablehnung</p>
-    </div>-->
+        <div class="smiley">
+          <img id="smiley" [src]="picSmiley" height="100%" width="100%" >
+        </div>
     <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
   </div>
   <div class="rechteSeite">
-      <img src="../../assets/img/vas10.PNG">
+      <img id="slider" src="../../assets/img/vas10.svg">
     <div classe="range">
       <input type="range" name="likert7" id="likert" [(ngModel)]="knobValue" min="0" max="10" (change)='onChange($event.target.value)'>
     </div>

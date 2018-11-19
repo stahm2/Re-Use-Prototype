@@ -11,24 +11,59 @@ page-begleittherapie {
     margin: 7px;
   }
 
-  #begleit{
-    background-color: #203B8F;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 16pt;
-    width: 100px;
-    height: 33px;
-    border: none;
-    color: #ffffff;
+  .begleitButton {
+    .segment-md .segment-button {
+      background-color: #203B8F;
+      font-family: Asap_Bold;
+      font-size: 16pt;
+      width: 100px;
+      height: 40px;
+      border: none;
+      color: #ffffff;
+      opacity: 1;
+      margin: 10px;
+    }
+
+    .segment-ios .segment-button {
+      background-color: #203B8F;
+      font-family: Asap_Bold;
+      font-size: 16pt;
+      width: 100px;
+      height: 40px;
+      border: none;
+      border-radius: none;
+      color: #ffffff;
+      opacity: 1;
+      margin: 10px;
+    }
+
+    .segment-button {
+      border: none;
+      border-radius: none;
+    }
+
+    .segment-md .segment-button.activated,
+    .segment-md .segment-button.segment-activated {
+      background-color: #25A33C;
+    }
+
+    .segment-ios .segment-button.segment-activated {
+      background-color: #25A33C;
+    }
+
+    .segment-ios .segment-button:first-of-type{
+      border-top-left-radius: none !important;
+      border-top-right-radius: none !important;
+      border-bottom-left-radius: none !important;
+      border-bottom-right-radius: none !important;
+    }
+
+    .segment-ios .segment-button:last-of-type{
+
+      border-top-left-radius: none !important;
+      border-top-right-radius: none !important;
+      border-bottom-left-radius: none !important;
+      border-bottom-right-radius: none !important;
+    }
   }
-
-  #begleit:hover{
-    background-color: #25A33C;
-  }
-
-  #begleit:focus{
-    background-color: #25A33C;
-  }
-
-
 }

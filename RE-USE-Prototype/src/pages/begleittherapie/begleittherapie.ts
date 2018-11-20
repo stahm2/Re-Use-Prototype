@@ -22,8 +22,8 @@ export class BegleittherapiePage {
 
   leavePage() {
     let alert = this.alertCtrl.create({
-      title: 'Seite verlassen',
-      message: 'Möchten Sie auf die Startseite zurückkehren?',
+      title: 'Eingabe abbrechen',
+      message: 'Möchten Sie die eingabe wircklich abbrechen?',
       buttons: [
         {
           text: 'Ja',

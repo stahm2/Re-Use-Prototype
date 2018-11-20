@@ -23,8 +23,8 @@ export class ArmbewegungPage {
 
   leavePage() {
     let alert = this.alertCtrl.create({
-      title: 'Seite verlassen',
-      message: 'Möchten Sie auf die Startseite zurückkehren?',
+      title: 'Eingabe abbrechen',
+      message: 'Möchten Sie die eingabe wircklich abbrechen?',
       buttons: [
         {
           text: 'Ja',
@@ -65,6 +65,7 @@ export class ArmbewegungPage {
   onChange(data) {
     let test4 = <HTMLParagraphElement>document.getElementById('erklaerungText');
     if (data == 0) {
+      test4.innerHTML = "Bitte ziehen Sie den Punkt auf den entsprechenden Wert"
       console.log('nichts');
       document.querySelector("body").style.cssText = "--color: #D68018";
     } else if (data == 1) {

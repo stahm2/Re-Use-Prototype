@@ -66,6 +66,7 @@ export class Armgebrauch7Page {
     if (data == 0) {
       console.log('nichts');
       document.querySelector("body").style.cssText = "--color: #D68018";
+      test4.innerHTML = "Bitte ziehen Sie den Punkt auf den entsprechenden Wert";
     } else if (data == 1) {
       console.log(1);
       test4.innerHTML = "1: Viel schlechter";

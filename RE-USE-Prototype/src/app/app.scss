@@ -45,7 +45,7 @@ h1 {
 
 p {
   font-family: Asap_Regular;
-  font-size: 13pt;
+  font-size: 14pt;
   font-weight: normal;
 }
 
@@ -242,7 +242,7 @@ $thumb-d: 2.5em;
 }
 
 .inhalt .linkeSeite .erklaerung {
-  background-color: #25A33C;
+  background-color: var(--color);
   position: fixed;
   bottom: 200px;
   width: 230px;

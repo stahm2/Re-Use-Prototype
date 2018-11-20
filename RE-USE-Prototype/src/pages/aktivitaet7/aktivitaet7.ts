@@ -64,7 +64,9 @@ export class Aktivitaet7Page {
   onChange(data) {
     let test4 = <HTMLParagraphElement>document.getElementById('erklaerungTextAK7');
     if (data == 0) {
+      test4.innerHTML = "Bitte ziehen Sie den Punkt auf den entsprechenden Wert";
       console.log('nichts');
+
       document.querySelector("body").style.cssText = "--color: #D68018";
     } else if (data == 1) {
       console.log(1);

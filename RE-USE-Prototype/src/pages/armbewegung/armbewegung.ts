@@ -65,7 +65,7 @@ export class ArmbewegungPage {
   onChange(data) {
     let test4 = <HTMLParagraphElement>document.getElementById('erklaerungText');
     if (data == 0) {
-      test4.innerHTML = "Bitte ziehen Sie den Punkt auf den entsprechenden Wert"
+      test4.innerHTML = "Bitte ziehen Sie den Punkt auf den entsprechenden Wert";
       console.log('nichts');
       document.querySelector("body").style.cssText = "--color: #D68018";
     } else if (data == 1) {

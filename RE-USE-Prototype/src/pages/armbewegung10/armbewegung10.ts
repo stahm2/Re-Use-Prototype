@@ -43,30 +43,34 @@ export class Armbewegung10Page {
     alert.present();
   }
 
-  goToHome(){
+  goToHome() {
     this.navCtrl.popToRoot();
   }
 
-  openNext(){
+  openNext() {
     this.navCtrl.push('Armgebrauch7Page');
   }
 
-  openLast(){
+  openLast() {
     this.navCtrl.pop();
   }
 
   ionViewDidLoad() {
+    document.querySelector("body").style.cssText = "--color: #D68018";
     console.log('ionViewDidLoad Armbewegung10Page');
 
-    document.querySelector("body").style.cssText = "--color: #D68018";
+
   }
 
   private knobValue = 0;
   onChange(data) {
+    let likert10Text = <HTMLParagraphElement>document.getElementById('erklaerungTextAB10');
     if (data == 0) {
       console.log('nichts');
+      likert10Text.innerHTML = "Bitte ziehen Sie den Punkt auf den entsprechenden Wert";
       document.querySelector("body").style.cssText = "--color: #D68018";
     } else {
+      likert10Text.innerHTML = "10 sehr wichtig <br>--><br>1 gar nicht wichtig";
       document.querySelector("body").style.cssText = "--color: #25A33C";
     }
   }

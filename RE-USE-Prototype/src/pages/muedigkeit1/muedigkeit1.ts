@@ -44,23 +44,23 @@ export class Muedigkeit1Page {
     alert.present();
   }
 
-  setBagde(){
+  setBagde() {
     //this.sleepness = this.singleValue.ratio;
 
-  //this.sleepness = likert7.value;
+    //this.sleepness = likert7.value;
 
   }
 
 
-  goToHome(){
+  goToHome() {
     this.navCtrl.popToRoot();
   }
 
-  openNext(){
+  openNext() {
     this.navCtrl.push('Muedigkeit2Page');
   }
 
-  openLast(){
+  openLast() {
     this.navCtrl.pop();
   }
 
@@ -71,10 +71,13 @@ export class Muedigkeit1Page {
 
   private knobValue = 0;
   onChange(data) {
+    let likert10Text = <HTMLParagraphElement>document.getElementById('erklaerungTextM1');
     if (data == 0) {
       console.log('nichts');
+      likert10Text.innerHTML = "Bitte ziehen Sie den Punkt auf den entsprechenden Wert";
       document.querySelector("body").style.cssText = "--color: #D68018";
     } else {
+      likert10Text.innerHTML = "7 volle Übereinstimmung<br>---><br>1 Ablehnung";
       document.querySelector("body").style.cssText = "--color: #25A33C";
     }
   }

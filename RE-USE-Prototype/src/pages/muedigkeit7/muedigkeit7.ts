@@ -63,10 +63,13 @@ export class Muedigkeit7Page {
 
   private knobValue = 0;
   onChange(data) {
+    let likert10Text = <HTMLParagraphElement>document.getElementById('erklaerungTextM7');
     if (data == 0) {
       console.log('nichts');
+      likert10Text.innerHTML = "Bitte ziehen Sie den Punkt auf den entsprechenden Wert";
       document.querySelector("body").style.cssText = "--color: #D68018";
     } else {
+      likert10Text.innerHTML = "7 volle Übereinstimmung<br>---><br>1 Ablehnung";
       document.querySelector("body").style.cssText = "--color: #25A33C";
     }
   }

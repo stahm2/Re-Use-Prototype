@@ -61,10 +61,13 @@ export class Schlaf5Page {
   }
   private knobValue = 0;
   onChange(data) {
+    let schlafText = <HTMLParagraphElement>document.getElementById('schlaf5Text');
     if (data == 0) {
       console.log('nichts');
+      schlafText.innerHTML = "Bitte ziehen Sie den Punkt auf den entsprechenden Wert";
       document.querySelector("body").style.cssText = "--color: #D68018";
     } else {
+      schlafText.innerHTML = "10 sehr wach<br>---><br>0 sehr müde";
       document.querySelector("body").style.cssText = "--color: #25A33C";
     }
   }

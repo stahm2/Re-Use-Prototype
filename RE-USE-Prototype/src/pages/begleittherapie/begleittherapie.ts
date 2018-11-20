@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DatePicker } from '@ionic-native/date-picker';
+import { AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the BegleittherapiePage page.
@@ -16,7 +17,31 @@ import { DatePicker } from '@ionic-native/date-picker';
 })
 export class BegleittherapiePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private datePicker1: DatePicker/*, private datePicker2: DatePicker, private datePicker3: DatePicker*/) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private datePicker1: DatePicker/*, private datePicker2: DatePicker, private datePicker3: DatePicker*/, private alertCtrl: AlertController) {
+  }
+
+  leavePage() {
+    let alert = this.alertCtrl.create({
+      title: 'Seite verlassen',
+      message: 'Möchten Sie auf die Startseite zurückkehren?',
+      buttons: [
+        {
+          text: 'Ja',
+          role: 'yes',
+          handler: () => {
+            this.goToHome();
+            console.log('yes clicked');
+          }
+        },
+        {
+          text: 'Nein',
+          handler: () => {
+            console.log('no clicked');
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 
   selectDate() {

@@ -11,9 +11,9 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding no-bounce>
   <div class="navigation">
-    <button ion-button (click)="goToHome()">
+    <button ion-button (click)="leavePage()">
       <ion-icon name="home"></ion-icon>
     </button>
     <h1>Bewegung im Alltag</h1>
@@ -25,14 +25,12 @@
       <p>Wie wichtig ist die Änderung<br> des Armgebrauchs im Alltag <br>für Sie?
         (während den letzten<br>7 Tagen)</p>
       <div class="erklaerung">
-        <p>10 sehr wichtig<br>
-          ---><br>
-          1 gar nicht wichtig</p>
+        <p id="erklaerungTextAG10">Bitte ziehen Sie den Punkt auf den entsprechenden Wert</p>
       </div>
       <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
     </div>
     <div class="rechteSeite">
-      <img src="../../assets/img/likert10.png">
+      <img src="../../assets/img/likert10.svg">
       <div classe="range">
         <input type="range" name="likert10" id="likert" [(ngModel)]="knobValue" min="0" max="10" step="1" (change)='onChange($event.target.value)'>
       </div>

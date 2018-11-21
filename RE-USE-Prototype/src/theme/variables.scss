@@ -4,8 +4,14 @@
 // Font path is used to include ionicons,
 // roboto, and noto sans fonts
 $font-path: "../assets/fonts";
+$font-family-md-base: "Asap_Regular";
+$font-family-ios-base: "Asap_Regular";
+$font-family-wp-base: "Asap_Regular";
 
 
+$font-family-md-base: "Asap_Bold";
+$font-family-ios-base: "Asap_Bold";
+$font-family-wp-base: "Asap_Bold";
 // The app direction is used to include
 // rtl styles in your app. For more info, please see:
 // http://ionicframework.com/docs/theming/rtl-support/
@@ -86,3 +92,4 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+@import "./asap_font.scss";

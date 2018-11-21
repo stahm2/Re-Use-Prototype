@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DatePicker } from '@ionic-native/date-picker';
+import { AlertController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 
 /**
@@ -17,7 +18,30 @@ import { Storage } from '@ionic/storage';
 })
 export class BegleittherapiePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private datePicker1: DatePicker, private storage: Storage) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private datePicker1: DatePicker, private storage: Storage, private alertCtrl: AlertController) {}
+
+  leavePage() {
+    let alert = this.alertCtrl.create({
+      title: 'Eingabe abbrechen',
+      message: 'Möchten Sie die eingabe wircklich abbrechen?',
+      buttons: [
+        {
+          text: 'Ja',
+          role: 'yes',
+          handler: () => {
+            this.goToHome();
+            console.log('yes clicked');
+          }
+        },
+        {
+          text: 'Nein',
+          handler: () => {
+            console.log('no clicked');
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 
   selectDate() {
@@ -61,7 +85,8 @@ export class BegleittherapiePage {
     console.log('ionViewDidLoad BegleittherapiePage');
   }
 
-  choice() {
+  choice(data){
+    console.log(data);
   }
 
 }

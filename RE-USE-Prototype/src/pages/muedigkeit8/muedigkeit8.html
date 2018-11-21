@@ -11,9 +11,9 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding no-bounce>
   <div class="navigation">
-    <button ion-button (click)="goToHome()">
+    <button ion-button (click)="leavePage()">
       <ion-icon name="home"></ion-icon>
     </button>
     <h1>Müdigkeit</h1>
@@ -24,14 +24,12 @@
       <h1>Fatigue Severity <br> Scale</h1>
       <p>Die Erschöpfung gehört <br> zu den drei mich am <br>meisten behindernden<br> Beschwerden</p>
       <div class="erklaerung">
-        <p>7 volle Übereinstimmung<br>
-          ---><br>
-          1 Ablehnung</p>
+        <p id="erklaerungTextM8">Bitte ziehen Sie den Punkt auf den entsprechenden Wert</p>
       </div>
       <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
     </div>
     <div class="rechteSeite">
-        <img src="../../assets/img/likert7.png">
+        <img src="../../assets/img/likert7.svg">
       <div classe="range">
         <input type="range" name="likert7" id="likert" [(ngModel)]="knobValue" min="0" max="7" step="1" (change)='onChange($event.target.value)'>
       </div>

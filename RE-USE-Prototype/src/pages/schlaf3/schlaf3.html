@@ -12,9 +12,9 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding no-bounce>
   <div class="navigation">
-    <button ion-button (click)="goToHome()">
+    <button ion-button (click)="leavePage()">
       <ion-icon name="home"></ion-icon>
     </button>
     <h1>Schlafen</h1>
@@ -22,17 +22,14 @@
   </div>
   <div class="inhalt">
     <div class="linkeSeite">
-      <h1></h1>
       <p>Zeichnen Sie bitte auf<br> der folgenden Linie<br> Ihre Tagesmüdigkeit<br> ein:</p>
       <div class="erklaerung">
-        <p>10 sehr wach<br>
-          ---><br>
-          0 sehr müde</p>
+        <p id="schlaf3Text">Bitte ziehen Sie den Punkt auf den entsprechenden Wert</p>
       </div>
       <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
     </div>
     <div class="rechteSeite">
-        <img src="../../assets/img/vas10.PNG">
+        <img src="../../assets/img/vas10.svg">
       <div classe="range">
         <input type="range" name="likert7" id="likert" [(ngModel)]="knobValue" min="0" max="10" (change)='onChange($event.target.value)'>
       </div>

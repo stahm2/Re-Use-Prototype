@@ -43,8 +43,10 @@ export class BlutdruckPage {
     alert.present();
   }
 
-  save() {
-
+  save(sys, dia, puls) {
+    this.storage.set('sys', sys);
+    this.storage.set('dia', dia);
+    this.storage.set('puls', puls);
     console.log("Data saved");
     this.storage.get('begldate').then((val) => {
       console.log('seems to work: ', val);

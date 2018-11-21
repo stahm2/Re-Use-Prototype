@@ -23,8 +23,9 @@ export class Schlaf2Page {
     this.navCtrl.popToRoot();
   }
 
-  openNext(value){
-    this.storage.set('schl2', value);
+  openNext(radioSchlaf2,textSchlaf2){
+    this.storage.set('schl2radio', radioSchlaf2);
+    this.storage.set('textSchlaf2', textSchlaf2);
     console.log("Data saved");
     this.storage.get('schl2').then((val) => {
       console.log('The value was:', val, 'and the key was');

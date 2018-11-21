@@ -24,9 +24,9 @@ export class Armbewegung10Page {
   }
 
   openNext(knobValue){
-    this.storage.set('arm10', knobValue);
+    this.storage.set('armb10', knobValue);
     console.log("Data saved");
-    this.storage.get('arm10').then((val) => {
+    this.storage.get('armb10').then((val) => {
       console.log('The value was:', val, 'and the key was');
     });
     this.navCtrl.push('Armgebrauch7Page');

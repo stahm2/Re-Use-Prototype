@@ -22,19 +22,31 @@
   </div>
   <div id="schlaf2Radio">
     <p>Nehmen Sie Schlafmittel?</p>
-    <label>nie</label>
+    <ion-list radio-group [(ngModel)]="radioSchlaf2">
+      <ion-item no-lines>
+    <ion-label>nie</ion-label>
     <ion-radio group="schlaf2" value="nie"></ion-radio>
-    <label>selten</label>
+  </ion-item>
+  <ion-item no-lines>
+    <ion-label>selten</ion-label>
     <ion-radio group="schlaf2" value="selten"></ion-radio>
-    <label>manchmal</label>
+  </ion-item>
+    <ion-item no-lines>
+    <ion-label>manchmal</ion-label>
     <ion-radio group="schlaf2" value="manchmal"></ion-radio>
-    <label>oft</label>
+  </ion-item>
+    <ion-item no-lines>
+    <ion-label>oft</ion-label>
     <ion-radio group="schlaf2" value="oft"></ion-radio>
-    <label>fast immer</label>
+  </ion-item>
+    <ion-item no-lines>
+    <ion-label>fast immer</ion-label>
     <ion-radio group="schlaf2" value="fastimmer"></ion-radio>
-    <p>Wenn ja: Bitte Namen:</p>
-    <ion-input type="text"></ion-input>
+  </ion-item>
+  </ion-list>
+    <ion-label>Wenn ja: Bitte Namen:</ion-label>
+    <ion-input type="text" id="textSchlaf2"></ion-input>
   </div>
   <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
-  <button id="weiter" ion-button (click)="openNext()">Weiter</button>
+  <button id="weiter" ion-button (click)="openNext(radioSchlaf2,textSchlaf2)">Weiter</button>
 </ion-content>

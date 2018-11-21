@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
+import { File } from '@ionic-native/file';
 
 /**
  * Generated class for the MoodPage page.
@@ -16,7 +17,7 @@ import { Storage } from '@ionic/storage';
 })
 export class MoodPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage, public file: File) {
   }
 
   goToHome(){
@@ -38,6 +39,7 @@ export class MoodPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MoodPage');
+    document.querySelector("body").style.cssText = "--color: #D68018";
   }
 
   private knobValue = 0;

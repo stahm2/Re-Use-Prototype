@@ -31,10 +31,11 @@ export class BegleittherapiePage {
 
   }
 
-  save(myDate, startTime, endTime) {
+  save(myDate, startTime,therapy, endTime) {
     this.storage.set('begldate', myDate);
     this.storage.set('beglstart', startTime);
     this.storage.set('beglend', endTime);
+    this.storage.set('therapy', therapy);
     console.log("Data saved");
     this.storage.get('begldate').then((val) => {
       console.log('The date was:', val, 'and the key was');

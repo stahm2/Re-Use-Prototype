@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the Schlaf1Page page.
@@ -15,7 +16,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class Schlaf1Page {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
   }
 
   onChange(data) : void {
@@ -25,7 +26,40 @@ export class Schlaf1Page {
     this.navCtrl.popToRoot();
   }
 
-  openNext(){
+  openNext(Herzbeschwerden, Allergien, Schliddruesenprobleme, Lungenerkrankungen, Stimmung, Schlafmittel, Weissnicht, nameText){
+    this.storage.set('schl1herz', Herzbeschwerden);
+    this.storage.set('schl1alle', Allergien);
+    this.storage.set('schl1schi', Schliddruesenprobleme);
+    this.storage.set('schl1lung', Lungenerkrankungen);
+    this.storage.set('schl1stim', Stimmung);
+    this.storage.set('schl1schmitt', Schlafmittel);
+    this.storage.set('schl1weis', Weissnicht);
+    this.storage.set('schl1ande', nameText);
+    console.log("Data saved");
+    this.storage.get('schl1herz').then((val) => {
+      console.log('The value was:', val, 'and the key was');
+    });
+    this.storage.get('schl1alle').then((val) => {
+      console.log('The value was:', val, 'and the key was');
+    });
+    this.storage.get('schl1schi').then((val) => {
+      console.log('The value was:', val, 'and the key was');
+    });
+    this.storage.get('schl1lung').then((val) => {
+      console.log('The value was:', val, 'and the key was');
+    });
+    this.storage.get('schl1stim').then((val) => {
+      console.log('The value was:', val, 'and the key was');
+    });
+    this.storage.get('schl1schmitt').then((val) => {
+      console.log('The value was:', val, 'and the key was');
+    });
+    this.storage.get('schl1weis').then((val) => {
+      console.log('The value was:', val, 'and the key was');
+    });
+    this.storage.get('schl1ande').then((val) => {
+      console.log('The value was:', val, 'and the key was');
+    });
     this.navCtrl.push('Schlaf2Page');
   }
 

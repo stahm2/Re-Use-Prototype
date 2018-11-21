@@ -19,7 +19,9 @@
 }
 body{
   --color: #D68018;
+  color:#000;
 }
+
 h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18pt;
@@ -38,17 +40,18 @@ p{
   font-weight: normal;
 }
 
-.ios p{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14pt;
-  font-weight: normal;
-}
-
-.radio ion-label{
+/*.radio ion-label{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14pt;
   font-weight: normal;
   color: #000;
+}*/
+
+
+ion-label{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14pt;
+  font-weight: normal;
 }
 
 .ios .radio ion-label{
@@ -72,6 +75,7 @@ p{
 
 .item-md{
   padding-left: 0px;
+  color: #000;
 }
 
 .navigation{
@@ -203,23 +207,6 @@ $thumb-d: 2em;
 
     &::-ms-tooltip { display: none }
   }
-/*.inhalt .rechteSeite #likert::-webkit-slider-thumb{
-  color: #25A33C;
-  background-color: aqua;
-  -webkit-appearance: none;//sliderthumb-vertical;
-  width: 100px;
-  height: 100px;
-  border-color: black;
-  border-width: 2px;
-}*/
-/*input[type="range" i]::-webkit-slider-thumb, input[type="range" i]::-webkit-media-slider-thumb{
-  -webkit-appearance: none;
-  -webkit-user-modify: read-write !important;
-  color: #25A33C;
-  border-color: red;
-  background-image: url(../assets/img/eq-5d-5l_scale.PNG)
-
-}*/
 
 #weiter{
   position: fixed;

@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DatePicker } from '@ionic-native/date-picker';
 import { AlertController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
+import { WheelSelector } from '@ionic-native/wheel-selector';
 
 /**
  * Generated class for the BegleittherapiePage page.
@@ -16,9 +17,39 @@ import { Storage } from '@ionic/storage';
   selector: 'page-begleittherapie',
   templateUrl: 'begleittherapie.html',
 })
+
 export class BegleittherapiePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private datePicker1: DatePicker, private storage: Storage, private alertCtrl: AlertController) {}
+  DataField = {
+    numbers: [
+     { description: "1" },
+      { description: "2" },
+      { description: "3" }
+    ],
+    fruits: [
+      { description: "Apple" },
+      { description: "Banana" },
+      { description: "Tangerine" }
+    ],
+    firstNames: [
+      { name: "Fred", id: '1' },
+      { name: "Jane", id: '2' },
+      { name: "Bob", id: '3' },
+      { name: "Earl", id: '4' },
+      { name: "Eunice", id: '5' }
+    ],
+    lastNames: [
+      { name: "Johnson", id: '100' },
+      { name: "Doe", id: '101' },
+      { name: "Kinishiwa", id: '102' },
+      { name: "Gordon", id: '103' },
+      { name: "Smith", id: '104' }
+    ]
+  };
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private wheel: WheelSelector, private datePicker1: DatePicker, private storage: Storage, private alertCtrl: AlertController) {}
+
+
 
   leavePage() {
     let alert = this.alertCtrl.create({
@@ -44,6 +75,19 @@ export class BegleittherapiePage {
     alert.present();
   }
 
+  selectANumber() {
+    this.wheel.show({
+      title: "How Many?",
+      items: [
+        this.DataField.numbers
+      ],
+    }).then(
+      result => {
+        console.log(result[0].description + ' at index: ' + result[0].index);
+      },
+      err => console.log('Error: ', err)
+      );
+  }
   selectDate() {
     this.datePicker1.show({
       date: new Date(),

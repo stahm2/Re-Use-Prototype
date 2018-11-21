@@ -26,7 +26,9 @@
       <!--  <button id="begleit" value="Logo" ion-button (click)='choice($event.value)'>Logo</button>
         <button id="begleit" value="Physio" ion-button (click)='choice($event.value)'>Physio</button><br>
         <button id="begleit" value="Ergo" ion-button (click)='choice($event.value)'>Ergo</button>
-        <button id="begleit" value="Andere" ion-button (click)='choice($event.value)'>Andere</button>-->
+        <button id="begleit" value="Andere" ion-button (click)='choice($event.value)'>Andere</button>
+
+      yearValues="2018, 2019, 2020" monthValues="1,2,3,4,5,6,7,8,9,10,11,12" dayValues="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31"-->
   </div>
 
 
@@ -39,7 +41,7 @@
         </ion-item>
       </ion-col>
       <ion-col>
-        <ion-item>
+        <ion-item style="background-color: #D68018">
           <ion-datetime cancelText="Abbrechen" doneText="OK" displayFormat="DD.MM.YYYY" [(ngModel)]="myDate"></ion-datetime>
         </ion-item>
       </ion-col>
@@ -51,8 +53,8 @@
         </ion-item>
       </ion-col>
       <ion-col>
-        <ion-item>
-          <ion-datetime cancelText="Abbrechen" doneText="OK" displayFormat="H:mm" [(ngModel)]="startTime"></ion-datetime>
+        <ion-item style="background-color: #D68018">
+          <ion-datetime hourValues="0,1,2,3,4" minuteValues="0,5,10,15,20,25.30,35,40,45,50,55" cancelText="Abbrechen" doneText="OK" displayFormat="H:mm" [(ngModel)]="startTime"></ion-datetime>
         </ion-item>
       </ion-col>
     </ion-row>
@@ -63,12 +65,23 @@
         </ion-item>
       </ion-col>
       <ion-col>
-        <ion-item>
-          <ion-datetime cancelText="Abbrechen" doneText="OK" displayFormat="H:mm" [(ngModel)]="endTime"></ion-datetime>
+        <ion-item style="background-color: #D68018">
+          <ion-datetime hourValues="0,1,2,3,4" minuteValues="0,5,10,15,20,25.30,35,40,45,50,55" cancelText="Abbrechen" doneText="OK" displayFormat="H:mm" [(ngModel)]="endTime"></ion-datetime>
         </ion-item>
       </ion-col>
     </ion-row>
   </ion-list>
+  </div>
+
+  <div>
+    <p>Letzte Einträge: <br><br>
+      Ergo: {{myDate}} <br>
+      Logo: {{myDate}} <br>
+      Physio: {{myDate}} <br>
+      Andere: {{myDate}}
+    </p>
+
+
   </div>
 
   <button id="zurueck" ion-button (click)="back()">Zurück</button>

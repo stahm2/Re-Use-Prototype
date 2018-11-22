@@ -20,6 +20,7 @@ export class ArmbewegungPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage, private alertCtrl: AlertController) {}
 
+  private knobValue = 0;
   leavePage() {
     let alert = this.alertCtrl.create({
       title: 'Eingabe abbrechen',
@@ -63,9 +64,10 @@ export class ArmbewegungPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ArmbewegungPage');
     document.querySelector("body").style.cssText = "--color: #D68018";
+
   }
 
-  private knobValue = 0;
+
   onChange(data) {
     let test4 = <HTMLParagraphElement>document.getElementById('erklaerungText');
     if (data == 0) {

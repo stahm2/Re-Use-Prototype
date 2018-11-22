@@ -58,6 +58,7 @@ export class Aktivitaet10Page {
 
   openLast() {
     this.navCtrl.pop();
+    document.querySelector("body").style.cssText = "--color: #25A33C";
   }
 
   ionViewDidLoad() {

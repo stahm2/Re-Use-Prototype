@@ -53,7 +53,7 @@ export class PainPage {
     this.storage.get('pain').then((val) => {
       console.log('The value was:', val, 'and the key was');
     });
-    this.navCtrl.push('MoodPage');
+    this.navCtrl.push('ErklStimPage');
   }
 
   openLast(){

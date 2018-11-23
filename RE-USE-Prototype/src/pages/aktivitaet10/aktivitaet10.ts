@@ -53,7 +53,7 @@ export class Aktivitaet10Page {
     this.storage.get('aktiv10').then((val) => {
       console.log('The value was:', val, 'and the key was');
     });
-    this.navCtrl.push('PainPage');
+    this.navCtrl.push('ErklSchmPage');
   }
 
   openLast() {

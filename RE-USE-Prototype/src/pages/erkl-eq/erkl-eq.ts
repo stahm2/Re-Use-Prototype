@@ -18,6 +18,14 @@ export class ErklEqPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+
+  leavePage(){
+    this.navCtrl.popToRoot();
+  }
+
+  openNext(){
+    this.navCtrl.push('Eq_5d_5l1Page');
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad ErklEqPage');
   }

@@ -5,14 +5,32 @@
   Ionic pages and navigation.
 -->
 <ion-header>
+    <ion-navbar hideBackButton *navbar>
+    </ion-navbar>
 
-  <ion-navbar>
-    <ion-title>erkl_stim</ion-title>
-  </ion-navbar>
-
-</ion-header>
+  </ion-header>
 
 
-<ion-content padding>
+  <ion-content padding no-bounce>
+    <div class="navigation">
+      <button ion-button (click)="leavePage()">
+        <ion-icon name="home"></ion-icon>
+      </button>
+      <h1>Stimmung</h1>
+    </div>
+    <div>
+      <h3>Erklärung zur folgenden Frage</h3>
+      <p>
+        Auf den folgenden Seiten finden Sie verschiedene Skalen.
+        <br>
+        Es werden Ihnen Fragen zur Beweglichkeit und dem Gebrauch der Armen oder des Armes gestellt.
+        <br>
+        Auf der linken Seite finden Sie eine Box mit entsprechenden Angaben.
+        <br><br>
+        Stellen Sie bitte bei jeder Skala den für Sie richtigen Wert ein.
+        Es ist <b>nicht erlaubt</b> keine Äusserung zu machen.
+      </p>
+    </div>
+    <button id="weiter" ion-button (click)="openNext()">Weiter</button>
 
-</ion-content>
+  </ion-content>

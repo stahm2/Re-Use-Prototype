@@ -18,6 +18,14 @@ export class ErklStimPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+
+  leavePage(){
+    this.navCtrl.popToRoot();
+  }
+
+  openNext(){
+    this.navCtrl.push('MoodPage');
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad ErklStimPage');
   }

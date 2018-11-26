@@ -54,7 +54,7 @@ export class MoodPage {
     this.storage.get('mood').then((val) => {
       console.log('The value was:', val, 'and the key was');
     });
-    this.navCtrl.push('Eq_5d_5l1Page');
+    this.navCtrl.push('ErklEqPage');
   }
 
   openLast(){

@@ -18,6 +18,14 @@ export class ErklArmPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  openNext(){
+    this.navCtrl.push('ArmbewegungPage');
+  }
+
+  leavePage(){
+    this.navCtrl.popToRoot();
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad ErklArmPage');
   }

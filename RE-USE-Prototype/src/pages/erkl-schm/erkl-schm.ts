@@ -18,6 +18,15 @@ export class ErklSchmPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  leavePage(){
+    this.navCtrl.popToRoot();
+  }
+
+  openNext(){
+    this.navCtrl.push('PainPage');
+  }
+
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad ErklSchmPage');
   }

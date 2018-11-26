@@ -25,7 +25,7 @@ export class HomePage {
   private count = 0;
 
   openFragebogen() {
-    this.navCtrl.push('ArmbewegungPage');
+    this.navCtrl.push('ErklArmPage');
   }
 
   openBegleittherapie() {

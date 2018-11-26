@@ -47,6 +47,14 @@ export class Schlaf2Page {
     this.navCtrl.popToRoot();
   }
 
+  private disableButton = true;
+  enableButton(radioSchlaf2) {
+    console.log(radioSchlaf2);
+    if (radioSchlaf2 == "nie" || radioSchlaf2 == "selten" || radioSchlaf2 == "manchmal" || radioSchlaf2 == "oft" || radioSchlaf2 == "fastimmer") {
+      this.disableButton = false;
+    }
+  }
+
   openNext(radioSchlaf2,textSchlaf2){
     this.storage.set('schl2radio', radioSchlaf2);
     this.storage.set('textSchlaf2', textSchlaf2);

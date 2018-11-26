@@ -66,13 +66,16 @@ export class Schlaf3Page {
   }
 
   private knobValue = 0;
+  private disableButton = true;
   onChange(data) {
     let schlafText = <HTMLParagraphElement>document.getElementById('schlaf3Text');
     if (data == 0) {
+      this.disableButton = true;
       console.log('nichts');
       schlafText.innerHTML = "Bitte ziehen Sie den Punkt auf den entsprechenden Wert";
       document.querySelector("body").style.cssText = "--color: #D68018";
     } else {
+      this.disableButton = false;
       schlafText.innerHTML = "10 sehr wach<br>---><br>0 sehr müde";
       document.querySelector("body").style.cssText = "--color: #25A33C";
     }

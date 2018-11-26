@@ -47,6 +47,13 @@ export class Eq_5d_5l5Page {
     this.navCtrl.popToRoot();
   }
 
+  private disableButton = true;
+  enableButton(eq5) {
+    if (eq5 >= 1) {
+      this.disableButton = false;
+    }
+  }
+
   openNext(eq5){
     this.storage.set('eq5', eq5);
     console.log("Data saved");

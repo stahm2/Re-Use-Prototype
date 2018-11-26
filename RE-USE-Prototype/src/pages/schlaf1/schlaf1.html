@@ -25,13 +25,13 @@
     <ion-row radio-group [(ngModel)]="schlaf1">
       <ion-col>
         <ion-item no-lines>
-          <ion-radio value="ja"></ion-radio>
+          <ion-radio value="ja" (click)="enableButton(schlaf1)"></ion-radio>
           <ion-label>ja</ion-label>
         </ion-item>
       </ion-col>
       <ion-col>
         <ion-item no-lines>
-          <ion-radio value="nein"></ion-radio>
+          <ion-radio value="nein" (click)="enableButton(schlaf1)"></ion-radio>
           <ion-label>nein</ion-label>
         </ion-item>
       </ion-col>
@@ -72,6 +72,6 @@
     <ion-textarea [(ngModel)]="nameText" (change)='onChange($event.target.value)'></ion-textarea>
 
   </div>
-  <button id="weiter" ion-button (click)="openNext(Herzbeschwerden, Allergien, Schliddruesenprobleme, Lungenerkrankungen, Stimmung, Schlafmittel, Weissnicht, nameText)">Weiter</button>
+  <button id="weiter" ion-button (click)="openNext(Herzbeschwerden, Allergien, Schliddruesenprobleme, Lungenerkrankungen, Stimmung, Schlafmittel, Weissnicht, nameText)" [disabled]="disableButton">Weiter</button>
 
 </ion-content>

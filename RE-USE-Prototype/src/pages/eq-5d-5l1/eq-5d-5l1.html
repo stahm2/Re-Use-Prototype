@@ -24,28 +24,28 @@
     <h1>Beweglichkeit/Mobilität</h1>
     <ion-list radio-group [(ngModel)]="eq1">
       <ion-item>
-        <ion-radio value="1"></ion-radio>
+        <ion-radio value="1" (click)="enableButton(eq1)"></ion-radio>
         <ion-label>Ich habe keine <br>Probleme herumzugehen</ion-label>
       </ion-item>
       <ion-item>
-        <ion-radio value="2"></ion-radio>
+        <ion-radio value="2" (click)="enableButton(eq1)"></ion-radio>
         <ion-label>Ich habe leichte <br>Probleme herumzugehen</ion-label>
       </ion-item>
       <ion-item>
-        <ion-radio value="3"></ion-radio>
+        <ion-radio value="3" (click)="enableButton(eq1)"></ion-radio>
         <ion-label>Ich habe mässige <br>Probleme herumzugehen</ion-label>
       </ion-item>
       <ion-item>
-        <ion-radio value="4"></ion-radio>
+        <ion-radio value="4" (click)="enableButton(eq1)"></ion-radio>
         <ion-label>Ich habe grosse <br>Probleme herumzugehen</ion-label>
       </ion-item>
       <ion-item>
-        <ion-radio value="5"></ion-radio>
+        <ion-radio value="5" (click)="enableButton(eq1)"></ion-radio>
         <ion-label>Ich bin nicht in <br>der Lage herumzugehen</ion-label>
       </ion-item>
     </ion-list>
   </div>
   <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
-  <button id="weiter" ion-button (click)="openNext(eq1)">Weiter</button>
+  <button id="weiter" ion-button (click)="openNext(eq1)" [disabled]="disableButton">Weiter</button>
 
 </ion-content>

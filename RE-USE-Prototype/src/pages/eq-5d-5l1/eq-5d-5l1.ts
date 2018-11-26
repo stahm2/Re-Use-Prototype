@@ -17,7 +17,8 @@ import { Storage } from '@ionic/storage';
 })
 export class Eq_5d_5l1Page {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController, public storage: Storage) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController, public storage: Storage) {
+  }
 
   leavePage() {
     let alert = this.alertCtrl.create({
@@ -43,11 +44,17 @@ export class Eq_5d_5l1Page {
     alert.present();
   }
 
-  goToHome(){
+  goToHome() {
     this.navCtrl.popToRoot();
   }
 
-  openNext(eq1){
+  private disableButton = true;
+  enableButton(eq1) {
+    if (eq1 >= 1) {
+      this.disableButton = false;
+    }
+  }
+  openNext(eq1) {
     this.storage.set('eq1', eq1);
     console.log("Data saved");
     this.storage.get('eq1').then((val) => {
@@ -56,7 +63,7 @@ export class Eq_5d_5l1Page {
     this.navCtrl.push('Eq_5d_5l2Page');
   }
 
-  openLast(){
+  openLast() {
     this.navCtrl.pop();
     document.querySelector("body").style.cssText = "--color: #25A33C";
   }

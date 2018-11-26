@@ -50,6 +50,13 @@ export class Schlaf1Page {
     this.navCtrl.popToRoot();
   }
 
+  private disableButton = true;
+  enableButton(schlaf1) {
+    if (schlaf1 == "ja" || schlaf1 == "nein") {
+      this.disableButton = false;
+    }
+  }
+
   openNext(Herzbeschwerden, Allergien, Schliddruesenprobleme, Lungenerkrankungen, Stimmung, Schlafmittel, Weissnicht, nameText){
     this.storage.set('schl1herz', Herzbeschwerden);
     this.storage.set('schl1alle', Allergien);

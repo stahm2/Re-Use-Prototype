@@ -66,14 +66,17 @@ export class Aktivitaet10Page {
     document.querySelector("body").style.cssText = "--color: #D68018";
   }
 
+  private disableButton = true;
   private knobValue = 0;
   onChange(data) {
     let likert10Text = <HTMLParagraphElement>document.getElementById('erklaerungTextAK10');
     if (data == 0) {
+      this.disableButton = true;
       console.log('nichts');
       likert10Text.innerHTML = "Bitte ziehen Sie den Punkt auf den entsprechenden Wert";
       document.querySelector("body").style.cssText = "--color: #D68018";
     } else {
+      this.disableButton = false;
       likert10Text.innerHTML = "10 sehr wichtig <br>--><br>1 gar nicht wichtig";
       document.querySelector("body").style.cssText = "--color: #25A33C";
     }

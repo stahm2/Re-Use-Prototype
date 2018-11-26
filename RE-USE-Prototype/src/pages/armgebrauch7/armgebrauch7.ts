@@ -67,37 +67,46 @@ export class Armgebrauch7Page {
   }
 
   private knobValue = 0;
+  private disableButton = true;
   onChange(data) {
     let test4 = <HTMLParagraphElement>document.getElementById('erklaerungTextAR7');
     if (data == 0) {
+     this.disableButton = true;
       console.log('nichts');
       document.querySelector("body").style.cssText = "--color: #D68018";
       test4.innerHTML = "Bitte ziehen Sie den Punkt auf den entsprechenden Wert";
     } else if (data == 1) {
+      this.disableButton = false;
       console.log(1);
       test4.innerHTML = "1: Viel schlechter";
       document.querySelector("body").style.cssText = "--color: #25A33C";
     } else if (data == 2) {
+      this.disableButton = false;
       console.log(2);
       test4.innerHTML = "2: Ein bisschen schlechter, relevant";
       document.querySelector("body").style.cssText = "--color: #25A33C";
     } else if (data == 3) {
+      this.disableButton = false;
       console.log(3);
       test4.innerHTML = "3: Ein bisschen schlechter, nicht relevant";
       document.querySelector("body").style.cssText = "--color: #25A33C";
     } else if (data == 4) {
+      this.disableButton = false;
       console.log(4);
       test4.innerHTML = "4: Ungefähr ungeändert";
       document.querySelector("body").style.cssText = "--color: #25A33C";
     } else if (data == 5) {
+      this.disableButton = false;
       console.log(5);
       test4.innerHTML = "5: Ein bisschen besser, nicht relevant";
       document.querySelector("body").style.cssText = "--color: #25A33C";
     } else if (data == 6) {
+      this.disableButton = false;
       console.log(6);
       test4.innerHTML = "6: Ein bisschen besser, relevant";
       document.querySelector("body").style.cssText = "--color: #25A33C";
     } else if (data == 7) {
+      this.disableButton = false;
       console.log(7);
       test4.innerHTML = "7: Viel besser";
       document.querySelector("body").style.cssText = "--color: #25A33C";

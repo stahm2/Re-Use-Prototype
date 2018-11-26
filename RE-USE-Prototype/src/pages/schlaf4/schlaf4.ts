@@ -47,6 +47,14 @@ export class Schlaf4Page {
     this.navCtrl.popToRoot();
   }
 
+  private disableButton = true;
+  enableButton(data){
+    console.log(data);
+    if(data >= 0){
+      this.disableButton = false;
+    }
+  }
+
   openNext(startTime){
     this.storage.set('schl4', startTime);
     console.log("Data saved");

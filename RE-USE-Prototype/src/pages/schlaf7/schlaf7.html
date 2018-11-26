@@ -65,5 +65,5 @@
 
     </div>
   <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
-  <button id="weiter" ion-button (click)="openNext(wakeTime, sleepTime)">Beenden</button>
+  <button id="weiter" ion-button (click)="openNext(wakeTime, sleepTime)" [disabled]="disableButton">Beenden</button>
 </ion-content>

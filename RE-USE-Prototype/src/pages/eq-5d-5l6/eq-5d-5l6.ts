@@ -67,30 +67,37 @@ export class Eq_5d_5l6Page {
 
   private knobValue = 0;
   private picSmiley ="../../assets/img/00.svg";
+  private disableButton = true;
   onChange(data) {
     let vas10Text = <HTMLParagraphElement>document.getElementById('eq6Text');
     if (data == 0) {
+      this.disableButton = true;
       console.log('nichts');
       document.querySelector("body").style.cssText = "--color: #D68018";
       this.picSmiley= "../../assets/img/00.svg";
       vas10Text.innerHTML = "Bitte ziehen Sie den<br> Punkt auf den <br>entsprechenden Wert";
     } else if(data >= 0 && data <20){
+      this.disableButton = false;
       vas10Text.innerHTML = " ";
       document.querySelector("body").style.cssText = "--color: #25A33C";
       this.picSmiley ="../../assets/img/8.svg"
     }else if (data >= 20 && data <40){
+      this.disableButton = false;
       vas10Text.innerHTML = " ";
       document.querySelector("body").style.cssText = "--color: #25A33C";
       this.picSmiley ="../../assets/img/6.svg"
     }else if(data >= 40 && data <60){
+      this.disableButton = false;
       vas10Text.innerHTML = " ";
       document.querySelector("body").style.cssText = "--color: #25A33C";
       this.picSmiley ="../../assets/img/2.svg";
     }else if(data >=60 && data <80){
+      this.disableButton = false;
       vas10Text.innerHTML = " ";
       document.querySelector("body").style.cssText = "--color: #25A33C";
       this.picSmiley ="../../assets/img/4.svg";
     }else if(data >=80 && data ==100){
+      this.disableButton = false;
       vas10Text.innerHTML = " ";
       document.querySelector("body").style.cssText = "--color: #25A33C";
       this.picSmiley ="../../assets/img/0.svg";

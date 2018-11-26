@@ -25,28 +25,28 @@
     <ion-list radio-group [(ngModel)]="radioSchlaf2">
       <ion-item no-lines>
     <ion-label>nie</ion-label>
-    <ion-radio group="schlaf2" value="nie"></ion-radio>
+    <ion-radio value="nie" (click)="enableButton(radioSchlaf2)"></ion-radio>
   </ion-item>
   <ion-item no-lines>
     <ion-label>selten</ion-label>
-    <ion-radio group="schlaf2" value="selten"></ion-radio>
+    <ion-radio value="selten" (click)="enableButton(radioSchlaf2)"></ion-radio>
   </ion-item>
     <ion-item no-lines>
     <ion-label>manchmal</ion-label>
-    <ion-radio group="schlaf2" value="manchmal"></ion-radio>
+    <ion-radio value="manchmal" (click)="enableButton(radioSchlaf2)"></ion-radio>
   </ion-item>
     <ion-item no-lines>
     <ion-label>oft</ion-label>
-    <ion-radio group="schlaf2" value="oft"></ion-radio>
+    <ion-radio value="oft" (click)="enableButton(radioSchlaf2)"></ion-radio>
   </ion-item>
     <ion-item no-lines>
     <ion-label>fast immer</ion-label>
-    <ion-radio group="schlaf2" value="fastimmer"></ion-radio>
+    <ion-radio value="fastimmer" (click)="enableButton(radioSchlaf2)"></ion-radio>
   </ion-item>
   </ion-list>
     <ion-label>Wenn ja: Bitte Namen:</ion-label>
     <ion-input type="text" id="textSchlaf2"></ion-input>
   </div>
   <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
-  <button id="weiter" ion-button (click)="openNext(radioSchlaf2,textSchlaf2)">Weiter</button>
+  <button id="weiter" ion-button (click)="openNext(radioSchlaf2,textSchlaf2)" [disabled]="disableButton">Weiter</button>
 </ion-content>

@@ -24,28 +24,28 @@
         <h1>Für sich selbst sorgen</h1>
         <ion-list radio-group [(ngModel)]="eq2">
             <ion-item>
-                <ion-radio value="1"></ion-radio>
+                <ion-radio value="1" (click)="enableButton(eq2)"></ion-radio>
                 <ion-label>Ich habe keine Probleme, <br>für mich selbst zu sorgen</ion-label>
             </ion-item>
             <ion-item>
-                <ion-radio value="2"></ion-radio>
+                <ion-radio value="2" (click)="enableButton(eq2)"></ion-radio>
                 <ion-label>Ich habe leichte Probleme, mich<br> selbst zu waschen oder <br>anzuziehen</ion-label>
             </ion-item>
             <ion-item>
-                <ion-radio value="3"></ion-radio>
+                <ion-radio value="3" (click)="enableButton(eq2)"></ion-radio>
                 <ion-label>Ich habe mässige Probleme, mich<br> selbst zu waschen oder <br>anzuziehen</ion-label>
             </ion-item>
             <ion-item>
-                <ion-radio value="4"></ion-radio>
+                <ion-radio value="4" (click)="enableButton(eq2)"></ion-radio>
                 <ion-label>Ich habe grosse Probleme, mich<br> selbst zu waschen oder <br>anzuziehen</ion-label>
             </ion-item>
             <ion-item>
-                <ion-radio value="5"></ion-radio>
+                <ion-radio value="5" (click)="enableButton(eq2)"></ion-radio>
                 <ion-label>Ich bin nicht in der Lage, mich<br> selbst zu waschen oder <br>anzuziehen</ion-label>
             </ion-item>
         </ion-list>
     </div>
     <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
-    <button id="weiter" ion-button (click)="openNext(eq2)">Weiter</button>
+    <button id="weiter" ion-button (click)="openNext(eq2)" [disabled]="disableButton">Weiter</button>
 
 </ion-content>

@@ -70,30 +70,37 @@ export class MoodPage {
 
   private knobValue = 0;
   private picSmiley ="../../assets/img/00.svg";
+  private disableButton = true;
   onChange(data) {
     let vas10Text = <HTMLParagraphElement>document.getElementById('moodText');
     if (data == 0) {
+      this.disableButton = true;
       console.log('nichts');
       vas10Text.innerHTML = "Bitte ziehen Sie den<br> Punkt auf den <br>entsprechenden Wert";
       document.querySelector("body").style.cssText = "--color: #D68018";
       this.picSmiley = "../../assets/img/00.svg";
     } else if(data >= 1 && data <3){
+      this.disableButton = false;
       vas10Text.innerHTML = " ";
       document.querySelector("body").style.cssText = "--color: #25A33C";
       this.picSmiley ="../../assets/img/8.svg"
     }else if (data >= 3 && data <5){
+      this.disableButton = false;
       vas10Text.innerHTML = " ";
       document.querySelector("body").style.cssText = "--color: #25A33C";
       this.picSmiley ="../../assets/img/6.svg"
     }else if(data >= 5 && data <7){
+      this.disableButton = false;
       vas10Text.innerHTML = " ";
       document.querySelector("body").style.cssText = "--color: #25A33C";
       this.picSmiley ="../../assets/img/2.svg";
     }else if(data >=7 && data <9){
+      this.disableButton = false;
       vas10Text.innerHTML = " ";
       document.querySelector("body").style.cssText = "--color: #25A33C";
       this.picSmiley ="../../assets/img/4.svg";
     }else if(data >=9 && data ==10){
+      this.disableButton = false;
       vas10Text.innerHTML = " ";
       document.querySelector("body").style.cssText = "--color: #25A33C";
       this.picSmiley ="../../assets/img/0.svg";

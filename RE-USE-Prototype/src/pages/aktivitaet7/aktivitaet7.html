@@ -36,7 +36,7 @@
         [(ngModel)]="knobValue" (change)='onChange($event.target.value)'>
       </div>
 
-      <button id="weiter" ion-button (click)="openNext(knobValue)">Weiter</button>
+      <button id="weiter" ion-button (click)="openNext(knobValue)" [disabled]="disableButton">Weiter</button>
     </div>
   </div>
 </ion-content>

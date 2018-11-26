@@ -23,28 +23,28 @@
         <h1>Angst/Niedergeschlagenheit</h1>
         <ion-list radio-group [(ngModel)]="eq5">
             <ion-item>
-                <ion-radio value="1"></ion-radio>
+                <ion-radio value="1" (click)="enableButton(eq5)"></ion-radio>
                 <ion-label>Ich bin nicht ängstlich oder <br>deprimiert</ion-label>
             </ion-item>
             <ion-item>
-                <ion-radio value="2"></ion-radio>
+                <ion-radio value="2" (click)="enableButton(eq5)"></ion-radio>
                 <ion-label>Ich bin ein wenig ängstlich oder <br>deprimiert</ion-label>
             </ion-item>
             <ion-item>
-                <ion-radio value="3"></ion-radio>
+                <ion-radio value="3" (click)="enableButton(eq5)"></ion-radio>
                 <ion-label>Ich bin mässig ängstlich oder <br>deprimiert</ion-label>
             </ion-item>
             <ion-item>
-                <ion-radio value="4"></ion-radio>
+                <ion-radio value="4" (click)="enableButton(eq5)"></ion-radio>
                 <ion-label>Ich bin sehr ängstlich oder <br>deprimiert</ion-label>
             </ion-item>
             <ion-item>
-                <ion-radio value="5">
+                <ion-radio value="5" (click)="enableButton(eq5)">
                     </ion-radio>
                     <ion-label>Ich bin extrem ängstlich oder <br>deprimiert</ion-label>
             </ion-item>
         </ion-list>
     </div>
     <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
-    <button id="weiter" ion-button (click)="openNext(eq5)">Weiter</button>
+    <button id="weiter" ion-button (click)="openNext(eq5)" [disabled]="disableButton">Weiter</button>
 </ion-content>

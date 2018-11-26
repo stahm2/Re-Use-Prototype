@@ -47,6 +47,13 @@ export class Schlaf6Page {
     this.navCtrl.popToRoot();
   }
 
+  private disableButton = true;
+  enableButton(fallAsleepTime, wakeUpCount){
+    if(fallAsleepTime != null && wakeUpCount!= null){
+      this.disableButton = false;
+    }
+  }
+
   openNext(fallAsleepTime, wakeUpCount){
     this.storage.set('schl6fall', fallAsleepTime);
     this.storage.set('schl6wake', wakeUpCount);

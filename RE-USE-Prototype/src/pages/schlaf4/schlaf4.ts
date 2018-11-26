@@ -48,9 +48,8 @@ export class Schlaf4Page {
   }
 
   private disableButton = true;
-  enableButton(data){
-    console.log(data);
-    if(data >= 0){
+  enableButton(startTime){
+    if(startTime != null){
       this.disableButton = false;
     }
   }

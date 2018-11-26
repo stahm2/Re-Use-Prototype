@@ -30,7 +30,7 @@
       <ion-row>
         <ion-col>
           <ion-item style="background-color: #D68018">
-            <ion-datetime hourValues="0,1,2,3,4,5,6,7,8,9,10,11,12,13" cancelText="Abbrechen" doneText="OK" displayFormat="H" [(ngModel)]="startTime" (change)="enableButton($event.target.value)"></ion-datetime>
+            <ion-datetime hourValues="0,1,2,3,4,5,6,7,8,9,10,11,12,13" cancelText="Abbrechen" doneText="OK" displayFormat="H" [(ngModel)]="startTime" (ngModelChange)="enableButton(startTime)"></ion-datetime>
           </ion-item>
         </ion-col>
         <ion-col>

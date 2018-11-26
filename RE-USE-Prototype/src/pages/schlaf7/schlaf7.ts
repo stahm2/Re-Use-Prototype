@@ -47,6 +47,13 @@ export class Schlaf7Page {
     this.navCtrl.popToRoot();
   }
 
+  private disableButton = true;
+  enableButton(wakeTime, sleepTime){
+    if(sleepTime != null && wakeTime != null){
+      this.disableButton = false;
+    }
+  }
+
   openNext(wakeTime, sleepTime){
     this.storage.set('schl7wake', wakeTime);
     this.storage.set('schl7slee', sleepTime);

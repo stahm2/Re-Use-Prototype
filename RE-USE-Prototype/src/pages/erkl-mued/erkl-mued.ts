@@ -22,4 +22,13 @@ export class ErklMuedPage {
     console.log('ionViewDidLoad ErklMuedPage');
   }
 
+  openNext(){
+    this.navCtrl.push('Muedigkeit1Page');
+  }
+
+  leavePage(){
+    this.navCtrl.popToRoot();
+  }
+
+
 }

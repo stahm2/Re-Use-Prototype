@@ -53,7 +53,7 @@ export class Eq_5d_5l6Page {
     this.storage.get('eq6').then((val) => {
       console.log('The value was:', val, 'and the key was');
     });
-    this.navCtrl.push('Muedigkeit1Page');
+    this.navCtrl.push('ErklMuedPage');
   }
 
   openLast(){

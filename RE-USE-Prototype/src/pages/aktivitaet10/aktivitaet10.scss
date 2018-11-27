@@ -1,10 +1,16 @@
 page-aktivitaet10 {
 
-img{
-  z-index: -10000 !important;
-  position: fixed;
-  top: 90px;
-  margin-left: 265px;
-  width: 84px;
-}
+  img {
+    z-index: -10000 !important;
+    position: fixed;
+    top: 90px;
+    margin-left: 265px;
+    width: 84px;
+  }
+
+  #pfeil {
+    position: fixed;
+    left: -235px;
+    top: 15.5%;
+  }
 }

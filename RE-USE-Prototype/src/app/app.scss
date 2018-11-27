@@ -267,11 +267,31 @@ $thumb-d: 2.5em;
   padding-bottom: 2px;
 }
 
-
 .alert-md .alert-button{
+  color: #000000;
+  border: 0.55px solid #dbdbdf;
+  width: 115px;
+  text-align: center;
+  font-family: Asap_Bold;
+  font-size: 13pt;
+  padding-right: 10px;
+}
+
+.alert-message{
+  font-family: Asap_Regular;
+
+}
+
+.alert-md .alert-message{
+  font-size: 13pt;
+  color: #000000;
+}
+
+.alert-md .alert-title{
+  font-family: Asap_Bold;
   color: #000;
 }
 
 .alert-ios .alert-button{
-  color: #000;
+  color: #000000;
 }

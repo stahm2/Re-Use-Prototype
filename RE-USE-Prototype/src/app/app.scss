@@ -74,6 +74,14 @@ ion-label {
   font-weight: normal;
 }
 
+.item-checkbox-checked.item-ios ion-label{
+  color: #25A33C;
+}
+
+.item-checkbox-checked.item-md ion-label{
+  color: #25A33C;
+}
+
 .item-radio-checked.item-md ion-label {
   color: #25A33C;
 }

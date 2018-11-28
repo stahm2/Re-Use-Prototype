@@ -27,7 +27,7 @@
           Systolisch
         </td>
         <td>
-          <input [(ngModel)]="sys" type="tel" pattern="\d*" style="width:120px;">
+          <input [(ngModel)]="sys" type="tel" pattern="\d*" style="width:120px;" (ngModelChange)="enableButton(sys, dia, puls)">
         </td>
         <td>
            mmHg
@@ -38,7 +38,7 @@
           Diastolisch
         </td>
         <td>
-          <input [(ngModel)]="dia" type="tel" pattern="\d*" style="width:120px;">
+          <input [(ngModel)]="dia" type="tel" pattern="\d*" style="width:120px;" (ngModelChange)="enableButton(sys, dia, puls)">
         </td>
         <td>
            mmHg
@@ -49,16 +49,17 @@
           Puls
         </td>
         <td>
-          <input [(ngModel)]="puls" type="tel" pattern="\d*" style="width:120px;">
+          <input [(ngModel)]="puls" type="tel" pattern="\d*" style="width:120px;" (ngModelChange)="enableButton(sys, dia, puls)">
         </td>
         <td>
            bpm
         </td>
       </tr>
     </table>
+    <p id="warning"></p>
   </div>
 
   <button id="zurueck" ion-button (click)="back()">Zurück</button>
-  <button id="weiter" ion-button (click)="save(sys, dia, puls)">Speichern</button>
+  <button id="weiter" ion-button (click)="save(sys, dia, puls)" [disabled]="disableButton">Speichern</button>
 
 </ion-content>

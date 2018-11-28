@@ -43,6 +43,31 @@ export class BlutdruckPage {
     alert.present();
   }
 
+  private disableButton = true;
+  enableButton(sys, dia, puls){
+    let warningText = <HTMLParagraphElement>document.getElementById('warning');
+    if(sys != null && dia != null && puls != null){
+      console.log(+sys);
+      if(sys >20 && sys < 300 && dia > 20 && dia < 300 && puls > 20 && puls < 300){
+        warningText.innerHTML = " ";
+        console.log("richtig");
+        this.disableButton = false;
+      } else if(sys <20 || sys > 300){
+        warningText.innerHTML = "Bitte geben Sie bei <b>Systolisch</b> einen Wert zwischen 20 und 300 ein.";
+        console.log("fals sys");
+        this.disableButton = true;
+      }else if(dia < 20 || dia > 300){
+        warningText.innerHTML = "Bitte geben Sie bei <b>Diastolisch</b> einen Wert zwischen 20 und 300 ein.";
+        console.log("falsch dia");
+        this.disableButton = true;
+      }else if(puls < 20 || puls > 300){
+        warningText.innerHTML = "Bitte geben Sie bei <b>Puls</b> einen Wert zwischen 20 und 300 ein.";
+        console.log("falsch puls");
+        this.disableButton = true;
+      }
+    }
+  }
+
   save(sys, dia, puls) {
     this.storage.set('sys', sys);
     this.storage.set('dia', dia);

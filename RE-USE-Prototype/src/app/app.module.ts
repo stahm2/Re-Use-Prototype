@@ -32,10 +32,9 @@ import { File } from '@ionic-native/file';
     StatusBar,
     SplashScreen,
     WheelSelector,
-    File,
     DatePicker,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
-
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    File
   ]
 })
 export class AppModule { }

@@ -49,7 +49,7 @@ export class ArmbewegungPage {
   }
 
   openNext(knobValue) {
-    this.storage.set('arm', knobValue);
+    this.storage.set('arm', Date.now + knobValue);
     console.log("Data saved");
     this.storage.get('arm').then((val) => {
       console.log('The value was:', val, 'and the key was');

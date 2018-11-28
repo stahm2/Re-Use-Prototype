@@ -1,7 +1,11 @@
 page-schlaf1 {
 
+  body{
+    --vaBorder: none;
+  }
+
   ion-textarea {
-    border: 1px solid black;
+    border: var(--vaBorder);
     font-family: Asap_Regular;
     font-weight: 400;
   }
@@ -20,4 +24,5 @@ page-schlaf1 {
   .list-ios{
     margin-bottom: 5px;
   }
+
 }

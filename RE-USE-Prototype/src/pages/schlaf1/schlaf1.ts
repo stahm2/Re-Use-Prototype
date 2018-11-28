@@ -51,9 +51,21 @@ export class Schlaf1Page {
   }
 
   private disableButton = true;
-  enableButton(schlaf1) {
-    if (schlaf1 == "ja" || schlaf1 == "nein") {
+  private disableBox = true;
+  private disableText = true;
+  enableButton(schlaf1, Herzbeschwerden, Allergien, Schliddruesenprobleme, Lungenerkrankungen, Stimmung, Schlafmittel, Weissnicht, nameText) {
+    if (schlaf1 == "nein") {
       this.disableButton = false;
+      this.disableBox = true;
+    }else if(schlaf1 == "ja"){
+      this.disableBox = false;
+      if(Herzbeschwerden != null || Allergien != null || Schliddruesenprobleme != null || Lungenerkrankungen != null || Stimmung != null || Schlafmittel != null || Weissnicht != null){
+      this.disableText = false;
+      document.querySelector("body").style.cssText = "--vaBorder: 1px solid black";
+        if(nameText != null){
+          this.disableButton = false;
+        }
+      }
     }
   }
 

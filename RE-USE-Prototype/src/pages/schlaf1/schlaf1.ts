@@ -57,6 +57,8 @@ export class Schlaf1Page {
     if (schlaf1 == "nein") {
       this.disableButton = false;
       this.disableBox = true;
+      this.disableText = true;
+      document.querySelector("body").style.cssText = "--vaBorder: none";
     }else if(schlaf1 == "ja"){
       this.disableBox = false;
       if(Herzbeschwerden != null || Allergien != null || Schliddruesenprobleme != null || Lungenerkrankungen != null || Stimmung != null || Schlafmittel != null || Weissnicht != null){

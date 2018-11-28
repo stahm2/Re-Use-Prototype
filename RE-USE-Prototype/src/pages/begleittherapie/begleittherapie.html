@@ -41,7 +41,7 @@
         </ion-item>
       </ion-col>
       <ion-col>
-        <ion-item style="background-color: #D68018">
+        <ion-item id="picker">
           <ion-datetime cancelText="Abbrechen" doneText="OK" displayFormat="DD.MM.YYYY" [(ngModel)]="myDate" (ngModelChange)="enableButton(therapy, myDate, startTime, endTime)"></ion-datetime>
         </ion-item>
       </ion-col>
@@ -53,7 +53,7 @@
         </ion-item>
       </ion-col>
       <ion-col>
-        <ion-item style="background-color: #D68018">
+        <ion-item id="picker">
           <ion-datetime hourValues="0,1,2,3,4" minuteValues="0,5,10,15,20,25.30,35,40,45,50,55" cancelText="Abbrechen" doneText="OK" displayFormat="H:mm" [(ngModel)]="startTime" (ngModelChange)="enableButton(therapy, myDate, startTime, endTime)"></ion-datetime>
         </ion-item>
       </ion-col>
@@ -65,7 +65,7 @@
         </ion-item>
       </ion-col>
       <ion-col>
-        <ion-item style="background-color: #D68018">
+        <ion-item id="picker">
           <ion-datetime hourValues="0,1,2,3,4" minuteValues="0,5,10,15,20,25.30,35,40,45,50,55" cancelText="Abbrechen" doneText="OK" displayFormat="H:mm" [(ngModel)]="endTime" (ngModelChange)="enableButton(therapy, myDate, startTime, endTime)"></ion-datetime>
         </ion-item>
       </ion-col>

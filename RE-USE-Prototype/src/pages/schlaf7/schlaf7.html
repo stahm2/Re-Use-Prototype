@@ -32,7 +32,7 @@
       <ion-list>
         <ion-row>
           <ion-col>
-            <ion-item style="background-color: #D68018">
+            <ion-item id="picker">
               <ion-datetime hourValues="0,1,2,3,4,5,6,7,8,9,10,11,12" minuteValues="0,5,10,15,20,25.30,35,40,45,50,55"cancelText="Abbrechen" doneText="OK" displayFormat="H:mm" [(ngModel)]="wakeTime" (ngModelChange)="enableButton(wakeTime, sleepTime)"></ion-datetime>
             </ion-item>
           </ion-col>
@@ -51,7 +51,7 @@
       <ion-list>
           <ion-row>
             <ion-col>
-              <ion-item style="background-color: #D68018">
+              <ion-item id="picker">
                 <ion-datetime hourValues="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15" minuteValues="0,5,10,15,20,25.30,35,40,45,50,55"cancelText="Abbrechen" doneText="OK" displayFormat="H:mm" [(ngModel)]="sleepTime" (ngModelChange)="enableButton(wakeTime, sleepTime)"></ion-datetime>
               </ion-item>
             </ion-col>

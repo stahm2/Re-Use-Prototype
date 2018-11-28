@@ -1,14 +1,24 @@
 page-schlaf5 {
 
-    img{
-        z-index: -10000 !important;
-        position: fixed;
-        top: 90px;
-        margin-left: 267px;
-        width: 85px;
-      }
+  img {
+    z-index: -10000 !important;
+    position: fixed;
+    top: 90px;
+    margin-left: 267px;
+    width: 85px;
+  }
 
-      .linkeSeite p{
-        margin-top: -3px;
-      }
+  .linkeSeite p {
+    margin-top: -3px;
+  }
+
+  .linkeSeite .erklaerung p{
+    margin-top: 6px;
+  }
+
+  #pfeil {
+    position: fixed;
+    left: -235px;
+    top: 13.5%;
+  }
 }

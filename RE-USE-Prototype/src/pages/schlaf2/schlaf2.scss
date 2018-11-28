@@ -1,15 +1,20 @@
 page-schlaf2 {
 
+  body{
+    --vaBorder: none;
+  }
+
   ion-item {
     height: 30px;
   }
 
   #textSchlaf2{
-    border: 1px solid black;
+    border: var(--vaBorder);
   }
 
   #textSchlaf2{
     font-family: Asap_Regular;
     font-weight: 400;
   }
+
 }

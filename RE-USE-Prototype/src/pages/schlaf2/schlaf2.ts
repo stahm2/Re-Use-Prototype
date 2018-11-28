@@ -48,10 +48,22 @@ export class Schlaf2Page {
   }
 
   private disableButton = true;
-  enableButton(radioSchlaf2) {
-    console.log(radioSchlaf2);
-    if (radioSchlaf2 == "nie" || radioSchlaf2 == "selten" || radioSchlaf2 == "manchmal" || radioSchlaf2 == "oft" || radioSchlaf2 == "fastimmer") {
+  private disableBox = true;
+  private disableText = true;
+  enableButton(radioSchlaf2, nameText) {
+    if (radioSchlaf2 == "selten" || radioSchlaf2 == "manchmal" || radioSchlaf2 == "oft" || radioSchlaf2 == "fastimmer") {
+      this.disableText = false;
+      this.disableBox = false;
+      this.disableButton = true;
+      document.querySelector("body").style.cssText = "--vaBorder: 1px solid black";
+      if(nameText != null){
+        this.disableButton = false;
+      }
+    }else if(radioSchlaf2 == "nie"){
       this.disableButton = false;
+      this.disableText = true;
+      this.disableBox = true;
+      document.querySelector("body").style.cssText = "--vaBorder: none";
     }
   }
 

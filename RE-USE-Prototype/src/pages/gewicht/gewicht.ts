@@ -44,6 +44,23 @@ export class GewichtPage {
     alert.present();
   }
 
+  private disableButton = true;
+  enableButton(gewicht, bauch){
+    let warningText = <HTMLParagraphElement>document.getElementById('warningGW');
+    if(gewicht != null && bauch != null){
+      if(gewicht > 20 && gewicht < 300 && bauch > 20 && bauch < 300){
+        this.disableButton = false;
+        warningText.innerHTML = " ";
+      }else if(gewicht < 20 || gewicht > 300){
+        warningText.innerHTML = "Bitte geben Sie bei <b>Gewicht</b> einen Wert zwischen 20 und 300 ein.";
+        this.disableButton = true;
+      }else if( bauch < 20 || bauch > 300){
+        warningText.innerHTML = "Bitte geben Sie bei <b>Bauchumfang</b> einen Wert zwischen 20 und 300 ein.";
+        this.disableButton = true;
+      }
+    }
+  }
+
   goToHome() {
     this.navCtrl.popToRoot();
   }

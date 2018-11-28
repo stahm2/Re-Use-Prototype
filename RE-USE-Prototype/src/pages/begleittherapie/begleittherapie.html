@@ -16,12 +16,12 @@
   </div>
   <div class="begleitButton">
     <ion-segment [(ngModel)]="therapy">
-      <ion-segment-button value="Logo">Logo</ion-segment-button>
-      <ion-segment-button value="Physio">Physio</ion-segment-button>
+      <ion-segment-button value="Logo" (click)="enableButton(therapy, myDate, startTime, endTime)">Logo</ion-segment-button>
+      <ion-segment-button value="Physio" (click)="enableButton(therapy, myDate, startTime, endTime)">Physio</ion-segment-button>
     </ion-segment>
     <ion-segment [(ngModel)]="therapy">
-      <ion-segment-button value="Ergo">Ergo</ion-segment-button>
-      <ion-segment-button value="Andere">Andere</ion-segment-button>
+      <ion-segment-button value="Ergo" (click)="enableButton(therapy, myDate, startTime, endTime)">Ergo</ion-segment-button>
+      <ion-segment-button value="Andere" (click)="enableButton(therapy, myDate, startTime, endTime)">Andere</ion-segment-button>
     </ion-segment>
       <!--  <button id="begleit" value="Logo" ion-button (click)='choice($event.value)'>Logo</button>
         <button id="begleit" value="Physio" ion-button (click)='choice($event.value)'>Physio</button><br>
@@ -42,7 +42,7 @@
       </ion-col>
       <ion-col>
         <ion-item style="background-color: #D68018">
-          <ion-datetime cancelText="Abbrechen" doneText="OK" displayFormat="DD.MM.YYYY" [(ngModel)]="myDate"></ion-datetime>
+          <ion-datetime cancelText="Abbrechen" doneText="OK" displayFormat="DD.MM.YYYY" [(ngModel)]="myDate" (ngModelChange)="enableButton(therapy, myDate, startTime, endTime)"></ion-datetime>
         </ion-item>
       </ion-col>
     </ion-row>
@@ -54,7 +54,7 @@
       </ion-col>
       <ion-col>
         <ion-item style="background-color: #D68018">
-          <ion-datetime hourValues="0,1,2,3,4" minuteValues="0,5,10,15,20,25.30,35,40,45,50,55" cancelText="Abbrechen" doneText="OK" displayFormat="H:mm" [(ngModel)]="startTime"></ion-datetime>
+          <ion-datetime hourValues="0,1,2,3,4" minuteValues="0,5,10,15,20,25.30,35,40,45,50,55" cancelText="Abbrechen" doneText="OK" displayFormat="H:mm" [(ngModel)]="startTime" (ngModelChange)="enableButton(therapy, myDate, startTime, endTime)"></ion-datetime>
         </ion-item>
       </ion-col>
     </ion-row>
@@ -66,7 +66,7 @@
       </ion-col>
       <ion-col>
         <ion-item style="background-color: #D68018">
-          <ion-datetime hourValues="0,1,2,3,4" minuteValues="0,5,10,15,20,25.30,35,40,45,50,55" cancelText="Abbrechen" doneText="OK" displayFormat="H:mm" [(ngModel)]="endTime"></ion-datetime>
+          <ion-datetime hourValues="0,1,2,3,4" minuteValues="0,5,10,15,20,25.30,35,40,45,50,55" cancelText="Abbrechen" doneText="OK" displayFormat="H:mm" [(ngModel)]="endTime" (ngModelChange)="enableButton(therapy, myDate, startTime, endTime)"></ion-datetime>
         </ion-item>
       </ion-col>
     </ion-row>
@@ -85,6 +85,6 @@
   </div>
 
   <button id="zurueck" ion-button (click)="back()">Zurück</button>
-  <button id="weiter" ion-button (click)="save(myDate, startTime,therapy,endTime)">Speichern</button>
+  <button id="weiter" ion-button (click)="save(myDate, startTime,therapy,endTime)" [disabled]="disableButton">Speichern</button>
 
 </ion-content>

@@ -99,6 +99,16 @@ export class BegleittherapiePage {
 
   }
 
+  private disableButton = true;
+  enableButton(therapy, myDate, startTime, endTime){
+    console.log(therapy);
+    if(therapy == "Logo" || therapy == "Physio" || therapy == "Ergo" || therapy == "Andere"){
+      if(myDate != null && startTime != null && endTime != null){
+        this.disableButton = false;
+      }
+    }
+  }
+
   save(myDate, startTime,therapy, endTime) {
     this.storage.set('begldate', myDate);
     this.storage.set('beglstart', startTime);

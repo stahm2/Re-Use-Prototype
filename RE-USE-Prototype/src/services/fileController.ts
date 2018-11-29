@@ -25,8 +25,9 @@ export class fileController {
 	}
 
   readFile(fileName) {
-		console.log('reading file ' + fileName);
+
 		return new Promise((resolve, reject) => {
+      console.log('reading file ' + fileName);
 			this.file.readAsText(this.fs, fileName)
 				.then(content => {
 					console.log(content);

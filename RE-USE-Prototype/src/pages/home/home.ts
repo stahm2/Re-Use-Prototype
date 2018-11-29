@@ -4,6 +4,7 @@ import { Storage } from '@ionic/storage';
 import { Platform } from 'ionic-angular';
 
 import { fileController } from '../../services/fileController';
+import { analyzeAndValidateNgModules } from '@angular/compiler';
 
 
 /**
@@ -24,18 +25,13 @@ export class HomePage {
               public navParams: NavParams,
               public storage: Storage,
               public platform: Platform,
-              public fc: fileController) {
-
-                document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-    console.log(this.flie);
-}
-              }
+              public fc: fileController) { }
 
   private count = 0;
-  vals: Array<{timestamp: string, value: string}>;
-  timestamp = Date.now();
-  filename: string = null;
+
+  values = [];
+
+
 
   openFragebogen() {
     this.navCtrl.push('ErklArmPage');
@@ -58,156 +54,213 @@ function onDeviceReady() {
   }
 
   outcome() {
+    let ts = Date.now().toLocaleString();
+
+    values = [
+      {
+        name: 0
+        ^'oEF'
+      }
+    ]
+
+
+
     this.storage.get('arm').then((val) => {
       console.log('Wert auf Armbewegung 1:', val);
-      this.vals.push(null, val);
+
     });
     this.storage.get('armb10').then((val) => {
       console.log('Wert auf Armbewegung 2:', val);
-      this.vals.push(null, val);
+
     });
     this.storage.get('arm7').then((val) => {
       console.log('Wert auf Armbewegung 3:', val);
+
     });
     this.storage.get('arm10').then((val) => {
       console.log('Wert auf Armbewegung 4:', val);
+
     });
     this.storage.get('aktiv7').then((val) => {
       console.log('Wert auf Armbewegung 5:', val);
+
     });
     this.storage.get('aktiv10').then((val) => {
       console.log('Wert auf Armbewegung 6:', val);
+
     });
     this.storage.get('pain').then((val) => {
       console.log('Wert auf Schmerzseite:', val);
+
     });
     this.storage.get('mood').then((val) => {
       console.log('Wert auf Stimmungsseite:', val);
+
     });
     this.storage.get('eq1').then((val) => {
       console.log('Wert auf EQ1:', val);
+
     });
     this.storage.get('eq2').then((val) => {
       console.log('Wert auf EQ2:', val);
+
     });
     this.storage.get('eq3').then((val) => {
       console.log('Wert auf EQ3:', val);
+
     });
     this.storage.get('eq4').then((val) => {
       console.log('Wert auf EQ4:', val);
+
     });
     this.storage.get('eq5').then((val) => {
       console.log('Wert auf EQ5:', val);
+
     });
     this.storage.get('eq6').then((val) => {
       console.log('Wert auf EQ6:', val);
+
     });
     this.storage.get('mud1').then((val) => {
       console.log('Wert auf Müdigkeit 1:', val);
+
     });
     this.storage.get('mud2').then((val) => {
       console.log('Wert auf Müdigkeit 2:', val);
+
     });
     this.storage.get('mud3').then((val) => {
       console.log('Wert auf Müdigkeit 3:', val);
+
     });
     this.storage.get('mud4').then((val) => {
       console.log('Wert auf Müdigkeit 4:', val);
+
     });
     this.storage.get('mud5').then((val) => {
       console.log('Wert auf Müdigkeit 5:', val);
+
     });
     this.storage.get('mud6').then((val) => {
       console.log('Wert auf Müdigkeit 6:', val);
+
     });
     this.storage.get('mud7').then((val) => {
       console.log('Wert auf Müdigkeit 7:', val);
+
     });
     this.storage.get('mud8').then((val) => {
       console.log('Wert auf Müdigkeit 8:', val);
+
     });
     this.storage.get('mud9').then((val) => {
       console.log('Wert auf Müdigkeit 9:', val);
+
     });
     this.storage.get('therapy').then((val) => {
       console.log('Art der Therapie:', val);
+
     });
     this.storage.get('begldate').then((val) => {
       console.log('Datum der Therapie:', val);
+
     });
     this.storage.get('beglstart').then((val) => {
       console.log('Geplante Zeit:', val);
+
     });
     this.storage.get('beglend').then((val) => {
       console.log('Effektive Zeit:', val);
+
     });
     this.storage.get('gewicht').then((val) => {
       console.log('Gewicht:', val);
+
     });
     this.storage.get('bauch').then((val) => {
       console.log('Bauchumfang:', val);
+
     });
     this.storage.get('sys').then((val) => {
       console.log('Systolisch:', val);
+
     });
     this.storage.get('dia').then((val) => {
       console.log('Diastolisch:', val);
+
     });
     this.storage.get('puls').then((val) => {
       console.log('Puls:', val);
+
     });
     this.storage.get('schl1herz').then((val) => {
       console.log('Herzbeschwerden:', val);
+
     });
     this.storage.get('schl1alle').then((val) => {
       console.log('Allergie:', val);
+
     });
     this.storage.get('schl1schi').then((val) => {
       console.log('Schilddruese:', val);
+
     });
     this.storage.get('schl1lung').then((val) => {
       console.log('Lungenerkrankung:', val);
+
     });
     this.storage.get('schl1stim').then((val) => {
       console.log('Stimmung:', val);
+
     });
     this.storage.get('schl1schmitt').then((val) => {
       console.log('Schlafmittel:', val);
+
     });
     this.storage.get('schl1weis').then((val) => {
       console.log('Weiss nicht:', val);
+
     });
     this.storage.get('schl1ande').then((val) => {
       console.log('Andere:', val);
+
     });
     this.storage.get('schl2radio').then((val) => {
       console.log('Schlafmittel nehmen:', val);
+
     });
     this.storage.get('textSchlaf2').then((val) => {
       console.log('Namen der Schlafmittel:', val);
+
     });
     this.storage.get('schl3').then((val) => {
       console.log('Wert Schlaf 3:', val);
+
     });
     this.storage.get('schl4').then((val) => {
       console.log('Wert Schlaf 3:', val);
+
     });
     this.storage.get('schl5').then((val) => {
       console.log('Wert Schlaf 5:', val);
+
     });
     this.storage.get('schl6fall').then((val) => {
       console.log('Wert Schlaf 6 Einschlafen:', val);
+
     });
     this.storage.get('schl6fall').then((val) => {
       console.log('Wert Schlaf 6 Aufgewacht:', val);
+
     });
     this.storage.get('schl7wake').then((val) => {
       console.log('Wert Schlaf 7 wachliegen:', val);
+
     });
     this.storage.get('schl7slee').then((val) => {
       console.log('Wert Schlaf 7 geschlafen:', val);
-    });
 
+    });
   }
 
  clickcount() {
@@ -233,15 +286,21 @@ function onDeviceReady() {
 
     this.outcome();
     console.warn("saved to array");
-    this.storage.get('arm10').then((res) => {
-      console.log("this is our storage item:", res);
-      let str = <string> res;
+    // this.storage.get('arm10').then((res) => {
+    //   console.log("this is our storage item:", res);
+    //   let str = <string> res;
 
       let filename = "File_" + Date.now();
-      this.fc.writeFile(filename, this.vals);
+      this.fc.writeFile(filename, "test")
+			.then(success => {
+				this.fc.getPath() + filename, x=>{console.log('generated file loaded: ' + x)}, x=>{console.log('some error occured')};
+			})
+			.catch(error => {
+				alert('there was an error writing or loading the rive file: ' + error);
+			});
 
-
-    });
+      this.fc.readFile(filename);
+    //});
 
   }
 

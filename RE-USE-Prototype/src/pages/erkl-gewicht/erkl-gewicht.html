@@ -1,0 +1,34 @@
+<!--
+  Generated template for the ErklGewichtPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar hideBackButton *navbar>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding no-bounce>
+  <div class="navigation">
+    <button ion-button (click)="leavePage()">
+      <ion-icon name="home"></ion-icon>
+    </button>
+    <h1>Gewicht</h1>
+  </div>
+  <div>
+    <h3>Erklärung zu folgenden Seite</h3>
+    <p>
+      Auf der folgenden Seite tragen Sie bitte Ihr Gewicht und Ihren Bauchumfang in den entsprechenden Feldern ein.
+    </p>
+    <img src="../../assets/img/gewicht.PNG">
+    <p>
+      Ihren Bauchumfang Messen Sie mit einem Massband, welches Sie am Bauchnabel einmal um den Bauchherum führen.
+    </p>
+
+  </div>
+  <button id="weiter" ion-button (click)="openNext()">Weiter</button>
+
+</ion-content>

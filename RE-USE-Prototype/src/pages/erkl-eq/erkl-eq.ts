@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the ErklEqPage page.
@@ -15,16 +15,39 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ErklEqPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
   }
 
 
-  leavePage(){
+  leavePage() {
+    let alert = this.alertCtrl.create({
+      title: 'Eingabe abbrechen',
+      message: 'Möchten Sie die Eingabe wirklich abbrechen?',
+      buttons: [
+        {
+          text: 'Ja',
+          role: 'yes',
+          handler: () => {
+            this.goToHome();
+            console.log('yes clicked');
+          }
+        },
+        {
+          text: 'Nein',
+          handler: () => {
+            console.log('no clicked');
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
+
+  goToHome(){
     this.navCtrl.popToRoot();
   }
-
   openNext(){
-    this.navCtrl.push('Eq_5d_5l1Page');
+    this.navCtrl.push('ErklEq2Page');
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad ErklEqPage');

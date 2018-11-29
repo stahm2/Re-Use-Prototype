@@ -18,8 +18,15 @@ export class ErklSchlafPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  leavePage(){
+    this.navCtrl.popToRoot();
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad ErklSchlafPage');
   }
 
+  openNext(){
+    this.navCtrl.push('ErklSchlaf2Page');
+  }
 }

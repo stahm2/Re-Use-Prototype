@@ -29,19 +29,19 @@ export class HomePage {
   }
 
   openBegleittherapie() {
-    this.navCtrl.push('BegleittherapiePage');
+    this.navCtrl.push('ErklBegleitPage');
   }
 
   openGewicht() {
-    this.navCtrl.push('GewichtPage');
+  this.navCtrl.push('ErklGewichtPage');
   }
 
   openBlutdruck() {
-    this.navCtrl.push('BlutdruckPage');
+    this.navCtrl.push('ErklBlutPage');
   }
 
   openSchlaf() {
-    this.navCtrl.push('Schlaf1Page');
+    this.navCtrl.push('ErklSchlafPage');
   }
 
   outcome() {

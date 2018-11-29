@@ -1,0 +1,31 @@
+<!--
+  Generated template for the ErklBlutPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar hideBackButton *navbar>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding no-bounce>
+  <div class="navigation">
+    <button ion-button (click)="leavePage()">
+      <ion-icon name="home"></ion-icon>
+    </button>
+    <h1>Blutdruck</h1>
+  </div>
+  <div>
+    <h3>Erklärung zu folgenden Seite</h3>
+    <p>
+      Auf der folgenden Seite tragen Sie bitte Ihr Blutdruck und Ihren Puls in den entsprechenden Feldern ein.
+    </p>
+    <img src="../../assets/img/blutdruck.PNG">
+
+  </div>
+  <button id="weiter" ion-button (click)="openNext()">Weiter</button>
+
+</ion-content>

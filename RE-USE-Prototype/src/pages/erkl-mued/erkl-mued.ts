@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the ErklMuedPage page.
@@ -15,7 +15,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ErklMuedPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
@@ -26,7 +26,31 @@ export class ErklMuedPage {
     this.navCtrl.push('Muedigkeit1Page');
   }
 
-  leavePage(){
+  leavePage() {
+    let alert = this.alertCtrl.create({
+      title: 'Eingabe abbrechen',
+      message: 'Möchten Sie die Eingabe wirklich abbrechen?',
+      buttons: [
+        {
+          text: 'Ja',
+          role: 'yes',
+          handler: () => {
+            this.goToHome();
+            console.log('yes clicked');
+          }
+        },
+        {
+          text: 'Nein',
+          handler: () => {
+            console.log('no clicked');
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
+
+  goToHome(){
     this.navCtrl.popToRoot();
   }
 

@@ -22,7 +22,7 @@ export class Eq_5d_5l2Page {
   leavePage() {
     let alert = this.alertCtrl.create({
       title: 'Eingabe abbrechen',
-      message: 'Möchten Sie die eingabe wircklich abbrechen?',
+      message: 'Möchten Sie die Eingabe wirklich abbrechen?',
       buttons: [
         {
           text: 'Ja',

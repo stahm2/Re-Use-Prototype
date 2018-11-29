@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { Platform } from 'ionic-angular';
-import { File, IWriteOptions } from '@ionic-native/file';
+
+import { fileController } from '../../services/fileController';
 
 
 /**
@@ -23,9 +24,18 @@ export class HomePage {
               public navParams: NavParams,
               public storage: Storage,
               public platform: Platform,
-              public flie: File) { }
+              public fc: fileController) {
+
+                document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    console.log(this.flie);
+}
+              }
 
   private count = 0;
+  vals: Array<{timestamp: string, value: string}>;
+  timestamp = Date.now();
+  filename: string = null;
 
   openFragebogen() {
     this.navCtrl.push('ErklArmPage');
@@ -50,9 +60,11 @@ export class HomePage {
   outcome() {
     this.storage.get('arm').then((val) => {
       console.log('Wert auf Armbewegung 1:', val);
+      this.vals.push(null, val);
     });
     this.storage.get('armb10').then((val) => {
       console.log('Wert auf Armbewegung 2:', val);
+      this.vals.push(null, val);
     });
     this.storage.get('arm7').then((val) => {
       console.log('Wert auf Armbewegung 3:', val);
@@ -203,13 +215,13 @@ export class HomePage {
     console.log(this.count);
     let pltfrm: string;
     if (this.count >= 3) {
-      if (this.platform.is('ios')) {
-        //pltfrm = this.file.dataDirectory;
-      } else if (this.platform.is('android')) {
-        //pltfrm = this.file.dataDirectory;
-      } else {
-        //pltfrm = this.file.dataDirectory;
-      }
+      // if (this.platform.is('ios')) {
+      //   //pltfrm = this.file.dataDirectory;
+      // } else if (this.platform.is('android')) {
+      //   //pltfrm = this.file.dataDirectory;
+      // } else {
+      //   //pltfrm = this.file.dataDirectory;
+      // }
       this.auswertung();
     }
   }
@@ -217,58 +229,63 @@ export class HomePage {
   auswertung() {
     this.count = 0;
     //create test file
-    let path = this.flie.dataDirectory;
-    console.log("this is our path:", path);
+    console.log("this is our path:", this.fc.getPath());
 
+    this.outcome();
+    console.warn("saved to array");
     this.storage.get('arm10').then((res) => {
       console.log("this is our storage item:", res);
       let str = <string> res;
-      this.chechIfExists(path, str);
+
+      let filename = "File_" + Date.now();
+      this.fc.writeFile(filename, this.vals);
+
+
     });
 
   }
 
-  chechIfExists(path: string, val: string) {
-    console.log("check if file exists:");
-    this.flie.checkFile(path, "FILE.txt").then((exists) => {
-      console.log("does file exists?", exists);
-      if(exists) {
-        this.writeThisNow(path, val)
-        //this.removeFile(path, val);
-      } else {
-        this.writeThisNow(path, val)
-      }
-    }).catch((err) => {
-      console.log("elloololol:", err)
-    });
-  }
+  // chechIfExists(path: string, val: string) {
+  //   console.log("check if file exists:");
+  //   this.flie.checkFile(path, "FILE.txt").then((exists) => {
+  //     console.log("does file exists?", exists);
+  //     if(exists) {
+  //       this.writeThisNow(path, val)
+  //       //this.removeFile(path, val);
+  //     } else {
+  //       this.writeThisNow(path, val)
+  //     }
+  //   }).catch((err) => {
+  //     console.log("elloololol:", err)
+  //   });
+  // }
 
-  removeFile(path: string, val: string) {
-    console.log("try to romive file:");
-    this.flie.removeFile(path, "FILE.txt").then((res) => {
-      console.log("file removed:", res);
-      this.writeThisNow(path, val);
-    });
-  }
+  // removeFile(path: string, val: string) {
+  //   console.log("try to romive file:");
+  //   this.flie.removeFile(path, "FILE.txt").then((res) => {
+  //     console.log("file removed:", res);
+  //     this.writeThisNow(path, val);
+  //   });
+  // }
 
-  writeThisNow(path: string, val: string){
-    console.log("now write:");
-    let a: IWriteOptions = {
-      append: true,
-      replace: false,
-    }
-    this.flie.writeFile(path, "FILE.txt", val, a).then(res => {
-      console.log("we could save:", res);
+  // writeThisNow(path: string, val: string){
+  //   console.log("now write:");
+  //   let a: IWriteOptions = {
+  //     append: true,
+  //     replace: false,
+  //   }
+  //   this.flie.writeFile(path, "FILE.txt", val, a).then(res => {
+  //     console.log("we could save:", res);
 
-      this.flie.readAsText(path, "FILE.txt").then(res => {
-        console.log("we could read: ", res);
-      }).catch(err => {
-        console.warn("error during reading:", err);
-      } );
-    }).catch(err => {
-      console.warn("error during write", err);
-    });
-  }
+  //     this.flie.readAsText(path, "FILE.txt").then(res => {
+  //       console.log("we could read: ", res);
+  //     }).catch(err => {
+  //       console.warn("error during reading:", err);
+  //     } );
+  //   }).catch(err => {
+  //     console.warn("error during write", err);
+  //   });
+  // }
 
   // auswertung(pltfrm) {
   //   this.count = 0;

@@ -77,7 +77,7 @@ export class Schlaf5Page {
     } else {
       this.hidePfeil = false;
       this.disableButton = false;
-      schlafText.innerHTML = "10 sehr wach<br><br>0 sehr müde";
+      schlafText.innerHTML = "10 sehr gut<br><br>0 sehr schlecht";
       document.querySelector("body").style.cssText = "--color: #25A33C";
     }
   }

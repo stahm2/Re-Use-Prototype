@@ -20,7 +20,7 @@ import { WheelSelector } from '@ionic-native/wheel-selector';
 
 export class BegleittherapiePage {
 
-  DataField = {
+ DataField = {
     numbers: [
      { description: "1" },
       { description: "2" },

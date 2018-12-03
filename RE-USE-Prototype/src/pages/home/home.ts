@@ -377,10 +377,24 @@ export class HomePage {
       body: 'Test',
       isHtml: true
     };
+    // add alias
+this.mailer.addAlias('gmail', 'com.google.android.gm');
+
+// then use alias when sending email
+
 
     this.mailer.isAvailable().then((available: boolean) =>{
       if(available) {
-        this.mailer.open(email);
+        this.mailer.open({
+          app: 'gmail',
+          to: 'petim1@bfh.ch',
+              attachments: [
+
+              ],
+              subject: 'Test',
+              body: 'Test',
+              isHtml: true
+        });
       }
      });
   }

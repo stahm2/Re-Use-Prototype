@@ -17,7 +17,7 @@ export class fileController {
               public alertCtrl: AlertController) {
 
 
-    this.ROOT_DIRECTORY = '/storage/emulated/0/Android/data(ch.bfh.i4mi.re_use/files';
+    this.ROOT_DIRECTORY = fileNav.dataDirectory;
 
     plt.ready()
       .then(() => {

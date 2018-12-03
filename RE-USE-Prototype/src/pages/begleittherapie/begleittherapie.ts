@@ -20,32 +20,7 @@ import { WheelSelector } from '@ionic-native/wheel-selector';
 
 export class BegleittherapiePage {
 
-  DataField = {
-    numbers: [
-     { description: "1" },
-      { description: "2" },
-      { description: "3" }
-    ],
-    fruits: [
-      { description: "Apple" },
-      { description: "Banana" },
-      { description: "Tangerine" }
-    ],
-    firstNames: [
-      { name: "Fred", id: '1' },
-      { name: "Jane", id: '2' },
-      { name: "Bob", id: '3' },
-      { name: "Earl", id: '4' },
-      { name: "Eunice", id: '5' }
-    ],
-    lastNames: [
-      { name: "Johnson", id: '100' },
-      { name: "Doe", id: '101' },
-      { name: "Kinishiwa", id: '102' },
-      { name: "Gordon", id: '103' },
-      { name: "Smith", id: '104' }
-    ]
-  };
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private wheel: WheelSelector, private datePicker1: DatePicker, private storage: Storage, private alertCtrl: AlertController) {}
 
@@ -73,40 +48,6 @@ export class BegleittherapiePage {
       ]
     });
     alert.present();
-  }
-
-  selectANumber() {
-    this.wheel.show({
-      title: "How Many?",
-      items: [
-        this.DataField.numbers
-      ],
-    }).then(
-      result => {
-        console.log(result[0].description + ' at index: ' + result[0].index);
-      },
-      err => console.log('Error: ', err)
-      );
-  }
-  selectDate() {
-    this.datePicker1.show({
-      date: new Date(),
-      mode: 'date',
-    }).then(
-      date => console.log('Got date: ', date),
-      err => console.log('Error occured: ', err)
-    );
-
-  }
-
-  private disableButton = true;
-  enableButton(therapy, myDate, startTime, endTime){
-    console.log(therapy);
-    if(therapy == "Logo" || therapy == "Physio" || therapy == "Ergo" || therapy == "Andere"){
-      if(myDate != null && startTime != null && endTime != null){
-        this.disableButton = false;
-      }
-    }
   }
 
   save(myDate, startTime,therapy, endTime) {

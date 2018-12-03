@@ -12,6 +12,8 @@ import { DatePicker } from '@ionic-native/date-picker';
 import { IonicStorageModule } from '@ionic/storage';
 import { File } from '@ionic-native/file';
 
+import { fileController} from '../services/fileController';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -32,10 +34,10 @@ import { File } from '@ionic-native/file';
     StatusBar,
     SplashScreen,
     WheelSelector,
-    File,
     DatePicker,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
-
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    File,
+    fileController
   ]
 })
 export class AppModule { }

@@ -20,4 +20,23 @@
  <button ion-button full (click)="openBlutdruck()" id="homeBt">4. Blutdruck</button>
  <button ion-button full (click)="openSchlaf()" id="homeBt">5. Schlaf</button>
  <button ion-button full (click)="clickcount()" id="secretBt">auswertung</button>
+
+ <h1>File Navigation</h1>
+      <div class="myList">
+      <button class="innerList" ion-button full large (click)="goUp()">
+        Go up
+      </button>
+
+      <ion-list class="innerList" *ngFor="let item of items">
+
+        <ion-list-header *ngIf="item.isDirectory" (click)="goDown(item)">
+          Directory: {{item.name}}
+        </ion-list-header>
+
+        <ion-item *ngIf="item.isFile">
+          File: {{item.name}}
+        </ion-item>
+
+      </ion-list>
+    </div>
 </ion-content>

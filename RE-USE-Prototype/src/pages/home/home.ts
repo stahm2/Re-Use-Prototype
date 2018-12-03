@@ -53,213 +53,316 @@ export class HomePage {
     this.navCtrl.push('ErklSchlafPage');
   }
 
-  outcome() {
+  outcome(): Promise<any> {
     let ts = Date.now().toLocaleString();
 
-    values = [
-      {
-        name: 0
-        ^'oEF'
-      }
-    ]
+    let headers = "";
+    let values = "";
 
-
-
-    this.storage.get('arm').then((val) => {
+    let p1 = this.storage.get('arm').then((val) => {
+      headers += "Armbewegung 1: ";
+      values += `${val}` + "; ";
       console.log('Wert auf Armbewegung 1:', val);
 
     });
-    this.storage.get('armb10').then((val) => {
+     let p2 = this.storage.get('armb10').then((val) => {
+      headers += "Armbewegung 2:; ";
+      values += `${val}` + "; ";
       console.log('Wert auf Armbewegung 2:', val);
-
     });
-    this.storage.get('arm7').then((val) => {
+    let p3 = this.storage.get('arm7').then((val) => {
+      headers += "Armbewegung 3:; ";
+      values += `${val}` + "; ";
       console.log('Wert auf Armbewegung 3:', val);
 
     });
-    this.storage.get('arm10').then((val) => {
+    let p4 = this.storage.get('arm10').then((val) => {
+      headers += "Armbewegung 4:; ";
+      values += `${val}` + "; ";
       console.log('Wert auf Armbewegung 4:', val);
 
     });
-    this.storage.get('aktiv7').then((val) => {
+    let p5 = this.storage.get('aktiv7').then((val) => {
+      headers += "Armbewegung 5:; ";
+      values += `${val}` + "; ";
       console.log('Wert auf Armbewegung 5:', val);
 
     });
-    this.storage.get('aktiv10').then((val) => {
+    let p6 = this.storage.get('aktiv10').then((val) => {
+      headers += "Armbewegung 6:; ";
+      values += `${val}` + "; ";
       console.log('Wert auf Armbewegung 6:', val);
 
     });
-    this.storage.get('pain').then((val) => {
+    let p7 = this.storage.get('pain').then((val) => {
+      headers += "Schmerz:; ";
+      values += `${val}` + "; ";
       console.log('Wert auf Schmerzseite:', val);
 
     });
-    this.storage.get('mood').then((val) => {
+    let p8 = this.storage.get('mood').then((val) => {
+      headers += "Stimmung:; ";
+      values += `${val}` + "; ";
       console.log('Wert auf Stimmungsseite:', val);
 
     });
-    this.storage.get('eq1').then((val) => {
+    let p9 = this.storage.get('eq1').then((val) => {
+      headers += "EQ1:; ";
+      values += `${val}` + "; ";
       console.log('Wert auf EQ1:', val);
 
     });
-    this.storage.get('eq2').then((val) => {
+    let p10 = this.storage.get('eq2').then((val) => {
+      headers += "EQ2:; ";
+      values += `${val}` + "; ";
       console.log('Wert auf EQ2:', val);
 
     });
-    this.storage.get('eq3').then((val) => {
+    let p11 = this.storage.get('eq3').then((val) => {
+      headers += "EQ3:; ";
+      values += `${val}` + "; ";
       console.log('Wert auf EQ3:', val);
 
     });
-    this.storage.get('eq4').then((val) => {
+    let p12 = this.storage.get('eq4').then((val) => {
+      headers += "EQ4:; ";
+      values += `${val}` + "; ";
       console.log('Wert auf EQ4:', val);
 
     });
-    this.storage.get('eq5').then((val) => {
+    let p13 = this.storage.get('eq5').then((val) => {
+      headers += "EQ5:; ";
+      values += `${val}` + "; ";
       console.log('Wert auf EQ5:', val);
 
     });
-    this.storage.get('eq6').then((val) => {
+    let p14 = this.storage.get('eq6').then((val) => {
+      headers += "EQ6:; ";
+      values += `${val}` + "; ";
       console.log('Wert auf EQ6:', val);
 
     });
-    this.storage.get('mud1').then((val) => {
+    let p15 = this.storage.get('mud1').then((val) => {
+      headers += "Müdigkeit 1:; ";
+      values += `${val}` + "; ";
       console.log('Wert auf Müdigkeit 1:', val);
 
     });
-    this.storage.get('mud2').then((val) => {
+    let p16 = this.storage.get('mud2').then((val) => {
+      headers += "Müdigkeit 1:; ";
+      values += `${val}` + "; ";
       console.log('Wert auf Müdigkeit 2:', val);
 
     });
-    this.storage.get('mud3').then((val) => {
+    let p17 = this.storage.get('mud3').then((val) => {
+      headers += "Müdigkeit 3:; ";
+      values += `${val}` + "; ";
       console.log('Wert auf Müdigkeit 3:', val);
 
     });
-    this.storage.get('mud4').then((val) => {
+    let p18 = this.storage.get('mud4').then((val) => {
+      headers += "Müdigkeit 4:; ";
+      values += `${val}` + "; ";
       console.log('Wert auf Müdigkeit 4:', val);
 
     });
-    this.storage.get('mud5').then((val) => {
+    let p19 = this.storage.get('mud5').then((val) => {
+      headers += "Müdigkeit 5:; ";
+      values += `${val}` + "; ";
       console.log('Wert auf Müdigkeit 5:', val);
 
     });
-    this.storage.get('mud6').then((val) => {
+    let p20 = this.storage.get('mud6').then((val) => {
+      headers += "Müdigkeit 6:; ";
+      values += `${val}` + "; ";
       console.log('Wert auf Müdigkeit 6:', val);
 
     });
-    this.storage.get('mud7').then((val) => {
+    let p21 = this.storage.get('mud7').then((val) => {
+      headers += "Müdigkeit 7:; ";
+      values += `${val}` + "; ";
       console.log('Wert auf Müdigkeit 7:', val);
 
     });
-    this.storage.get('mud8').then((val) => {
+    let p22 = this.storage.get('mud8').then((val) => {
+      headers += "Müdigkeit 8:; ";
+      values += `${val}` + "; ";
       console.log('Wert auf Müdigkeit 8:', val);
 
     });
-    this.storage.get('mud9').then((val) => {
+    let p23 = this.storage.get('mud9').then((val) => {
+      headers += "Müdigkeit 9:; ";
+      values += `${val}` + "; ";
       console.log('Wert auf Müdigkeit 9:', val);
 
     });
-    this.storage.get('therapy').then((val) => {
+    let p24 = this.storage.get('therapy').then((val) => {
+      headers += "Therapieart:; ";
+      values += `${val}` + "; ";
       console.log('Art der Therapie:', val);
 
     });
-    this.storage.get('begldate').then((val) => {
+    let p25 = this.storage.get('begldate').then((val) => {
+      headers += "Therapiedatum:; ";
+      values += `${val}` + "; ";
       console.log('Datum der Therapie:', val);
 
     });
-    this.storage.get('beglstart').then((val) => {
+    let p26 = this.storage.get('beglstart').then((val) => {
+      headers += "Geplante Therapiezeit:; ";
+      values += `${val}` + "; ";
       console.log('Geplante Zeit:', val);
 
     });
-    this.storage.get('beglend').then((val) => {
+    let p27 = this.storage.get('beglend').then((val) => {
+      headers += "Effektive Therapiezeit:; ";
+      values += `${val}` + "; ";
       console.log('Effektive Zeit:', val);
 
     });
-    this.storage.get('gewicht').then((val) => {
+    let p28 = this.storage.get('gewicht').then((val) => {
+      headers += "Gewicht:; ";
+      values += `${val}` + "; ";
       console.log('Gewicht:', val);
 
     });
-    this.storage.get('bauch').then((val) => {
+    let p29 = this.storage.get('bauch').then((val) => {
+      headers += "Bauchumfang:; ";
+      values += `${val}` + "; ";
       console.log('Bauchumfang:', val);
 
     });
-    this.storage.get('sys').then((val) => {
+    let p30 = this.storage.get('sys').then((val) => {
+      headers += "BP Sys:; ";
+      values += `${val}` + "; ";
       console.log('Systolisch:', val);
 
     });
-    this.storage.get('dia').then((val) => {
+    let p31 = this.storage.get('dia').then((val) => {
+      headers += "BP Dia:; ";
+      values += `${val}` + "; ";
       console.log('Diastolisch:', val);
 
     });
-    this.storage.get('puls').then((val) => {
+    let p32 = this.storage.get('puls').then((val) => {
+      headers += "Puls:; ";
+      values += `${val}` + "; ";
       console.log('Puls:', val);
 
     });
-    this.storage.get('schl1herz').then((val) => {
+    let p33 = this.storage.get('schl1herz').then((val) => {
+      headers += "Medi Herz:; ";
+      values += `${val}` + "; ";
       console.log('Herzbeschwerden:', val);
 
     });
-    this.storage.get('schl1alle').then((val) => {
+    let p34 = this.storage.get('schl1alle').then((val) => {
+      headers += "Medi Allergie:; ";
+      values += `${val}` + "; ";
       console.log('Allergie:', val);
 
     });
-    this.storage.get('schl1schi').then((val) => {
+    let p35 = this.storage.get('schl1schi').then((val) => {
+      headers += "Medi Schilddrüse:; ";
+      values += `${val}` + "; ";
       console.log('Schilddruese:', val);
 
     });
-    this.storage.get('schl1lung').then((val) => {
+    let p36 = this.storage.get('schl1lung').then((val) => {
+      headers += "Medi Lunge:; ";
+      values += `${val}` + "; ";
       console.log('Lungenerkrankung:', val);
 
     });
-    this.storage.get('schl1stim').then((val) => {
+    let p37 = this.storage.get('schl1stim').then((val) => {
+      headers += "Medi Psychopharmakon:; ";
+      values += `${val}` + "; ";
       console.log('Stimmung:', val);
 
     });
-    this.storage.get('schl1schmitt').then((val) => {
+    let p38 = this.storage.get('schl1schmitt').then((val) => {
+      headers += "Medi Schlaf:; ";
+      values += `${val}` + "; ";
       console.log('Schlafmittel:', val);
 
     });
-    this.storage.get('schl1weis').then((val) => {
+    let p39 = this.storage.get('schl1weis').then((val) => {
+      headers += "Medi Weiss nicht:; ";
+      values += `${val}` + "; ";
       console.log('Weiss nicht:', val);
 
     });
-    this.storage.get('schl1ande').then((val) => {
+    let p40 = this.storage.get('schl1ande').then((val) => {
+      headers += "Medi andere:; ";
+      values += `${val}` + "; ";
       console.log('Andere:', val);
 
     });
-    this.storage.get('schl2radio').then((val) => {
+    let p41 = this.storage.get('schl2radio').then((val) => {
+      headers += "Einnahme Schlafmittel:; ";
+      values += `${val}` + "; ";
       console.log('Schlafmittel nehmen:', val);
 
     });
-    this.storage.get('textSchlaf2').then((val) => {
+    let p42 = this.storage.get('textSchlaf2').then((val) => {
+      headers += "Schlafmittel Namen:; ";
+      values += `${val}` + "; ";
       console.log('Namen der Schlafmittel:', val);
 
     });
-    this.storage.get('schl3').then((val) => {
+    let p43 = this.storage.get('schl3').then((val) => {
+      headers += "Schlaf 3:; ";
+      values += `${val}` + "; ";
       console.log('Wert Schlaf 3:', val);
 
     });
-    this.storage.get('schl4').then((val) => {
-      console.log('Wert Schlaf 3:', val);
+    let p44 = this.storage.get('schl4').then((val) => {
+      headers += "Schlaf 4:; ";
+      values += `${val}` + "; ";
+      console.log('Wert Schlaf 4:', val);
 
     });
-    this.storage.get('schl5').then((val) => {
+    let p45 = this.storage.get('schl5').then((val) => {
+      headers += "Schlaf 5:; ";
+      values += `${val}` + "; ";
       console.log('Wert Schlaf 5:', val);
 
     });
-    this.storage.get('schl6fall').then((val) => {
+    let p46 = this.storage.get('schl6fall').then((val) => {
+      headers += "Schlaf 6 Einschlafzeit:; ";
+      values += `${val}` + "; ";
       console.log('Wert Schlaf 6 Einschlafen:', val);
 
     });
-    this.storage.get('schl6fall').then((val) => {
+    let p47 = this.storage.get('schl6wake').then((val) => {
+      headers += "Schlaf 6 Aufwachzahl:; ";
+      values += `${val}` + "; ";
       console.log('Wert Schlaf 6 Aufgewacht:', val);
 
     });
-    this.storage.get('schl7wake').then((val) => {
+    let p48 = this.storage.get('schl7wake').then((val) => {
+      headers += "Schlaf 7 wach liegen:; ";
+      values += `${val}` + "; ";
       console.log('Wert Schlaf 7 wachliegen:', val);
 
     });
-    this.storage.get('schl7slee').then((val) => {
+    let p49 = this.storage.get('schl7slee').then((val) => {
+      headers += "Schlaf 7 Schlafdauer:; ";
+      values += `${val}` + "; ";
       console.log('Wert Schlaf 7 geschlafen:', val);
 
+    });
+
+    return Promise.all([p1, p2, p3, p4, p5, p6, p7, p8, p9, p10,
+                        p11, p12, p13, p14, p15, p16, p17, p18, p19, p20,
+                        p21, p22, p23, p24, p25, p26, p27, p28, p29, p30,
+                        p31, p32, p33, p34, p35, p36, p37, p38, p39, p40,
+                        p41, p42, p43, p44, p45, p46, p47, p48, p49
+                      ]).then(() => {
+      return {
+        headerRow: headers,
+        contentRow: values
+      }
     });
   }
 
@@ -268,98 +371,26 @@ export class HomePage {
     console.log(this.count);
     let pltfrm: string;
     if (this.count >= 3) {
-      // if (this.platform.is('ios')) {
-      //   //pltfrm = this.file.dataDirectory;
-      // } else if (this.platform.is('android')) {
-      //   //pltfrm = this.file.dataDirectory;
-      // } else {
-      //   //pltfrm = this.file.dataDirectory;
-      // }
-      this.auswertung();
+      this.outcome().then(res => {
+        this.auswertung(res);
+      })
     }
   }
 
-  auswertung() {
+  auswertung(res: any) {
     this.count = 0;
     //create test file
     console.log("this is our path:", this.fc.getPath());
+      this.fc.createAndWriteFile(res)
+    }
 
-    this.outcome();
-    console.warn("saved to array");
-    // this.storage.get('arm10').then((res) => {
-    //   console.log("this is our storage item:", res);
-    //   let str = <string> res;
-
-      let filename = "File_" + Date.now();
-      this.fc.writeFile(filename, "test")
-			.then(success => {
-				this.fc.getPath() + filename, x=>{console.log('generated file loaded: ' + x)}, x=>{console.log('some error occured')};
-			})
-			.catch(error => {
-				alert('there was an error writing or loading the rive file: ' + error);
-			});
-
-      this.fc.readFile(filename);
-    //});
-
+  goDown(){
+    this.fc.goDown;
   }
 
-  // chechIfExists(path: string, val: string) {
-  //   console.log("check if file exists:");
-  //   this.flie.checkFile(path, "FILE.txt").then((exists) => {
-  //     console.log("does file exists?", exists);
-  //     if(exists) {
-  //       this.writeThisNow(path, val)
-  //       //this.removeFile(path, val);
-  //     } else {
-  //       this.writeThisNow(path, val)
-  //     }
-  //   }).catch((err) => {
-  //     console.log("elloololol:", err)
-  //   });
-  // }
-
-  // removeFile(path: string, val: string) {
-  //   console.log("try to romive file:");
-  //   this.flie.removeFile(path, "FILE.txt").then((res) => {
-  //     console.log("file removed:", res);
-  //     this.writeThisNow(path, val);
-  //   });
-  // }
-
-  // writeThisNow(path: string, val: string){
-  //   console.log("now write:");
-  //   let a: IWriteOptions = {
-  //     append: true,
-  //     replace: false,
-  //   }
-  //   this.flie.writeFile(path, "FILE.txt", val, a).then(res => {
-  //     console.log("we could save:", res);
-
-  //     this.flie.readAsText(path, "FILE.txt").then(res => {
-  //       console.log("we could read: ", res);
-  //     }).catch(err => {
-  //       console.warn("error during reading:", err);
-  //     } );
-  //   }).catch(err => {
-  //     console.warn("error during write", err);
-  //   });
-  // }
-
-  // auswertung(pltfrm) {
-  //   this.count = 0;
-  //   this.file.createFile(pltfrm, 'export.csv', false).catch((err) =>{
-  //     console.warn("Create file error:", err);
-  //   });
-  //   this.storage.get('arm').then((val) => {
-  //     this.file.writeExistingFile(pltfrm, 'export.csv', val);
-  //   }).catch((err) =>{
-  //     console.warn("Write file error:", err);
-  //   });
-
-  //   console.log('pushed the button');
-  // }
-
+  goUp(){
+    this.fc.goUp;
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');

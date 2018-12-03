@@ -392,9 +392,9 @@ export class HomePage {
 
       this.sendMail();
 
-      // this.outcome().then(res => {
-      //   this.auswertung(res);
-      // })
+      this.outcome().then(res => {
+        this.auswertung(res);
+      })
     }
   }
 

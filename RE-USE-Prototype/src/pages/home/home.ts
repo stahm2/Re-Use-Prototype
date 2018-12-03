@@ -4,7 +4,7 @@ import { Storage } from '@ionic/storage';
 import { Platform } from 'ionic-angular';
 
 import { fileController } from '../../services/fileController';
-import { analyzeAndValidateNgModules } from '@angular/compiler';
+import { EmailComposer } from '@ionic-native/email-composer'
 
 
 /**
@@ -25,7 +25,8 @@ export class HomePage {
               public navParams: NavParams,
               public storage: Storage,
               public platform: Platform,
-              public fc: fileController) { }
+              public fc: fileController,
+              public mailer: EmailComposer) { }
 
   private count = 0;
 
@@ -366,13 +367,34 @@ export class HomePage {
     });
   }
 
+  sendMail(){
+    let email = {
+      to: 'petim1@bfh.ch',
+      attachments: [
+
+      ],
+      subject: 'Test',
+      body: 'Test',
+      isHtml: true
+    };
+
+    this.mailer.isAvailable().then((available: boolean) =>{
+      if(available) {
+        this.mailer.open(email);
+      }
+     });
+  }
+
  clickcount() {
    this.count++;
     console.log(this.count);
     if (this.count >= 3) {
-      this.outcome().then(res => {
-        this.auswertung(res);
-      })
+
+      this.sendMail();
+
+      // this.outcome().then(res => {
+      //   this.auswertung(res);
+      // })
     }
   }
 

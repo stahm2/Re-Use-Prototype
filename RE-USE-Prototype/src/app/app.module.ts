@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DatePicker } from '@ionic-native/date-picker';
 import { IonicStorageModule } from '@ionic/storage';
 import { File } from '@ionic-native/file';
+import { EmailComposer } from '@ionic-native/email-composer'
 
 import { fileController} from '../services/fileController';
 
@@ -37,7 +38,8 @@ import { fileController} from '../services/fileController';
     DatePicker,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     File,
-    fileController
+    fileController,
+    EmailComposer
   ]
 })
 export class AppModule { }

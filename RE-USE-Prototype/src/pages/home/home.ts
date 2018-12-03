@@ -369,7 +369,6 @@ export class HomePage {
  clickcount() {
    this.count++;
     console.log(this.count);
-    let pltfrm: string;
     if (this.count >= 3) {
       this.outcome().then(res => {
         this.auswertung(res);
@@ -384,8 +383,8 @@ export class HomePage {
       this.fc.createAndWriteFile(res)
     }
 
-  goDown(){
-    this.fc.goDown;
+  goDown(item){
+    this.fc.goDown(item);
   }
 
   goUp(){

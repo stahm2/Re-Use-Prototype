@@ -72,7 +72,7 @@ getPath(){
       console.log('private doWrite', 'Create File:', res);
       this.fileList.push(newFileName);
       this.counter++;
-      //this.readFileContent();
+      this.readFileContent();
     }).catch((error) => {
       console.error('private doWrite', 'Create File Error:', error);
     });

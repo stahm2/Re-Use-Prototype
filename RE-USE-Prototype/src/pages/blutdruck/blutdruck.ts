@@ -71,7 +71,7 @@ export class BlutdruckPage {
 
   save(sys, dia, puls) {
 
-    if(this.checkvalues(sys,dia,puls)){
+
     this.storage.set('sys', sys);
     this.storage.set('dia', dia);
     this.storage.set('puls', puls);
@@ -80,16 +80,6 @@ export class BlutdruckPage {
       console.log('seems to work: ', val);
     });
     this.navCtrl.popToRoot();
-  } else {
-
-  }
-  }
-
-  checkvalues(sys,dia,puls){
-
-    if(sys)
-
-    return null;
   }
 
 

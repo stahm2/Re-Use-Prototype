@@ -404,7 +404,7 @@ this.mailer.addAlias('gmail', 'com.google.android.gm');
     console.log(this.count);
     if (this.count >= 3) {
 
-      this.sendMail();
+     // this.sendMail();
 
       this.outcome().then(res => {
         this.auswertung(res);

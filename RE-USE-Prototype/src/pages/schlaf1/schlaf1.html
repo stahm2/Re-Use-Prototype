@@ -4,15 +4,18 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
 
+<!-- the header of the app, who is hidden-->
+<ion-header>
+  <!-- hides the navigationbar of the app and hides the back button, the back button is not used-->
   <ion-navbar hideBackButton *navbar>
   </ion-navbar>
-
 </ion-header>
 
-
+<!-- starts of the content of the application, no-bounce is that the page does not bounce during the touch-->
 <ion-content padding no-bounce>
+
+  <!-- in the navigation is the homebutton and the the header title and at the number of the question-->
   <div class="navigation">
     <button ion-button (click)="leavePage()">
       <ion-icon name="home"></ion-icon>
@@ -37,6 +40,8 @@
       </ion-col>
     </ion-row>
   </div>
+
+  <!-- shows the radiobuttons, checkboxes and the input-->
   <div id="schalf1Check">
     <ion-list>
       <ion-item no-lines>
@@ -69,9 +74,11 @@
       </ion-item>
     </ion-list>
     <ion-label id="labelName" [hidden]="disableText">Bitte Namen:</ion-label>
-    <ion-textarea [disabled]="disableBox" [(ngModel)]="nameText" (change)='onChange($event.target.value)' (ngModelChange)="enableButton(schlaf1, Herzbeschwerden, Allergien, Schliddruesenprobleme, Lungenerkrankungen, Stimmung, Schlafmittel, Weissnicht, nameText)"></ion-textarea>
-
+    <ion-textarea [disabled]="disableBox" [(ngModel)]="nameText" (change)='onChange($event.target.value)'
+      (ngModelChange)="enableButton(schlaf1, Herzbeschwerden, Allergien, Schliddruesenprobleme, Lungenerkrankungen, Stimmung, Schlafmittel, Weissnicht, nameText)"></ion-textarea>
   </div>
-  <button id="weiter" ion-button (click)="openNext(Herzbeschwerden, Allergien, Schliddruesenprobleme, Lungenerkrankungen, Stimmung, Schlafmittel, Weissnicht, nameText)" [disabled]="disableButton">Weiter</button>
 
+  <!-- buttons for "weiter"-->
+  <button id="weiter" ion-button (click)="openNext(Herzbeschwerden, Allergien, Schliddruesenprobleme, Lungenerkrankungen, Stimmung, Schlafmittel, Weissnicht, nameText)"
+    [disabled]="disableButton">Weiter</button>
 </ion-content>

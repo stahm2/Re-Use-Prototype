@@ -4,20 +4,26 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+
+<!-- the header of the app, who is hidden-->
 <ion-header>
+  <!-- hides the navigationbar of the app and hides the back button, the back button is not used-->
   <ion-navbar hideBackButton *navbar>
   </ion-navbar>
-
 </ion-header>
 
-
+<!-- starts of the content of the application, no-bounce is that the page does not bounce during the touch-->
 <ion-content padding no-bounce>
+
+  <!-- in the navigation is the homebutton and the the header title-->
   <div class="navigation">
     <button ion-button (click)="leavePage()">
       <ion-icon name="home"></ion-icon>
     </button>
     <h1>Begleittherapie</h1>
   </div>
+
+  <!-- shows the explanation of the next questions-->
   <div>
     <h3>Erklärung zur folgenden Seite</h3>
     <p>
@@ -25,11 +31,13 @@
     </p>
     <img src="../../assets/img/begleitBtn_q.PNG">
     <p>
-      Wählen Sie mit einem Klick in das Feld, das Datum der Therapie aus. Wie lange die Therapie geplant war und wie lange die effektive Therapiezeit war.
+      Wählen Sie mit einem Klick in das Feld, das Datum der Therapie aus. Wie lange die Therapie geplant war und wie
+      lange die effektive Therapiezeit war.
     </p>
     <img id="zeit" src="../../assets/img/begleitZeit.PNG">
-
   </div>
+
+  <!-- buttons for "weiter"-->
   <button id="weiter" ion-button (click)="openNext()">Weiter</button>
 
 </ion-content>

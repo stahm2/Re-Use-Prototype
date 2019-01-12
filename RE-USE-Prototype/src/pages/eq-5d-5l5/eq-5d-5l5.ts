@@ -19,6 +19,13 @@ export class Eq_5d_5l5Page {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage, private alertCtrl: AlertController) {}
 
+    /**
+   * leavePage generates the alert wehn the homebutton is cliked.
+   * title is the title of the alert, message is the main text of the alert.
+   * buttons generate the yes and no button, and the hander sais what happens when this button is cliked.
+   * when the homebutton is cliked the function goToHome will be started.
+   * With alert.present the alert is shown on the screen.
+   */
   leavePage() {
     let alert = this.alertCtrl.create({
       title: 'Eingabe abbrechen',
@@ -43,17 +50,35 @@ export class Eq_5d_5l5Page {
     alert.present();
   }
 
+  /**
+   * The goToHome function goes back to the root of the stack. In our Case this is the Home screen.
+   */
   goToHome(){
     this.navCtrl.popToRoot();
   }
 
+  // disables the "weiter" button
   private disableButton = true;
+
+  /**
+   * Enables the "weiter" button after a value is entered
+   *
+   * @param eq5
+   */
   enableButton(eq5) {
     if (eq5 >= 1) {
       this.disableButton = false;
     }
   }
 
+  /**
+   * Opens the next page and saves the entered values in the databank
+   *
+   * navCtrl.push opens the page in the ().
+   * The name in the () is the name of the ts class, where it will link to.
+   *
+   * @param eq5
+   */
   openNext(eq5){
     this.storage.set('eq5', eq5);
     console.log("Data saved");
@@ -63,10 +88,16 @@ export class Eq_5d_5l5Page {
     this.navCtrl.push('Eq_5d_5l6Page');
   }
 
+   /**
+   * the openLast function opens the last page in the stack
+   */
   openLast(){
     this.navCtrl.pop();
   }
 
+   /**
+   * this function starts automaticly when this page is load.
+   */
   ionViewDidLoad() {
     console.log('ionViewDidLoad Eq_5d_5l5Page');
   }

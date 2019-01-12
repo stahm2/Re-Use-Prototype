@@ -1,5 +1,8 @@
 page-schlaf3 {
 
+  /**
+  * sets the position of the image for the likert scale
+  */
   img {
     z-index: -10000 !important;
     position: fixed;
@@ -8,14 +11,23 @@ page-schlaf3 {
     width: 85px;
   }
 
+  /**
+  * sets the position of the text
+  */
   .linkeSeite p {
     margin-top: -3px;
   }
 
-  .linkeSeite .erklaerung p{
+  /**
+  * sets the position of the "erklärungstext"
+  */
+  .linkeSeite .erklaerung p {
     margin-top: 6px;
   }
 
+  /**
+  * sets the position of the arrow in the "Erklärung"
+  */
   #pfeil {
     position: fixed;
     left: -235px;

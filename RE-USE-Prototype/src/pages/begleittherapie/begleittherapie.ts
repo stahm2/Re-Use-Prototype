@@ -25,7 +25,13 @@ export class BegleittherapiePage {
   constructor(public navCtrl: NavController, public navParams: NavParams, private wheel: WheelSelector, private datePicker1: DatePicker, private storage: Storage, private alertCtrl: AlertController) {}
 
 
-
+    /**
+   * leavePage generates the alert wehn the homebutton is cliked.
+   * title is the title of the alert, message is the main text of the alert.
+   * buttons generate the yes and no button, and the hander sais what happens when this button is cliked.
+   * when the homebutton is cliked the function goToHome will be started.
+   * With alert.present the alert is shown on the screen.
+   */
   leavePage() {
     let alert = this.alertCtrl.create({
       title: 'Eingabe abbrechen',
@@ -50,6 +56,15 @@ export class BegleittherapiePage {
     alert.present();
   }
 
+  /**
+   * saves the entered values to the databank
+   * and then it goes back to the root of the stack. In our Case this is the Home screen.
+   *
+   * @param myDate
+   * @param startTime
+   * @param therapy
+   * @param endTime
+   */
   save(myDate, startTime,therapy, endTime) {
     this.storage.set('begldate', myDate);
     this.storage.set('beglstart', startTime);
@@ -69,19 +84,25 @@ export class BegleittherapiePage {
   }
 
 
+  /**
+   * the openLast function opens the last page in the stack
+   */
   back() {
     this.navCtrl.pop();
   }
 
+  /**
+   * The goToHome function goes back to the root of the stack. In our Case this is the Home screen.
+   */
   goToHome() {
     this.navCtrl.popToRoot();
   }
+
+   /**
+   * this function starts automaticly when this page is load.
+   */
   ionViewDidLoad() {
     console.log('ionViewDidLoad BegleittherapiePage');
-  }
-
-  choice(data){
-    console.log(data);
   }
 
 }

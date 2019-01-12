@@ -1,16 +1,25 @@
 page-begleittherapie {
 
+  /**
+  * sets the font and border of the fieldset
+  */
   fieldset {
     width: 95%;
     font-size: 14pt;
     border: none;
   }
 
+  /**
+  * setst the width and position of the input field
+  */
   input {
     width: 42%;
     margin: 7px;
   }
 
+  /**
+  * wraps the buttons for the therapy and sets the color, font, size and position of the buttons
+  */
   .begleitButton {
     .segment-md .segment-button {
       background-color: #203B8F;

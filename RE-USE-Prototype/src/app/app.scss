@@ -15,94 +15,150 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+/**
+*Typography is added
+*/
 @font-face {
-
   font-family: Asap_Regular;
   src: url(../assets/fonts/Asap-Regular.ttf) format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
+/**
+*Typography is added
+*/
 @font-face {
   font-family: Asap_Bold;
   src: url(../assets/fonts/Asap-Bold.ttf) format('truetype');
   font-weight: 700;
 }
 
+/**
+* Hides the overflow, that there is no scroll
+*/
 .no-scroll .scroll-content {
   overflow: hidden;
 }
 
+/**
+* Sets the variable color and sets the textcolor
+*/
 body {
   --color: #D68018;
   color: #000;
 }
 
+/**
+* Sets the font of the main headline
+*/
 h1 {
   font-family: Asap_Bold;
   font-size: 17pt;
 }
 
+/**
+* Sets the font of the paragraph
+*/
 p {
   font-family: Asap_Regular;
   font-size: 14pt;
   font-weight: normal;
 }
 
+/**
+* sets the font of the label
+*/
 ion-label {
   font-family: Asap_Regular;
   font-size: 14pt;
   font-weight: normal;
 }
 
+/**
+* sets the text color and the padding for the ios item
+*/
 .item-ios {
   padding-left: 0px;
   color: #000;
 }
 
+/**
+* sets the border color for the radiobutton in the ios, when it is checked
+*/
 .radio-ios .radio-checked .radio-inner {
   border-color: #25A33C;
 }
 
+/**
+* sets the text color of the label when the radiobutton is checked in the ios
+*/
 .item-radio-checked.item-ios ion-label {
   color: #25A33C;
 }
 
-.ios .radio ion-label{
+/**
+* sets the font for the ios radibutton label
+*/
+.ios .radio ion-label {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14pt;
   font-weight: normal;
 }
 
-.item-checkbox-checked.item-ios ion-label{
+/**
+* sets the text color of the checkbox label for the ios
+*/
+.item-checkbox-checked.item-ios ion-label {
   color: #25A33C;
 }
 
-.item-checkbox-checked.item-md ion-label{
+/**
+* sets the text color of the checkbox label in android
+*/
+.item-checkbox-checked.item-md ion-label {
   color: #25A33C;
 }
 
+/**
+* sets the color of the radiobutton label in android, when it is checked
+*/
 .item-radio-checked.item-md ion-label {
   color: #25A33C;
 }
 
+/**
+* sets the border color of the checked radiobutton in android
+*/
 .radio-md .radio-checked {
   border-color: #25A33C;
 }
 
+/**
+* sets the color of the radiobutton inner when it is checked in android
+*/
 .radio-md .radio-inner {
   background-color: #25A33C;
 }
 
+/**
+* sets the padding and the text color of the android item
+*/
 .item-md {
   padding-left: 0px;
   color: #000;
 }
 
+/**
+* sets the height of the navigation div
+*/
 .navigation {
   height: 75px;
 }
 
+/**
+* sets the position, size and color of the home button
+*/
 .navigation button {
   position: fixed;
   background-color: #203B8F;
@@ -110,6 +166,10 @@ ion-label {
   height: 40px;
 }
 
+
+/**
+* sets the font and position of the page title
+*/
 .navigation h1 {
   position: fixed;
   top: 2.5%;
@@ -120,9 +180,11 @@ ion-label {
   margin-top: 10px;
 }
 
+/**
+* sets the font and positin of the question label
+*/
 .navigation label {
   position: fixed;
-  //right: 5%;
   left: 300px;
   top: 2.5%;
   font-family: Asap_Regular;
@@ -131,23 +193,30 @@ ion-label {
   margin-top: 15px;
 }
 
-
+/**
+* sets the position of the div with the question
+*/
 .inhalt .linkeSeite {
   position: fixed;
   height: 500px;
 }
 
+/**
+* sets the font, position and size of the "zurück" button
+*/
 #zurueck {
   position: fixed;
   bottom: 20px;
   width: 125px;
   height: 40px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Asap_Bold;
   font-size: 14pt;
-  font-weight: bold;
   background-color: #203B8F;
 }
 
+/**
+* sets the psoition of the right side with the scale
+*/
 .inhalt .rechteSeite {
   position: fixed;
   height: 500px;
@@ -155,6 +224,9 @@ ion-label {
 
 }
 
+/**
+* sets the position of the likert scale
+*/
 .inhalt .rechteSeite #likert {
   z-index: 200;
   height: 450px;
@@ -165,22 +237,32 @@ ion-label {
   transform: rotate(-90deg);
 }
 
+/**
+* sets the border and background color of the checked checkbox in android
+*/
 .checkbox-md .checkbox-checked {
   background-color: #25A33C;
   border-color: #25A33C;
 }
 
+/**
+* sets the border and background color of the checked checkbox in ios
+*/
 .checkbox-ios .checkbox-checked {
   background-color: #25A33C;
   border-color: #25A33C;
 }
 
-
-
+/**
+* sets the width, height and thumb size of the scale
+*/
 $track-w: 12.5em;
 $track-h: .25em;
 $thumb-d: 2.5em;
 
+/**
+* sets the border and size of the track from the scale
+*/
 @mixin track() {
   box-sizing: border-box;
   border: none;
@@ -188,6 +270,9 @@ $thumb-d: 2.5em;
   height: $track-h;
 }
 
+/**
+* sets the size and color of the thumb of the scale
+*/
 @mixin thumb() {
   box-sizing: border-box;
   border: none;
@@ -197,6 +282,9 @@ $thumb-d: 2.5em;
   background-color: var(--color);
 }
 
+/**
+* sets position, size and color of the thumb for all render engines
+*/
 [type='range'] {
 
   &,
@@ -243,18 +331,23 @@ $thumb-d: 2.5em;
   }
 }
 
+/**
+* sets the size, position, font and color of the "weiter" button
+*/
 #weiter {
   position: fixed;
   margin-left: 230px;
   bottom: 20px;
   width: 125px;
   height: 40px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Asap_Bold;
   font-size: 14pt;
-  font-weight: bold;
   background-color: #203B8F;
 }
 
+/**
+* sets the color, position and size of the "erklärungs" div
+*/
 .inhalt .linkeSeite .erklaerung {
   background-color: var(--color);
   position: fixed;
@@ -267,7 +360,10 @@ $thumb-d: 2.5em;
   padding-bottom: 2px;
 }
 
-.alert-md .alert-button{
+/**
+* sets the font, size and color of the buttons in the alert for android
+*/
+.alert-md .alert-button {
   color: #ffffff;
   width: 115px;
   text-align: center;
@@ -277,37 +373,58 @@ $thumb-d: 2.5em;
   background-color: #203B8F;
 }
 
-.alert-md .alert-button .button-inner{
+/**
+* centers the content of the buttons in the alert for android
+*/
+.alert-md .alert-button .button-inner {
   -webkit-justify-content: center;
   justify-content: center;
 }
 
-.alert-message{
+/**
+* sets the font of the alert message
+*/
+.alert-message {
   font-family: Asap_Regular;
 
 }
 
-.alert-md .alert-message{
+/**
+* sets the font size and color of the alert message in the android
+*/
+.alert-md .alert-message {
   font-size: 13pt;
   color: #000000;
 }
 
-.alert-md .alert-title{
+/**
+* sets the font and color for the title in the alert for android
+*/
+.alert-md .alert-title {
   font-family: Asap_Bold;
   color: #000;
 }
 
-.alert-ios .alert-button{
+/**
+* sets the text color and background color for the buttons in the alert for ios
+*/
+.alert-ios .alert-button {
   color: #ffffff;
   min-width: 115px;
   margin: 5px;
   background-color: #203B8F;
 }
 
-.alert-ios .alert-wrapper{
+/**
+* sets the border radius for the alert wrapper in the ios
+*/
+.alert-ios .alert-wrapper {
   border-radius: 0px;
 }
 
-#picker{
+/**
+* sets the border for the picker
+*/
+#picker {
   border: 1px solid black;
 }

@@ -4,14 +4,18 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+
+<!-- the header of the app, who is hidden-->
 <ion-header>
+  <!-- hides the navigationbar of the app and hides the back button, the back button is not used-->
   <ion-navbar hideBackButton *navbar>
   </ion-navbar>
-
 </ion-header>
 
-
+<!-- starts of the content of the application, no-bounce is that the page does not bounce during the touch-->
 <ion-content padding no-bounce>
+
+  <!-- in the navigation is the homebutton and the the header title and at the number of the question-->
   <div class="navigation">
     <button ion-button (click)="leavePage()">
       <ion-icon name="home"></ion-icon>
@@ -19,23 +23,28 @@
     <h1>Lebensqualität</h1>
     <label>6/6</label>
   </div>
+
+  <!-- in the "inhalt" is the main content of the page-->
   <div class="inhalt">
+
+    <!-- on the left side is the Text with, the question title, the question, the explanation of the question and the back button-->
     <div class="linkeSeite">
       <h1>Gesundheit HEUTE</h1>
       <p>Wir wollen herausfinden, <br>wie gut oder schlecht Ihre <br>Gesundheit HEUTE ist.</p>
-        <div class="smiley">
-            <p id="eq6Text">Bitte ziehen Sie den<br> Punkt auf den<br> entsprechenden Wert</p>
-          <img id="smiley" [src]="picSmiley" height="100%" width="100%" >
-        </div>
+      <div class="smiley">
+        <p id="eq6Text">Bitte ziehen Sie den<br> Punkt auf den<br> entsprechenden Wert</p>
+        <img id="smiley" [src]="picSmiley" height="100%" width="100%">
+      </div>
       <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
     </div>
+
+    <!-- on the right side is the likert scale, the likert scale is a slider which lies over a picture. The "weiter" button is also on the right side-->
     <div class="rechteSeite">
-        <img id="slider" class="eq" src="../../assets/img/eq-5d-5l_scale.svg">
+      <img id="slider" class="eq" src="../../assets/img/eq-5d-5l_scale.svg">
       <div classe="range">
         <input type="range" name="likert7" id="likert" [(ngModel)]="knobValue" min="0" max="100" (change)='onChange($event.target.value)'>
       </div>
       <button id="weiter" ion-button (click)="openNext(knobValue)" [disabled]="disableButton">Weiter</button>
     </div>
   </div>
-
 </ion-content>

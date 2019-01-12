@@ -1,8 +1,9 @@
 page-armbewegung {
 
-
-
-img{
+/**
+* sets the position of the image for the likert scale
+*/
+  img {
     z-index: -10000 !important;
     position: fixed;
     top: 90px;

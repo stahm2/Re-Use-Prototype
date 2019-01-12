@@ -1,10 +1,16 @@
 page-erkl-stim {
 
+  /**
+  * sets the position and width of the text
+  */
   p{
     position: fixed;
     width: 200px;
   }
 
+  /**
+  * sets the position of the image
+  */
   img{
     position: fixed;
     top: 145px;

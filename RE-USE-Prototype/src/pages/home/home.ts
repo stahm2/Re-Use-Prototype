@@ -33,23 +33,37 @@ export class HomePage {
   values = [];
 
 
-
+  /**
+   * opens the main "Fragebogen"
+   */
   openFragebogen() {
     this.navCtrl.push('ErklArmPage');
   }
 
+  /**
+   * opens the "begleittherapie"
+   */
   openBegleittherapie() {
     this.navCtrl.push('ErklBegleitPage');
   }
 
+  /**
+   * opens the "gewicht"
+   */
   openGewicht() {
   this.navCtrl.push('ErklGewichtPage');
   }
 
+  /**
+   * opens the "blutdruck"
+   */
   openBlutdruck() {
     this.navCtrl.push('ErklBlutPage');
   }
 
+  /**
+   * opens the "schlaf fragebogen"
+   */
   openSchlaf() {
     this.navCtrl.push('ErklSchlafPage');
   }
@@ -427,10 +441,10 @@ this.mailer.addAlias('gmail', 'com.google.android.gm');
     this.fc.goUp;
   }
 
+  /**
+   * this function starts automaticly when this page is load.
+   */
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
   }
-
-
-
 }

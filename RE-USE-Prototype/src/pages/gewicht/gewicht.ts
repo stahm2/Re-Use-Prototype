@@ -20,6 +20,13 @@ export class GewichtPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage, private alertCtrl: AlertController) {}
 
+    /**
+   * leavePage generates the alert wehn the homebutton is cliked.
+   * title is the title of the alert, message is the main text of the alert.
+   * buttons generate the yes and no button, and the hander sais what happens when this button is cliked.
+   * when the homebutton is cliked the function goToHome will be started.
+   * With alert.present the alert is shown on the screen.
+   */
   leavePage() {
     let alert = this.alertCtrl.create({
       title: 'Eingabe abbrechen',
@@ -44,7 +51,15 @@ export class GewichtPage {
     alert.present();
   }
 
+  // disables the "speichern" button
   private disableButton = true;
+
+  /**
+   * Enables the "speichern" button after a value is entered
+   *
+   * @param gewicht
+   * @param bauch
+   */
   enableButton(gewicht, bauch){
     let warningText = <HTMLParagraphElement>document.getElementById('warningGW');
     if(gewicht != null && bauch != null){
@@ -61,10 +76,20 @@ export class GewichtPage {
     }
   }
 
+  /**
+   * The goToHome function goes back to the root of the stack. In our Case this is the Home screen.
+   */
   goToHome() {
     this.navCtrl.popToRoot();
   }
 
+  /**
+   * saves the entered values to the databank
+   * and then it goes back to the root of the stack. In our Case this is the Home screen.
+   *
+   * @param gewicht
+   * @param bauch
+   */
   save(gewicht, bauch) {
     this.storage.set('gewicht', gewicht);
     this.storage.set('bauch', bauch);
@@ -79,13 +104,17 @@ export class GewichtPage {
     this.navCtrl.popToRoot();
   }
 
-
+  /**
+   * the openLast function opens the last page in the stack
+   */
   back() {
     this.navCtrl.pop();
   }
 
+   /**
+   * this function starts automaticly when this page is load.
+   */
   ionViewDidLoad() {
-
     console.log('ionViewDidLoad GewichtPage');
   };
 

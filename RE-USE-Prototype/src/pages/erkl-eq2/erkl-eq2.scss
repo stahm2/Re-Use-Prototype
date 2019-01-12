@@ -1,9 +1,15 @@
 page-erkl-eq2 {
 
+  /**
+  * sets the width of the text
+  */
   p{
     width: 200px;
   }
 
+  /**
+  * sets the position of the image of the scale
+  */
   #eqSK{
     position: fixed;
     top: 145px;

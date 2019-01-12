@@ -4,49 +4,57 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
 
-    <ion-navbar hideBackButton *navbar>
-    </ion-navbar>
+<!-- the header of the app, who is hidden-->
+<ion-header>
+  <!-- hides the navigationbar of the app and hides the back button, the back button is not used-->
+  <ion-navbar hideBackButton *navbar>
+  </ion-navbar>
 
 </ion-header>
 
-
+<!-- starts of the content of the application, no-bounce is that the page does not bounce during the touch-->
 <ion-content padding no-bounce>
-    <div class="navigation">
-        <button ion-button (click)="leavePage()">
-            <ion-icon name="home"></ion-icon>
-        </button>
-        <h1>Lebensqualität</h1>
-        <label>3/6</label>
-    </div>
-    <div class="radio">
-        <h1>Alltägliche Tätigkeiten</h1>
-        <p class="klein">(z. B. Arbeit, Studium, Hausarbeit, Familien- oder Freizeitaktivitäten)</p>
-        <ion-list radio-group [(ngModel)]="eq3">
-            <ion-item>
-                <ion-radio value="1" (click)="enableButton(eq3)"></ion-radio>
-                <ion-label>Ich habe keine Probleme,<br> für mich selbst zu sorgen</ion-label>
-            </ion-item>
-            <ion-item>
-                <ion-radio value="2" (click)="enableButton(eq3)"></ion-radio>
-                <ion-label>Ich habe leichte Probleme,<br> meinen alltäglichen Tätigkeiten <br>nachzugehen</ion-label>
-            </ion-item>
-            <ion-item>
-                <ion-radio value="3" (click)="enableButton(eq3)"></ion-radio>
-                <ion-label>Ich habe mässige Probleme,<br> meinen alltäglichen Tätigkeiten <br>nachzugehen</ion-label>
-            </ion-item>
-            <ion-item>
-                <ion-radio value="4" (click)="enableButton(eq3)"></ion-radio>
-                <ion-label>Ich habe grosse Probleme,<br> meinen alltäglichen Tätigkeiten <br>nachzugehen</ion-label>
-            </ion-item>
-            <ion-item>
-                <ion-radio value="5" (click)="enableButton(eq3)"></ion-radio>
-                <ion-label>Ich bin nicht in der Lage, <br>meinen alltäglichen Tätigkeiten <br>nachzugehen</ion-label>
-            </ion-item>
-        </ion-list>
-    </div>
-    <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
-    <button id="weiter" ion-button (click)="openNext(eq3)" [disabled]="disableButton">Weiter</button>
+
+  <!-- in the navigation is the homebutton and the the header title and at the number of the question-->
+  <div class="navigation">
+    <button ion-button (click)="leavePage()">
+      <ion-icon name="home"></ion-icon>
+    </button>
+    <h1>Lebensqualität</h1>
+    <label>3/6</label>
+  </div>
+
+  <!-- shows the radiobuttons with the Text-->
+  <div class="radio">
+    <h1>Alltägliche Tätigkeiten</h1>
+    <p class="klein">(z. B. Arbeit, Studium, Hausarbeit, Familien- oder Freizeitaktivitäten)</p>
+    <ion-list radio-group [(ngModel)]="eq3">
+      <ion-item>
+        <ion-radio value="1" (click)="enableButton(eq3)"></ion-radio>
+        <ion-label>Ich habe keine Probleme,<br> für mich selbst zu sorgen</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-radio value="2" (click)="enableButton(eq3)"></ion-radio>
+        <ion-label>Ich habe leichte Probleme,<br> meinen alltäglichen Tätigkeiten <br>nachzugehen</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-radio value="3" (click)="enableButton(eq3)"></ion-radio>
+        <ion-label>Ich habe mässige Probleme,<br> meinen alltäglichen Tätigkeiten <br>nachzugehen</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-radio value="4" (click)="enableButton(eq3)"></ion-radio>
+        <ion-label>Ich habe grosse Probleme,<br> meinen alltäglichen Tätigkeiten <br>nachzugehen</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-radio value="5" (click)="enableButton(eq3)"></ion-radio>
+        <ion-label>Ich bin nicht in der Lage, <br>meinen alltäglichen Tätigkeiten <br>nachzugehen</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <!-- buttons for "weiter" und "zurück"-->
+  <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
+  <button id="weiter" ion-button (click)="openNext(eq3)" [disabled]="disableButton">Weiter</button>
 
 </ion-content>

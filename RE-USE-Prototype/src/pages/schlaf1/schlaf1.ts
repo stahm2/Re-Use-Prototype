@@ -19,6 +19,13 @@ export class Schlaf1Page {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage, private alertCtrl: AlertController) {}
 
+    /**
+   * leavePage generates the alert wehn the homebutton is cliked.
+   * title is the title of the alert, message is the main text of the alert.
+   * buttons generate the yes and no button, and the hander sais what happens when this button is cliked.
+   * when the homebutton is cliked the function goToHome will be started.
+   * With alert.present the alert is shown on the screen.
+   */
   leavePage() {
     let alert = this.alertCtrl.create({
       title: 'Eingabe abbrechen',
@@ -43,16 +50,42 @@ export class Schlaf1Page {
     alert.present();
   }
 
+  /**
+   * tracks the entered text in the text input and print in to the console.
+   *
+   * @param data
+   */
   onChange(data) : void {
     console.log("text: " + data);
   }
+
+  /**
+   * The goToHome function goes back to the root of the stack. In our Case this is the Home screen.
+   */
   goToHome(){
     this.navCtrl.popToRoot();
   }
 
+  // disables the "weiter" button
   private disableButton = true;
+  // disables the text input box
   private disableBox = true;
+  // hides the label of the text input
   private disableText = true;
+
+  /**
+   * Enables the "weiter" button after a value is entered
+   *
+   * @param schlaf1
+   * @param Herzbeschwerden
+   * @param Allergien
+   * @param Schliddruesenprobleme
+   * @param Lungenerkrankungen
+   * @param Stimmung
+   * @param Schlafmittel
+   * @param Weissnicht
+   * @param nameText
+   */
   enableButton(schlaf1, Herzbeschwerden, Allergien, Schliddruesenprobleme, Lungenerkrankungen, Stimmung, Schlafmittel, Weissnicht, nameText) {
     if (schlaf1 == "nein") {
       this.disableButton = false;
@@ -71,6 +104,21 @@ export class Schlaf1Page {
     }
   }
 
+  /**
+   * Opens the next page and saves the entered values in the databank
+   *
+   * navCtrl.push opens the page in the ().
+   * The name in the () is the name of the ts class, where it will link to.
+   *
+   * @param Herzbeschwerden
+   * @param Allergien
+   * @param Schliddruesenprobleme
+   * @param Lungenerkrankungen
+   * @param Stimmung
+   * @param Schlafmittel
+   * @param Weissnicht
+   * @param nameText
+   */
   openNext(Herzbeschwerden, Allergien, Schliddruesenprobleme, Lungenerkrankungen, Stimmung, Schlafmittel, Weissnicht, nameText){
     this.storage.set('schl1herz', Herzbeschwerden);
     this.storage.set('schl1alle', Allergien);
@@ -108,6 +156,9 @@ export class Schlaf1Page {
     this.navCtrl.push('Schlaf2Page');
   }
 
+   /**
+   * this function starts automaticly when this page is load.
+   */
   ionViewDidLoad() {
     console.log('ionViewDidLoad Schlaf1Page');
   }

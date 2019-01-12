@@ -4,30 +4,37 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+
+<!-- the header of the app, who is hidden-->
 <ion-header>
-    <ion-navbar hideBackButton *navbar>
-    </ion-navbar>
+  <!-- hides the navigationbar of the app and hides the back button, the back button is not used-->
+  <ion-navbar hideBackButton *navbar>
+  </ion-navbar>
+</ion-header>
 
-  </ion-header>
+<!-- starts of the content of the application, no-bounce is that the page does not bounce during the touch-->
+<ion-content padding no-bounce>
 
+  <!-- in the navigation is the homebutton and the the header title-->
+  <div class="navigation">
+    <button ion-button (click)="leavePage()">
+      <ion-icon name="home"></ion-icon>
+    </button>
+    <h1>Lebensqualität</h1>
+  </div>
 
-  <ion-content padding no-bounce>
-    <div class="navigation">
-      <button ion-button (click)="leavePage()">
-        <ion-icon name="home"></ion-icon>
-      </button>
-      <h1>Lebensqualität</h1>
-    </div>
-    <div>
-      <h3>Erklärung zu den folgenden Seiten</h3>
-      <p>
-        Auf den folgenden Seiten finden Sie verschiedene Auswahlmöglichkeiten.
-        <br>
-        Es werden Ihnen Fragen zur Ihrer Lebensqualität gestellt.
-        Wählen Sie Bitte die auf Sie zutreffende Aussage aus.
-      </p>
-      <img id="eq" src="../../assets/img/android_EQ_1.PNG">
-    </div>
-    <button id="weiter" ion-button (click)="openNext()">Weiter</button>
+  <!-- shows the explanation of the next questions-->
+  <div>
+    <h3>Erklärung zu den folgenden Seiten</h3>
+    <p>
+      Auf den folgenden Seiten finden Sie verschiedene Auswahlmöglichkeiten.
+      <br>
+      Es werden Ihnen Fragen zur Ihrer Lebensqualität gestellt.
+      Wählen Sie Bitte die auf Sie zutreffende Aussage aus.
+    </p>
+    <img id="eq" src="../../assets/img/android_EQ_1.PNG">
+  </div>
 
-  </ion-content>
+  <!-- buttons for "weiter"-->
+  <button id="weiter" ion-button (click)="openNext()">Weiter</button>
+</ion-content>

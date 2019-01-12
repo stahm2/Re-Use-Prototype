@@ -1,24 +1,30 @@
 page-home {
 
-
+  /**
+  * sets the position of the first button on the page
+  */
   #homeBT:first-child {
     margin-top: 0px;
   }
 
+  /**
+  * sets the position, font and height of the buttons
+  */
   #homeBt {
     height: 50px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Asap_Bold;
     font-size: 14pt;
-    font-weight: bold;
     background-color: #203B8F;
     margin-top: 60px;
   }
 
+  /**
+  * sets the position, font and height of the scerect Button "Auswertung"
+  */
   #secretBt {
     height: 50px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Asap_Bold;
     font-size: 14pt;
-    font-weight: bold;
     background-color: #203B8F;
     margin-top: 60px;
     opacity: 0;

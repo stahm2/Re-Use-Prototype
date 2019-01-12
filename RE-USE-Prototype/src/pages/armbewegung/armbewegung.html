@@ -4,15 +4,18 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
 
+<!-- the header of the app, who is hidden-->
+<ion-header>
+  <!-- hides the navigationbar of the app and hides the back button, the back button is not used-->
   <ion-navbar hideBackButton *navbar>
   </ion-navbar>
-
 </ion-header>
 
-
+<!-- starts of the content of the application, no-bounce is that the page does not bounce during the touch-->
 <ion-content padding no-bounce>
+
+  <!-- in the navigation is the homebutton and the the header title and at the number of the question-->
   <div class="navigation">
     <button ion-button (click)="leavePage()">
       <ion-icon name="home"></ion-icon>
@@ -21,7 +24,10 @@
     <label>1/6</label>
   </div>
 
+  <!-- in the "inhalt" is the main content of the page-->
   <div class="inhalt">
+
+    <!-- on the left side is the Text with, the question title, the question, the explanation of the question and the back button-->
     <div class="linkeSeite">
       <h1>Armbewegung</h1>
       <p>Wie hatten sich die<br> Bewegungen Ihres<br> betroffenen Armes<br> verändert?<br>
@@ -30,11 +36,12 @@
         <p id="erklaerungText">{{onChange()}}Bitte ziehen Sie den Punkt auf den entsprechenden Wert</p>
       </div>
     </div>
+
+    <!-- on the right side is the likert scale, the likert scale is a slider which lies over a picture. The "weiter" button is also on the right side-->
     <div class="rechteSeite">
-        <img src="../../assets/img/likert7.svg">
-     <div classe="range">
-       <input type="range" name="likert7" id="likert" min="0" max="7" step="1"
-       [(ngModel)]="knobValue" (change)='onChange($event.target.value)'>
+      <img src="../../assets/img/likert7.svg">
+      <div classe="range">
+        <input type="range" name="likert7" id="likert" min="0" max="7" step="1" [(ngModel)]="knobValue" (change)='onChange($event.target.value)'>
       </div>
       <button id="weiter" ion-button (click)="openNext(knobValue)" [disabled]="disableButton">Weiter</button>
     </div>

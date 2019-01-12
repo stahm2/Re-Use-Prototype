@@ -1,13 +1,22 @@
 page-erkl-schlaf2 {
 
+  /**
+  * sets the width of the text
+  */
   p{
     width: 200px;
   }
 
+  /**
+  * sets the width of the input image
+  */
   #zeit{
     width: 200px;
   }
 
+  /**
+  * sets the position of the scale image
+  */
   #skala{
     position: fixed;
     top: 145px;

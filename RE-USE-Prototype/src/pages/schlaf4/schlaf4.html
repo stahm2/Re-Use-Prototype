@@ -4,15 +4,18 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
 
+<!-- the header of the app, who is hidden-->
+<ion-header>
+  <!-- hides the navigationbar of the app and hides the back button, the back button is not used-->
   <ion-navbar hideBackButton *navbar>
   </ion-navbar>
-
 </ion-header>
 
-
+<!-- starts of the content of the application, no-bounce is that the page does not bounce during the touch-->
 <ion-content padding no-bounce>
+
+  <!-- in the navigation is the homebutton and the the header title and at the number of the question-->
   <div class="navigation">
     <button ion-button (click)="leavePage()">
       <ion-icon name="home"></ion-icon>
@@ -21,16 +24,17 @@
     <label>4/7</label>
   </div>
 
+  <!-- shows the time picker for the sleep-->
   <div>
     <p>
       Wie viele Stunden schlafen Sie ungefähr pro Nacht (nicht Bettliegzeit)?
     </p>
-
     <ion-list>
       <ion-row>
         <ion-col>
           <ion-item id="picker">
-            <ion-datetime hourValues="0,1,2,3,4,5,6,7,8,9,10,11,12,13" cancelText="Abbrechen" doneText="OK" displayFormat="H" [(ngModel)]="startTime" (ngModelChange)="enableButton(startTime)"></ion-datetime>
+            <ion-datetime hourValues="0,1,2,3,4,5,6,7,8,9,10,11,12,13" cancelText="Abbrechen" doneText="OK"
+              displayFormat="H" [(ngModel)]="startTime" (ngModelChange)="enableButton(startTime)"></ion-datetime>
           </ion-item>
         </ion-col>
         <ion-col>
@@ -40,8 +44,9 @@
         </ion-col>
       </ion-row>
     </ion-list>
-
   </div>
+
+  <!-- buttons for "weiter" und "zurück"-->
   <button id="zurueck" ion-button (click)="openLast()">Zurück</button>
   <button id="weiter" ion-button (click)="openNext(startTime)" [disabled]="disableButton">Weiter</button>
 </ion-content>

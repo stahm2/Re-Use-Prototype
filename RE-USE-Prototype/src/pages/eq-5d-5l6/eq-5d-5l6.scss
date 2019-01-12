@@ -1,5 +1,8 @@
 page-eq-5d-5l6 {
 
+  /**
+  * sets the position of the slider
+  */
   #slider {
     z-index: -10000 !important;
     position: fixed;
@@ -8,6 +11,9 @@ page-eq-5d-5l6 {
     width: 96px;
   }
 
+  /**
+  * sets the position of the smiley picture and explanation text
+  */
   .smiley {
     position: fixed;
     top: 280px;
@@ -15,18 +21,19 @@ page-eq-5d-5l6 {
     height: 200px;
   }
 
-  #smiley{
+  /**
+  * sets the position of the smiley
+  */
+  #smiley {
     margin-left: -5%;
   }
 
-  #eq6Text{
+  /**
+  * sets the position of the question
+  */
+  #eq6Text {
     position: fixed;
     bottom: 235px;
     left: 8%;
   }
-
-  ion-image {
-    background-color: transparent;
-  }
-
 }

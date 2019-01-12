@@ -68,6 +68,13 @@ export class HomePage {
     this.navCtrl.push('ErklSchlafPage');
   }
 
+  /**
+   * attaches read values from database to a string
+   * in Promises
+   * Pack all database gets in a separate promise, to be sure for
+   * all of them completed before going on in code
+   *
+   */
   outcome(): Promise<any> {
     let ts = Date.now().toLocaleString();
 
@@ -381,7 +388,13 @@ export class HomePage {
     });
   }
 
-  sendMail(){
+  /**
+   * function to send a mail for testing issues.
+   * not used in prototype
+   */
+  /*
+
+    sendMail(){
     let email = {
       to: 'petim1@bfh.ch',
       attachments: [
@@ -412,7 +425,11 @@ this.mailer.addAlias('gmail', 'com.google.android.gm');
       }
      });
   }
-
+*/
+  /**
+   * counts the amount of clicks to hidden home button
+   * if >3, function outcome and auswertung will start
+   */
  clickcount() {
    this.count++;
     console.log(this.count);
@@ -426,6 +443,11 @@ this.mailer.addAlias('gmail', 'com.google.android.gm');
     }
   }
 
+  /**
+   * write file on filesystem and print out corresponding pathto console
+   *
+   * @param res
+   */
   auswertung(res: any) {
     this.count = 0;
     //create test file
@@ -433,10 +455,18 @@ this.mailer.addAlias('gmail', 'com.google.android.gm');
       this.fc.createAndWriteFile(res)
     }
 
+    /**
+     * function to navogate in file system down from item
+     *
+     * @param item
+     */
   goDown(item){
     this.fc.goDown(item);
   }
 
+  /**
+   * function to navigate in file system up
+   */
   goUp(){
     this.fc.goUp;
   }

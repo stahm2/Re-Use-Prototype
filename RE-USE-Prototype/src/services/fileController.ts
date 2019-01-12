@@ -16,27 +16,20 @@ export class fileController {
               public plt: Platform,
               public alertCtrl: AlertController) {
 
-
+    //define root directory
     this.ROOT_DIRECTORY = fileNav.dataDirectory;
 
+    //Check if platform is ready, then list directory
     plt.ready()
       .then(() => {
         this.listDir(this.ROOT_DIRECTORY, '');
     })
   }
 
-  checkFile(f) {
-		this.fileNav.checkFile(this.fileNav.dataDirectory, f)
-			.then(success => {
-				console.log('File ' + f + ' exists');
-				return true;
-			})
-			.catch(err => {
-				console.log('File ' + f + 'doesn\'t exist');
-				return false;
-			});
-	}
-
+  /**
+   * read file in defined directory with filename as parameter
+   * @param fileName
+   */
   readFile(fileName) {
 
 		return new Promise((resolve, reject) => {
@@ -52,6 +45,11 @@ export class fileController {
 		});
 	}
 
+  /**
+   * write content to a file in defined directory with content and filename as param
+   * @param fileName
+   * @param content
+   */
   writeFile(fileName, content) {
     let a: IWriteOptions = {
       append: true,
@@ -60,10 +58,18 @@ export class fileController {
     return this.fileNav.writeFile(this.ROOT_DIRECTORY, fileName, content, a);
 }
 
+/**
+ * returns the path
+ */
 getPath(){
  return this.ROOT_DIRECTORY;
 }
 
+/**
+ * creates a new file and write to it.
+ * First preparing the param JSON to write.
+ * @param contentJSON
+ */
   createAndWriteFile(contentJSON) {
     let value = contentJSON.headerRow + "\r\n" + contentJSON.conentRow;
     let newFileName = `${this.counter}` + this.fileName;
@@ -79,6 +85,9 @@ getPath(){
 
   }
 
+  /**
+   * append content to the last created file
+   */
   appendToFile() {
     let lastFile = this.fileList[this.fileList.length - 1];
 
@@ -99,6 +108,9 @@ getPath(){
     }
   }
 
+  /**
+   * delete the last used created file
+   */
   deleteFile() {
     let lastFile = this.fileList[this.fileList.length - 1];
 
@@ -114,6 +126,10 @@ getPath(){
     }
   }
 
+  /**
+   * read the content of the last created and used file and
+   * present it as an alert to the user
+   */
   private readFileContent() {
     let lastFile = this.fileList[this.fileList.length - 1];
 
@@ -144,13 +160,24 @@ getPath(){
   /*------------------------------------*/
   /*---------FILE NAVIAGATION-----------*/
   /*------------------------------------*/
+
+  /**
+   * for testing issues only
+   * go down in a navigation tree from a given startpoint param item
+   * @author Stefan Iseli
+   * @param item
+   */
   goDown(item) {
     const parentNativeURL = item.nativeURL.replace(item.name, "");
     this.savedParentNativeURLs.push(parentNativeURL);
 
     this.listDir(parentNativeURL, item.name);
   }
-
+/**
+ * for testing issues only
+ * go up in a navigation tree from present position
+ * @author Stefan Iseli
+ */
   goUp() {
     const parentNativeURL = this.savedParentNativeURLs.pop();
 

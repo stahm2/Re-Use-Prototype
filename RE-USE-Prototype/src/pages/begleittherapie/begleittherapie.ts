@@ -57,7 +57,7 @@ export class BegleittherapiePage {
   }
 
   /**
-   * saves the entered values to the databank
+   * saves the entered values to the database
    * and then it goes back to the root of the stack. In our Case this is the Home screen.
    *
    * @param myDate

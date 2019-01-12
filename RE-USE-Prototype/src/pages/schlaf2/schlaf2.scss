@@ -1,18 +1,30 @@
 page-schlaf2 {
 
-  body{
+  /**
+  * sets the border color as a variable
+  */
+  body {
     --vaBorder: none;
   }
 
+  /**
+  * sets the height of the list item
+  */
   ion-item {
     height: 30px;
   }
 
-  #textSchlaf2{
+  /**
+  * sets the border of the text input
+  */
+  #textSchlaf2 {
     border: var(--vaBorder);
   }
 
-  #textSchlaf2{
+  /**
+  * sets the font of the text input
+  */
+  #textSchlaf2 {
     font-family: Asap_Regular;
     font-weight: 400;
   }

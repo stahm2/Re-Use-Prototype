@@ -1,5 +1,8 @@
 page-mood {
 
+  /**
+  * sets the position of the scale
+  */
   #slider {
     z-index: -10000 !important;
     position: fixed;
@@ -8,6 +11,9 @@ page-mood {
     width: 85px;
   }
 
+  /**
+  * sets the position and size of the div with the smileys
+  */
   .smiley {
     position: fixed;
     top: 280px;
@@ -15,22 +21,26 @@ page-mood {
     height: 200px;
   }
 
-  #smiley{
+  /**
+  * sets the position of the smiley image
+  */
+  #smiley {
     margin-left: -5%;
   }
 
-  #moodText{
+  /**
+  * sets the position of the "erklärungstext"
+  */
+  #moodText {
     position: fixed;
     bottom: 235px;
     left: 8%;
   }
 
-  .linkeSeite p{
+  /**
+  * sets the position of the text
+  */
+  .linkeSeite p {
     margin-top: -3px;
   }
-
-  ion-image {
-    background-color: transparent;
-  }
-
 }

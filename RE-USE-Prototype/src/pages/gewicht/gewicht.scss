@@ -1,24 +1,41 @@
 page-gewicht {
 
-  table, th, td {
+  /**
+  * sets the border of the table
+  */
+  table,
+  th,
+  td {
     border: none;
- }
+  }
 
- table {
-   width: 90%;
- }
+  /**
+  * sets the width of the table
+  */
+  table {
+    width: 90%;
+  }
 
- td {
-   height: 50px;
-   font-size: 14pt;
- }
+  /**
+  * sets the height and font size of table
+  */
+  td {
+    height: 50px;
+    font-size: 14pt;
+  }
 
- input{
-   border-color: black;
-   border-width: 1px;
- }
+  /**
+  * sets the border of the text input
+  */
+  input {
+    border-color: black;
+    border-width: 1px;
+  }
 
- #warningGW{
-  color: red;
-}
+  /**
+  * sets the color of the warning
+  */
+  #warningGW {
+    color: red;
+  }
 }

@@ -1,6 +1,9 @@
 page-muedigkeit5 {
 
-img{
+  /**
+  * sets the position of the image for the likert scale
+  */
+  img {
     z-index: -10000 !important;
     position: fixed;
     top: 90px;
@@ -8,7 +11,10 @@ img{
     width: 76px;
   }
 
-  #pfeil{
+  /**
+  * sets the position of the arrow in the "Erklärung"
+  */
+  #pfeil {
     position: fixed;
     left: -235px;
     top: 15%;

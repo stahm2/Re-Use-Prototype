@@ -1,26 +1,41 @@
 page-blutdruck {
 
-  table, th, td {
+  /**
+  * sets the border for the table
+  */
+  table,
+  th,
+  td {
     border: none;
- }
+  }
 
- table {
-   width: 90%;
- }
+  /**
+  * sets the width of the table
+  */
+  table {
+    width: 90%;
+  }
 
- td {
-   height: 50px;
-   font-size: 14pt;
- }
+  /**
+  * sets the height and font size for the table
+  */
+  td {
+    height: 50px;
+    font-size: 14pt;
+  }
 
- input{
-   border-width: 1px;
-   border-color: black;
- }
+  /**
+  * sets the border for the input field
+  */
+  input {
+    border-width: 1px;
+    border-color: black;
+  }
 
- #warning{
-   color: red;
- }
-
-
+  /**
+  * sets the color for the warning
+  */
+  #warning {
+    color: red;
+  }
 }

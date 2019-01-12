@@ -1,28 +1,46 @@
 page-schlaf1 {
 
+  /**
+  * sets the border color as a variable
+  */
   body{
     --vaBorder: none;
   }
 
+  /**
+  * sets the border and font of the input
+  */
   ion-textarea {
     border: var(--vaBorder);
     font-family: Asap_Regular;
     font-weight: 400;
   }
 
+  /**
+  * sets the position of the row in the layout
+  */
   .row {
     margin-top: -20px;
   }
 
+  /**
+  * sets the height of the title box and home button
+  */
   .navigation {
     height: 50px;
   }
 
+  /**
+  * sets the height of the list items
+  */
   ion-item {
     height: 30px;
   }
+
+  /**
+  * sets the position of the list item for ios
+  */
   .list-ios{
     margin-bottom: 5px;
   }
-
 }

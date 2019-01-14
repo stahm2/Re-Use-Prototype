@@ -83,6 +83,25 @@ export class BegleittherapiePage {
     this.navCtrl.popToRoot();
   }
 
+  //disables the "weiter" button
+  private disableButton = true;
+
+  /**
+   * Enables the "speichern" button after a value is entered
+   *
+   * @param therapy
+   * @param myDate
+   * @param startTime
+   * @param endTime
+   */
+  enableButton(therapy, myDate, startTime, endTime){
+    console.log(therapy);
+    if(therapy == "Logo" || therapy == "Physio" || therapy == "Ergo" || therapy == "Andere"){
+      if(myDate != null && startTime != null && endTime != null){
+        this.disableButton = false;
+      }
+    }
+  }
 
   /**
    * the openLast function opens the last page in the stack
